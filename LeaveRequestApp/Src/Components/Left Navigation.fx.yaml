@@ -1,0 +1,67 @@
+"'Left Navigation' As CanvasComponent":
+    Fill: =RGBA(255, 255, 255, 1) 
+    Height: =Max(App.Height,App.DesignHeight)
+    MenuWidth: =If(varOpenMenu,  Max(App.Width, App.MinScreenWidth)/6-30,65)
+    NavItems: =
+    Width: ='Left Navigation'.MenuWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Image1 As image:
+        Height: =77
+        Image: =sketchwireLogo
+        Width: =93
+        X: =77
+        ZIndex: =1
+
+    HamBurger As icon.Hamburger:
+        Height: =50
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(varOpenMenu,!varOpenMenu)
+        Width: =42
+        X: =15
+        Y: =13
+        ZIndex: =2
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =557
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplateSize: =173
+        Width: =197
+        Y: =123
+        ZIndex: =3
+
+        Button1 As button:
+            BorderThickness: =0
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =110
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =169
+            X: =7
+            Y: =20
+            ZIndex: =1
+
+        Image3 As image:
+            Height: =69
+            Image: =ThisItem.Icon
+            OnSelect: =Select(Parent)
+            Width: =42
+            X: =15
+            Y: =47
+            ZIndex: =2
+
+        Label1 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =110
+            X: =77
+            Y: =61
+            ZIndex: =3
+

@@ -1,0 +1,30 @@
+"'Apply Leave' As screen":
+    Fill: =RGBA(241, 244, 249, 1)
+
+    "'Left Navigation_1' As 'Left Navigation'":
+        NavItems: =lmsnav
+        Width: ='Left Navigation_1'.MenuWidth
+
+    Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =768
+        Width: =Parent.Width-'Left Navigation_1'.Width
+        X: ='Left Navigation_1'.Width
+        ZIndex: =2
+
+        DataCard1_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =769
+            Width: =1168
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Component2_4 As Component2_3:
+                Width: =Parent.Width
+                ZIndex: =1
+

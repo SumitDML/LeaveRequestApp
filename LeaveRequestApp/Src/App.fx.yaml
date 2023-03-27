@@ -1,3 +1,24 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: |
+        =ClearCollect(
+            lmsnav,
+            Table(
+                {
+                    Title: "Apply Leave",
+                    Screen: 'Apply Leave',
+                    Icon: ApplyLeave
+                },
+                {
+                    Title: "Leave Status",
+                    Screen: 'Leave Status',
+                    Icon: 'leaveStatus-7'
+                },
+                    {
+                    Title: "Holidays",
+                    Screen: Holidays,
+                    Icon: holidays
+                }
+            )
+        );
 
