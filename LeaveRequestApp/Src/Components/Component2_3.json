@@ -691,7 +691,7 @@
         "Rules": [
           {
             "Category": "Data",
-            "InvariantScript": "\"Welcome to <b>Newsletter App</b>\"",
+            "InvariantScript": "\"Welcome to <b>Leave Management System</b>\"",
             "Property": "HtmlText",
             "RuleProviderType": "Unknown"
           },
@@ -757,7 +757,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "200",
+            "InvariantScript": "247",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -787,7 +787,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "9",
+            "InvariantScript": "8.5",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           }
@@ -838,7 +838,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638155200477095591",
+    "LastModifiedTimestamp": "638155204059328651",
     "Name": "Component2_3",
     "Rules": [
       {
@@ -897,7 +897,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638155200477095591",
+  "LastModifiedTimestamp": "638155204059328651",
   "Name": "2c83fcd24b97406eb33eeade790d7b43",
   "OverridableProperties": {},
   "TemplateOriginalName": "9ddb115d1173464aa9db965d3d77cc36",

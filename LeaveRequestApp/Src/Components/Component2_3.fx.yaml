@@ -29,8 +29,9 @@ Component2_3 As CanvasComponent:
         ZIndex: =3
 
     HtmlText2 As htmlViewer:
-        HtmlText: ="Welcome to <b>Newsletter App</b>"
-        Size: =9
+        HtmlText: ="Welcome to <b>Leave Management System</b>"
+        Size: =8.5
+        Width: =247
         X: =103
         Y: =30
         ZIndex: =4
