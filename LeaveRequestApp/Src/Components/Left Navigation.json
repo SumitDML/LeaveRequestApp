@@ -799,7 +799,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(ThisItem.Screen)",
+                "InvariantScript": "Navigate(ThisItem.Screen,ScreenTransition.Fade)",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -1801,7 +1801,7 @@
       },
       "NavItems"
     ],
-    "LastModifiedTimestamp": "638155430384787354",
+    "LastModifiedTimestamp": "638155432019126451",
     "Name": "Left Navigation",
     "Rules": [
       {
@@ -1891,7 +1891,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638155430384787354",
+  "LastModifiedTimestamp": "638155432019126451",
   "Name": "784fa766a3ea40dfb2045a277d69d5b8",
   "OverridableProperties": {},
   "TemplateOriginalName": "0103d0576242426c9eeb751b9fd6cb43",
