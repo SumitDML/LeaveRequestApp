@@ -31,6 +31,7 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
+        TemplateFill: =If(ThisItem.IsSelected,Color.AliceBlue, RGBA(0, 0, 0, 0))
         TemplateSize: =139
         Width: =197
         Y: =123
