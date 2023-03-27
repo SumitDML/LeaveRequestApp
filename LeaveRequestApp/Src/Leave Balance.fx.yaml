@@ -26,7 +26,7 @@
                 ZIndex: =1
 
     "'Left Navigation_3' As 'Left Navigation'":
-        Width: =65.00
+        Width: ='Left Navigation_4'.MenuWidth
         X: =0.00
         ZIndex: =2
 

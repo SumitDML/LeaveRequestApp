@@ -1,7 +1,7 @@
 "'Left Navigation' As CanvasComponent":
     Fill: =RGBA(255, 255, 255, 1) 
     Height: =Max(App.Height,App.DesignHeight)
-    MenuWidth: =If(varOpenMenu,  Max(App.Width, App.MinScreenWidth)/6-30,65)
+    MenuWidth: =Max(App.Width, App.MinScreenWidth)/6-30
     NavItems: =lmsnav
     Width: ='Left Navigation'.MenuWidth
     X: =0
@@ -13,20 +13,8 @@
         Image: =sketchwireLogo
         PaddingRight: =0.00
         PaddingTop: =0.00
-        Width: =93.00
-        X: =77.00
+        Width: =197
         ZIndex: =1
-
-    HamBurger As icon.Hamburger:
-        Height: =50
-        Icon: =Icon.Hamburger
-        OnSelect: =Set(varOpenMenu,!varOpenMenu)
-        PaddingRight: =0.00
-        PaddingTop: =0.00
-        Width: =42.00
-        X: =15.00
-        Y: =13
-        ZIndex: =2
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true

@@ -3,7 +3,7 @@ Holidays As screen:
 
     Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
-        Height: =768
+        Height: =Parent.Height
         Width: =Parent.Width-'Left Navigation_4'.Width
         X: ='Left Navigation_4'.Width
         ZIndex: =1
