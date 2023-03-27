@@ -1,5 +1,5 @@
 Component2_3 As CanvasComponent:
-    Fill: =RGBA(255, 255, 255, 1)
+    Fill: =RGBA(0, 0, 0, 0)
     Height: |
         =70
     Width: =Max(App.Width, App.MinScreenWidth)
@@ -9,25 +9,29 @@ Component2_3 As CanvasComponent:
 
     Image2_1 As image:
         DisplayMode: =DisplayMode.View
-        Height: =70
+        Height: =65
         Image: =User().Image
         ImagePosition: =ImagePosition.Fill
-        Width: =92
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =69
+        X: =18
+        Y: =5
         ZIndex: =1
 
     Label5_1 As label:
         FontWeight: =FontWeight.Semibold
         Text: ="Hello, "&User().FullName
         Width: =233
-        X: =92
+        X: =103
         ZIndex: =3
 
-    Label6 As label:
-        Height: =30
-        Size: =8
-        Text: ="Welcome to Newsletter App"
-        Width: =161
-        X: =95
-        Y: =35
+    HtmlText2 As htmlViewer:
+        HtmlText: ="Welcome to <b>Newsletter App</b>"
+        Size: =9
+        X: =103
+        Y: =30
         ZIndex: =4
 
