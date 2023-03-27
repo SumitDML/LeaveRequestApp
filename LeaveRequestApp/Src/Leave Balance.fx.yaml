@@ -1,2 +1,30 @@
 "'Leave Balance' As screen":
+    Fill: =RGBA(241, 244, 249, 1)
+
+    Canvas1_3 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =768
+        Width: =Parent.Width-'Left Navigation_3'.Width
+        X: ='Left Navigation_3'.Width
+        ZIndex: =1
+
+        DataCard1_3 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =769
+            Width: =1301
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Component2_6 As Component2_3:
+                Width: =Parent.Width
+                ZIndex: =1
+
+    "'Left Navigation_3' As 'Left Navigation'":
+        Width: ='Left Navigation_3'.MenuWidth
+        ZIndex: =2
 

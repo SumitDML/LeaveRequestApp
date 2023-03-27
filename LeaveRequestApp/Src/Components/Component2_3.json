@@ -82,7 +82,7 @@
         "Name": "Label5_1",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 14,
+        "PublishOrderIndex": 22,
         "Rules": [
           {
             "Category": "Data",
@@ -445,7 +445,7 @@
         "Name": "Image2_1",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 15,
+        "PublishOrderIndex": 23,
         "Rules": [
           {
             "Category": "Data",
@@ -687,7 +687,7 @@
         "Name": "HtmlText2",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 16,
+        "PublishOrderIndex": 24,
         "Rules": [
           {
             "Category": "Data",

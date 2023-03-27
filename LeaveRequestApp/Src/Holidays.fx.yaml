@@ -1,2 +1,30 @@
 Holidays As screen:
+    Fill: =RGBA(241, 244, 249, 1)
+
+    Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =768
+        Width: =Parent.Width-'Left Navigation_4'.Width
+        X: ='Left Navigation_4'.Width
+        ZIndex: =1
+
+        DataCard1_4 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =769
+            Width: =1301
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Component2_7 As Component2_3:
+                Width: =Parent.Width
+                ZIndex: =1
+
+    "'Left Navigation_4' As 'Left Navigation'":
+        Width: ='Left Navigation_4'.MenuWidth
+        ZIndex: =2
 
