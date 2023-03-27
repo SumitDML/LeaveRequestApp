@@ -2,7 +2,8 @@
     Fill: =RGBA(241, 244, 249, 1)
 
     "'Left Navigation_2' As 'Left Navigation'":
-        Width: ='Left Navigation_2'.MenuWidth
+        Width: =65.00
+        X: =0.00
 
     Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -17,13 +18,14 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =769
-            Width: =1301
+            Height: =Parent.Height
+            Width: =Parent.Width
             X: =0
             Y: =0
             ZIndex: =1
 
             Component2_5 As Component2_3:
-                Width: =Parent.Width
+                Width: =1301.00
+                X: =0.00
                 ZIndex: =1
 

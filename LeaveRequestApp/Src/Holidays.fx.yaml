@@ -15,16 +15,18 @@ Holidays As screen:
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =769
-            Width: =1301
-            X: =0
+            Width: =1301.00
+            X: =Parent.X
             Y: =0
             ZIndex: =1
 
             Component2_7 As Component2_3:
-                Width: =Parent.Width
+                Width: =1301.00
+                X: =0.00
                 ZIndex: =1
 
     "'Left Navigation_4' As 'Left Navigation'":
         Width: ='Left Navigation_4'.MenuWidth
+        X: =0.00
         ZIndex: =2
 

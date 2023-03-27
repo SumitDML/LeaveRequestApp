@@ -11,16 +11,20 @@
     Image1 As image:
         Height: =77
         Image: =sketchwireLogo
-        Width: =93
-        X: =77
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =93.00
+        X: =77.00
         ZIndex: =1
 
     HamBurger As icon.Hamburger:
         Height: =50
         Icon: =Icon.Hamburger
         OnSelect: =Set(varOpenMenu,!varOpenMenu)
-        Width: =42
-        X: =15
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =42.00
+        X: =15.00
         Y: =13
         ZIndex: =2
 
@@ -33,7 +37,8 @@
         ShowScrollbar: =false
         TemplateFill: =If(ThisItem.IsSelected,Color.AliceBlue, RGBA(0, 0, 0, 0))
         TemplateSize: =139
-        Width: =197
+        Width: =197.00
+        X: =0.00
         Y: =123
         ZIndex: =3
 
@@ -46,9 +51,12 @@
 
             Label1 As label:
                 OnSelect: =Navigate(ThisItem.Screen)
+                PaddingRight: =5.00
+                PaddingTop: =5.00
+                Size: =13.00
                 Text: =ThisItem.Title
-                Width: =110
-                X: =77
+                Width: =110.00
+                X: =77.00
                 Y: =61
                 ZIndex: =1
 
@@ -56,8 +64,10 @@
                 Height: =69
                 Image: =ThisItem.Icon
                 OnSelect: =Navigate(ThisItem.Screen)
-                Width: =42
-                X: =15
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Width: =42.00
+                X: =15.00
                 Y: =47
                 ZIndex: =2
 
@@ -68,9 +78,12 @@
                 Height: =110
                 HoverFill: =RGBA(206, 206, 206, 0.1)
                 OnSelect: =Navigate(ThisItem.Screen)
+                PaddingRight: =5.00
+                PaddingTop: =5.00
+                Size: =15.00
                 Text: =""
-                Width: =169
-                X: =7
+                Width: =169.00
+                X: =7.00
                 Y: =20
                 ZIndex: =3
 
