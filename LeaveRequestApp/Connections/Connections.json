@@ -83,6 +83,31 @@
     "dependents": [],
     "id": "19cbb952-f9c9-4c30-a06b-01eefe17b38e"
   },
+  "4d389b56-f094-40a5-bd48-370f78e0ddbc": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1623/1.0.1623.3210/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://digimantra.sharepoint.com": {
+        "dataSources": {
+          "Leave Balance_1": {
+            "tableName": "a513462a-2e63-4c2e-a13b-cea33ac178ed"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Leave Balance_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4d389b56-f094-40a5-bd48-370f78e0ddbc"
+  },
   "f00fb260-1c25-456c-a265-b5905134ce35": {
     "connectionParameters": {
       "sku": "Enterprise"
@@ -97,9 +122,7 @@
       "parameterHintsV2": {}
     },
     "datasets": {},
-    "dataSources": [
-      "LinkedInAPIs"
-    ],
+    "dataSources": [],
     "dependencies": {},
     "dependents": [
       "19cbb952-f9c9-4c30-a06b-01eefe17b38e",

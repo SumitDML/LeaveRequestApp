@@ -1,8 +1,0 @@
-[
-  {
-    "ApiId": "/providers/microsoft.powerapps/apis/shared_linkedin-20apis-5fab783fa6c067e47c-5fceb1defd64d5997f",
-    "Name": "LinkedInAPIs",
-    "ServiceKind": "ConnectedWadl",
-    "Type": "ServiceInfo"
-  }
-]

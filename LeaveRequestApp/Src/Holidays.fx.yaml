@@ -1,5 +1,5 @@
 Holidays As screen:
-    Fill: =RGBA(241, 244, 249, 1)
+    Fill: =RGBA(241, 244, 249, 0.4)
 
     Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0

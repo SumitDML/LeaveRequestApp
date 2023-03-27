@@ -8,6 +8,14 @@
     Y: =0
     ZIndex: =1
 
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(237, 237, 237, 1)
+        BorderThickness: =0.5
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =768
+        Width: =197.66666666666666
+        ZIndex: =1
+
     Image1 As image:
         Height: =65
         Image: =sketchwireLogo
@@ -16,7 +24,7 @@
         Width: =176.66666666666666
         X: =10
         Y: =12
-        ZIndex: =1
+        ZIndex: =2
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
