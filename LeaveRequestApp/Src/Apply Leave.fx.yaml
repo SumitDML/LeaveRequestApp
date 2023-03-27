@@ -26,7 +26,7 @@
             ZIndex: =1
 
             Component2_4 As Component2_3:
-                Height: =102
+                Height: =70
                 Width: =Parent.Width
                 X: =0.00
                 ZIndex: =1
