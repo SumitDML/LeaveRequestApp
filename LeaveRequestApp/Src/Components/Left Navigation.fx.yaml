@@ -2,7 +2,7 @@
     Fill: =RGBA(255, 255, 255, 1) 
     Height: =Max(App.Height,App.DesignHeight)
     MenuWidth: =If(varOpenMenu,  Max(App.Width, App.MinScreenWidth)/6-30,65)
-    NavItems: =
+    NavItems: =lmsnav
     Width: ='Left Navigation'.MenuWidth
     X: =0
     Y: =0
@@ -27,7 +27,7 @@
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =557
-        Items: =CustomGallerySample
+        Items: ='Left Navigation'.NavItems
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false

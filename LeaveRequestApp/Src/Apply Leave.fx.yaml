@@ -2,7 +2,6 @@
     Fill: =RGBA(241, 244, 249, 1)
 
     "'Left Navigation_1' As 'Left Navigation'":
-        NavItems: =lmsnav
         Width: ='Left Navigation_1'.MenuWidth
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
