@@ -9,25 +9,27 @@
     ZIndex: =1
 
     Image1 As image:
-        Height: =77
+        Height: =65
         Image: =sketchwireLogo
         PaddingRight: =0.00
         PaddingTop: =0.00
-        Width: =197
+        Width: =176.66666666666666
+        X: =10
+        Y: =12
         ZIndex: =1
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =644
+        Height: =676
         Items: ='Left Navigation'.NavItems
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
-        TemplateFill: =If(ThisItem.IsSelected,Color.AliceBlue, RGBA(0, 0, 0, 0))
-        TemplateSize: =139
-        Width: =197.00
-        X: =0.00
-        Y: =123
+        TemplateFill: =
+        TemplateSize: =88
+        Transition: =Transition.Pop
+        Width: =197.66666666666666
+        Y: =92
         ZIndex: =3
 
         Group1 As group:
@@ -38,40 +40,41 @@
             ZIndex: =4
 
             Label1 As label:
+                Height: =43
                 OnSelect: =Navigate(ThisItem.Screen)
                 PaddingRight: =5.00
                 PaddingTop: =5.00
                 Size: =13.00
                 Text: =ThisItem.Title
-                Width: =110.00
-                X: =77.00
-                Y: =61
+                Width: =110
+                X: =60
+                Y: =22
                 ZIndex: =1
 
             Image3 As image:
-                Height: =69
+                Height: =43
                 Image: =ThisItem.Icon
                 OnSelect: =Navigate(ThisItem.Screen)
                 PaddingRight: =0.00
                 PaddingTop: =0.00
-                Width: =42.00
-                X: =15.00
-                Y: =47
+                Width: =42
+                X: =18
+                Y: =22
                 ZIndex: =2
 
             Button1 As button:
                 BorderThickness: =0
                 DisabledFill: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =110
+                Height: =79
                 HoverFill: =RGBA(206, 206, 206, 0.1)
                 OnSelect: =Navigate(ThisItem.Screen)
                 PaddingRight: =5.00
                 PaddingTop: =5.00
                 Size: =15.00
                 Text: =""
-                Width: =169.00
-                X: =7.00
-                Y: =20
+                Width: =185.66666666666666
+                X: =2
+                Y: =4
                 ZIndex: =3
 

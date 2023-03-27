@@ -80,25 +80,25 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "10",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "0",
+            "InvariantScript": "12",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "197",
+            "InvariantScript": "176.66666666666666",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "77",
+            "InvariantScript": "65",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -284,7 +284,7 @@
             "Rules": [
               {
                 "Category": "Design",
-                "InvariantScript": "If(ThisItem.IsSelected,Color.AliceBlue, RGBA(0, 0, 0, 0))",
+                "InvariantScript": "",
                 "Property": "TemplateFill",
                 "RuleProviderType": "Unknown"
               }
@@ -534,25 +534,25 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "7.00",
+                "InvariantScript": "2",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "20",
+                "InvariantScript": "4",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "169.00",
+                "InvariantScript": "185.66666666666666",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "110",
+                "InvariantScript": "79",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -769,25 +769,25 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "15.00",
+                "InvariantScript": "18",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "47",
+                "InvariantScript": "22",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "42.00",
+                "InvariantScript": "42",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "69",
+                "InvariantScript": "43",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -1161,25 +1161,25 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "77.00",
+                "InvariantScript": "60",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "61",
+                "InvariantScript": "22",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "110.00",
+                "InvariantScript": "110",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "40",
+                "InvariantScript": "43",
                 "Property": "Height",
                 "RuleProviderType": "Unknown"
               },
@@ -1375,7 +1375,14 @@
           "TemplateSize",
           "TemplatePadding",
           "Layout",
-          "Transition",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Transition",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DelayItemLoading",
           "LoadingSpinner",
           "LoadingSpinnerColor",
@@ -1433,7 +1440,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "139",
+            "InvariantScript": "88",
             "Property": "TemplateSize",
             "RuleProviderType": "Unknown"
           },
@@ -1451,7 +1458,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Transition.None",
+            "InvariantScript": "Transition.Pop",
             "Property": "Transition",
             "RuleProviderType": "Unknown"
           },
@@ -1541,25 +1548,25 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "0.00",
+            "InvariantScript": "0",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "123",
+            "InvariantScript": "92",
             "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "197.00",
+            "InvariantScript": "197.66666666666666",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "644",
+            "InvariantScript": "676",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -1631,7 +1638,7 @@
       },
       "NavItems"
     ],
-    "LastModifiedTimestamp": "638155326086113875",
+    "LastModifiedTimestamp": "638155358325718776",
     "Name": "Left Navigation",
     "Rules": [
       {
@@ -1721,7 +1728,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638155326086113875",
+  "LastModifiedTimestamp": "638155358325718776",
   "Name": "784fa766a3ea40dfb2045a277d69d5b8",
   "OverridableProperties": {},
   "TemplateOriginalName": "0103d0576242426c9eeb751b9fd6cb43",

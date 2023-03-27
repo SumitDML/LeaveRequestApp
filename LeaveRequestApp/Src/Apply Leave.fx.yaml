@@ -32,13 +32,18 @@
                 ZIndex: =1
 
             Button3 As button:
-                Height: =604
+                BorderThickness: =0
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =642
+                HoverColor: =
+                HoverFill: =
                 PaddingRight: =5.00
                 PaddingTop: =5.00
                 Size: =15.00
-                Text: ="Button"
-                Width: =978.00
-                X: =105
-                Y: =102
+                Text: =""
+                Width: =1056
+                X: =54
+                Y: =90
                 ZIndex: =2
 
