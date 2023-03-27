@@ -1,12 +1,15 @@
 "'Leave Status' As screen":
     Fill: =RGBA(241, 244, 249, 1)
 
+    "'Left Navigation_2' As 'Left Navigation'":
+        Width: ='Left Navigation_2'.MenuWidth
+
     Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =768
         Width: =Parent.Width-'Left Navigation_1'.Width
         X: ='Left Navigation_1'.Width
-        ZIndex: =1
+        ZIndex: =2
 
         DataCard1_2 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -23,8 +26,4 @@
             Component2_5 As Component2_3:
                 Width: =Parent.Width
                 ZIndex: =1
-
-    "'Left Navigation_2' As 'Left Navigation'":
-        Width: ='Left Navigation_2'.MenuWidth
-        ZIndex: =2
 
