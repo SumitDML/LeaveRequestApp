@@ -9,7 +9,8 @@
     "Component3": 8,
     "Component4": 9,
     "Left Navigation": 3,
-    "Left Navigation_1": 1
+    "Left Navigation_1": 1,
+    "Left Navigation_2": 3
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -45,11 +46,12 @@
     "Label5_1": 22,
     "Leave Status": 30,
     "Left Navigation": 3,
-    "Left Navigation_1": 26
+    "Left Navigation_1": 26,
+    "Left Navigation_2": 35
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/27/2023 10:43:49",
+  "HeaderLastSavedDateTimeUTC": "03/27/2023 10:48:12",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "19a2d51d-52df-4786-8b8f-594332c9ac3b": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/048f786b1211441aa199fd63447ffeee-5d0915855633a2f1\"",
@@ -159,7 +161,8 @@
     "Label5_1": {},
     "Leave Status": {},
     "Left Navigation": {},
-    "Left Navigation_1": {}
+    "Left Navigation_1": {},
+    "Left Navigation_2": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
@@ -196,7 +199,8 @@
     "Label5_1": 19,
     "Leave Status": 0,
     "Left Navigation": 0,
-    "Left Navigation_1": 0
+    "Left Navigation_1": 0,
+    "Left Navigation_2": 0
   },
   "ResourcesJsonIndices": {
     "Image-174857": 3,
@@ -218,7 +222,7 @@
     "AnalysisLoadTime": 0.238183,
     "ControlCount": {
       "2c83fcd24b97406eb33eeade790d7b43": 3,
-      "784fa766a3ea40dfb2045a277d69d5b8": 2,
+      "784fa766a3ea40dfb2045a277d69d5b8": 3,
       "button": 1,
       "c8abfdcb75b0457b827e987c0efa86ea": 1,
       "c9f129bab0ed442594784b81c36f2a13": 1,

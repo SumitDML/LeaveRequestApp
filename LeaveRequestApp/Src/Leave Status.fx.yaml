@@ -1,4 +1,5 @@
 "'Leave Status' As screen":
+    Fill: =RGBA(241, 244, 249, 1)
 
     Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -22,4 +23,8 @@
             Component2_5 As Component2_3:
                 Width: =Parent.Width
                 ZIndex: =1
+
+    "'Left Navigation_2' As 'Left Navigation'":
+        Width: ='Left Navigation_2'.MenuWidth
+        ZIndex: =2
 
