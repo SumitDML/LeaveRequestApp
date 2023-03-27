@@ -100,10 +100,10 @@
             ZIndex: =6
 
         Image11 As image:
-            Image: =
+            Image: =First(ThisItem.Attachments).AbsoluteUri
             OnSelect: =Select(Parent)
-            X: =70
-            Y: =40
+            X: =69
+            Y: =59
             ZIndex: =8
 
         Label9 As label:
