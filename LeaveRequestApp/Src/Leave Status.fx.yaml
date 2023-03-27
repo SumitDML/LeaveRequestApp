@@ -1,2 +1,25 @@
 "'Leave Status' As screen":
 
+    Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =768
+        Width: =Parent.Width-'Left Navigation_1'.Width
+        X: ='Left Navigation_1'.Width
+        ZIndex: =1
+
+        DataCard1_2 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =769
+            Width: =1168
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Component2_5 As Component2_3:
+                Width: =Parent.Width
+                ZIndex: =1
+

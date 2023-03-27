@@ -44,7 +44,7 @@
             ZIndex: =4
 
             Label1 As label:
-                OnSelect: =Select(Parent)
+                OnSelect: =Navigate(ThisItem.Screen)
                 Text: =ThisItem.Title
                 Width: =110
                 X: =77
@@ -54,7 +54,7 @@
             Image3 As image:
                 Height: =69
                 Image: =ThisItem.Icon
-                OnSelect: =Select(Parent)
+                OnSelect: =Navigate(ThisItem.Screen)
                 Width: =42
                 X: =15
                 Y: =47
@@ -66,7 +66,7 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =110
                 HoverFill: =RGBA(206, 206, 206, 0.1)
-                OnSelect: =Select(Parent)
+                OnSelect: =Navigate(ThisItem.Screen)
                 Text: =""
                 Width: =169
                 X: =7
