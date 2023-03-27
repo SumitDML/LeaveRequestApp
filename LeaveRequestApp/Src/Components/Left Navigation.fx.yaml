@@ -26,12 +26,12 @@
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =557
+        Height: =644
         Items: ='Left Navigation'.NavItems
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
-        TemplateSize: =173
+        TemplateSize: =139
         Width: =197
         Y: =123
         ZIndex: =3

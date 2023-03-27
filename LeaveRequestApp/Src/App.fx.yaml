@@ -14,6 +14,11 @@ App As appinfo:
                     Screen: 'Leave Status',
                     Icon: 'leaveStatus-7'
                 },
+                        {
+                    Title: "Leave Balance",
+                    Screen: 'Leave Balance',
+                    Icon: leave_balance
+                },
                     {
                     Title: "Holidays",
                     Screen: Holidays,
@@ -21,4 +26,5 @@ App As appinfo:
                 }
             )
         );
+    StartScreen: ='Splash Screen'
 

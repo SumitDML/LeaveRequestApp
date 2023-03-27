@@ -1,0 +1,21 @@
+"'Splash Screen' As screen":
+    Fill: =RGBA(136, 183, 207, 1)
+    OnVisible: =
+
+    Timer1 As timer:
+        AutoStart: =true
+        Duration: =5000
+        OnTimerEnd: =Navigate('Apply Leave')
+        Visible: =false
+        X: =336
+        Y: =144
+        ZIndex: =1
+
+    Image4 As image:
+        Height: =230
+        Image: =sketchwireLogo
+        Width: =292
+        X: =512
+        Y: =256
+        ZIndex: =2
+

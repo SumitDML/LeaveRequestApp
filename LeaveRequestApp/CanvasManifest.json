@@ -116,8 +116,10 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
+    "Splash Screen",
     "Apply Leave",
     "Leave Status",
-    "Holidays"
+    "Holidays",
+    "Leave Balance"
   ]
 }

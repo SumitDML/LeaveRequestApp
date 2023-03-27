@@ -254,17 +254,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.DigiMantra-Labs-logo-design-New (1)"
+                  "fullyQualifiedName": "App.174857"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.DigiMantra-Labs-logo-design-New (1)",
+                  "fullyQualifiedName": "App.174857",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "DigiMantra-Labs-logo-design-New (1)",
+                "member": "174857",
                 "module": "App",
                 "type": "App"
               }
@@ -314,47 +314,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.kindpng_1736989"
+                  "fullyQualifiedName": "App.DigiMantra-Labs-logo-design-New (1)"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.kindpng_1736989",
+                  "fullyQualifiedName": "App.DigiMantra-Labs-logo-design-New (1)",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "kindpng_1736989",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.174857"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.174857",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "174857",
+                "member": "DigiMantra-Labs-logo-design-New (1)",
                 "module": "App",
                 "type": "App"
               }
@@ -415,6 +385,36 @@
               },
               "properties": {
                 "member": "instagram",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.kindpng_1736989"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.kindpng_1736989",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "kindpng_1736989",
                 "module": "App",
                 "type": "App"
               }
