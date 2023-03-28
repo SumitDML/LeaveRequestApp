@@ -60,7 +60,7 @@
                 Height: =560
                 Items: =Filter('Leave Requests','Created By'.Email=User().Email)
                 Layout: =Layout.Vertical
-                OnSelect: =Set(varDisplay,true)
+                OnSelect: =Set(temp,true)
                 TemplateSize: =240
                 Transition: =Transition.Push
                 Width: =1081
@@ -146,7 +146,7 @@
                 Button6 As button:
                     Color: =RGBA(77, 77, 77, 1)
                     Fill: =RGBA(219, 219, 219, 1)
-                    OnSelect: =Select(Parent)
+                    OnSelect: =If(ThisItem.Filter="Approved",Set(varFilter,Filter('Leave Requests',Status.Value="Approved")))
                     Text: =ThisItem.Filter
                     X: =9
                     Y: =4
@@ -162,7 +162,7 @@
         Rectangle3 As rectangle:
             Fill: =RGBA(202, 202, 202, 0.7)
             Height: =768
-            Visible: =varDisplay
+            Visible: =temp
             Width: =1366
             ZIndex: =3
 
@@ -179,10 +179,10 @@
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Text: ="Button"
-            Visible: =varDisplay
+            Visible: =temp
             Width: =1040
-            X: =163
-            Y: =92
+            X: =150
+            Y: =93
             ZIndex: =4
 
         FormViewer1 As formViewer:
@@ -190,7 +190,7 @@
             Height: =529
             Item: =Gallery9_1.Selected
             NumberOfColumns: =2
-            Visible: =varDisplay
+            Visible: =temp
             Width: =887
             X: =253
             Y: =119
@@ -213,7 +213,6 @@
                 DataCardKey1 As label:
                     AutoHeight: =true
                     Height: =34
-                    PaddingBottom: =0
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -231,7 +230,7 @@
                     Text: =Parent.Default
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =39
+                    Y: =DataCardKey1.Y + DataCardKey1.Height + 5
                     ZIndex: =2
 
             Details_DataCard1 As typedDataCard.textualViewCard:
@@ -251,7 +250,6 @@
                 DataCardKey2 As label:
                     AutoHeight: =true
                     Height: =34
-                    PaddingBottom: =0
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -354,7 +352,6 @@
                 DataCardKey4 As label:
                     AutoHeight: =true
                     Height: =34
-                    PaddingBottom: =0
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -392,7 +389,6 @@
                 DataCardKey5 As label:
                     AutoHeight: =true
                     Height: =34
-                    PaddingBottom: =0
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -627,7 +623,6 @@
                 DataCardKey9 As label:
                     AutoHeight: =true
                     Height: =34
-                    PaddingBottom: =0
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -665,7 +660,6 @@
                 DataCardKey10 As label:
                     AutoHeight: =true
                     Height: =34
-                    PaddingBottom: =0
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -689,8 +683,8 @@
         Icon1 As icon.Cancel:
             Height: =35
             Icon: =Icon.Cancel
-            OnSelect: =Set(varDisplay,false)
-            Visible: =varDisplay
+            OnSelect: =Set(temp,false)
+            Visible: =temp
             Width: =33
             X: =1096
             Y: =124
