@@ -53,8 +53,8 @@
                 Layout: =Layout.Vertical
                 TemplateSize: =240
                 Transition: =Transition.Push
-                Width: =807
-                WrapCount: =3
+                Width: =1073
+                WrapCount: =4
                 X: =38
                 Y: =172
                 ZIndex: =3
@@ -128,7 +128,7 @@
                 TemplatePadding: =0
                 TemplateSize: =60
                 Transition: =Transition.Pop
-                Width: =596
+                Width: =592
                 WrapCount: =4
                 X: =63
                 Y: =108
