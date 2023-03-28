@@ -345,7 +345,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Canvas1_3",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2726,7 +2726,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Left Navigation_3",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

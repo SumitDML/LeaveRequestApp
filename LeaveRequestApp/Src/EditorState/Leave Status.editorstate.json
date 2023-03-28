@@ -924,7 +924,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Canvas1_2",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1028,7 +1028,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Circle1",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1285,7 +1285,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Component2_5",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7370,7 +7370,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DisplayLeave",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8581,7 +8581,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "FormViewer1",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8809,7 +8809,14 @@
         "TemplateSize",
         "TemplatePadding",
         "Layout",
-        "Transition",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Transition",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LoadingSpinner",
         "LoadingSpinnerColor",
         "DisplayMode",
@@ -8823,14 +8830,7 @@
         "DisabledFill",
         "PressedFill",
         "HoverFill",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "X",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "X",
         "Y",
         "Width",
         "Height",
@@ -9598,7 +9598,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10571,7 +10571,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Left Navigation_2",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
