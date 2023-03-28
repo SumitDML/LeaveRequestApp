@@ -146,7 +146,7 @@
         Width: =330
         X: =265
         Y: =178
-        ZIndex: =8
+        ZIndex: =4
 
     DisplayLeave As group:
         Height: =5
@@ -160,7 +160,7 @@
             Height: =768
             Visible: =varDisplay
             Width: =1366
-            ZIndex: =4
+            ZIndex: =5
 
         Button5 As button:
             Fill: =RGBA(255, 255, 255, 1)
@@ -179,7 +179,7 @@
             Width: =1040
             X: =150
             Y: =93
-            ZIndex: =5
+            ZIndex: =6
 
         Icon1 As icon.Cancel:
             Height: =35
@@ -189,16 +189,17 @@
             Width: =33
             X: =1096
             Y: =124
-            ZIndex: =6
+            ZIndex: =7
 
         FormViewer1 As formViewer:
             DataSource: ='Leave Requests'
+            Height: =521
             Item: =Gallery4.Selected
             Visible: =varDisplay
-            Width: =878
-            X: =211
-            Y: =167
-            ZIndex: =7
+            Width: =883
+            X: =205
+            Y: =126
+            ZIndex: =8
 
             Title_DataCard1 As typedDataCard.textualViewCard:
                 BorderStyle: =BorderStyle.Solid
@@ -209,14 +210,17 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =true
-                Width: =292
+                Width: =294
                 X: =0
                 Y: =0
                 ZIndex: =8
 
                 DataCardKey1 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -246,14 +250,17 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =292
+                Width: =294
                 X: =1
                 Y: =0
                 ZIndex: =8
 
                 DataCardKey2 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -281,17 +288,20 @@
                 DisplayMode: =DisplayMode.View
                 DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"LeaveType")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
+                Height: =91
                 Required: =false
                 Update: =DataCardValue3.Selected
-                Width: =292
+                Width: =294
                 X: =2
                 Y: =0
                 ZIndex: =8
 
                 DataCardKey3 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -309,9 +319,9 @@
                     SearchFields: =["Value"]
                     SearchItems: =Choices('Leave Requests'.LeaveType,DataCardValue3.SearchText)
                     SelectMultiple: =false
-                    Width: =Parent.Width - 60
+                    Width: =260
                     X: =30
-                    Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                    Y: =41
                     ZIndex: =2
 
                 ErrorMessage1 As label:
@@ -348,14 +358,17 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =292
+                Width: =294
                 X: =0
                 Y: =1
                 ZIndex: =8
 
                 DataCardKey4 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -385,14 +398,17 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =292
+                Width: =294
                 X: =1
                 Y: =1
                 ZIndex: =8
 
                 DataCardKey5 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -423,14 +439,17 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue6.Selected
-                Width: =292
+                Width: =294
                 X: =2
                 Y: =1
                 ZIndex: =8
 
                 DataCardKey6 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -485,18 +504,22 @@
                 DisplayMode: =DisplayMode.View
                 DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"ReportingManager")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
+                Height: =106
                 Required: =false
                 Update: =DataCardValue7.Selected
-                Width: =292
+                Width: =294
                 X: =0
                 Y: =2
                 ZIndex: =8
 
                 DataCardKey7 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
-                    Text: =Parent.DisplayName
+                    Size: =15
+                    Text: |-
+                        ="Reporting Manager:"
                     Width: =Parent.Width - 60
                     Wrap: =false
                     X: =30
@@ -514,9 +537,9 @@
                     SearchItems: =Choices('Leave Requests'.ReportingManager,DataCardValue7.SearchText)
                     SelectMultiple: =false
                     Template: =ListItemTemplate.Person
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                    Width: =205
+                    X: =89
+                    Y: =49
                     ZIndex: =2
 
                 ErrorMessage3 As label:
@@ -544,6 +567,17 @@
                     Y: =DataCardKey7.Y
                     ZIndex: =4
 
+                Image7 As image:
+                    Height: =45
+                    RadiusBottomLeft: =50
+                    RadiusBottomRight: =50
+                    RadiusTopLeft: =50
+                    RadiusTopRight: =50
+                    Width: =45
+                    X: =30
+                    Y: =48
+                    ZIndex: =5
+
             HR_DataCard1 As typedDataCard.comboBoxViewCard:
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="HR"
@@ -554,14 +588,17 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue8.Selected
-                Width: =292
+                Width: =294
                 X: =1
                 Y: =2
                 ZIndex: =8
 
                 DataCardKey8 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -580,9 +617,9 @@
                     SearchItems: =Choices('Leave Requests'.HR,DataCardValue8.SearchText)
                     SelectMultiple: =false
                     Template: =ListItemTemplate.Person
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                    Width: =204
+                    X: =86
+                    Y: =48
                     ZIndex: =2
 
                 ErrorMessage4 As label:
@@ -610,6 +647,17 @@
                     Y: =DataCardKey8.Y
                     ZIndex: =4
 
+                Image8 As image:
+                    Height: =45
+                    RadiusBottomLeft: =50
+                    RadiusBottomRight: =50
+                    RadiusTopLeft: =50
+                    RadiusTopRight: =50
+                    Width: =45
+                    X: =30
+                    Y: =46
+                    ZIndex: =5
+
             Comments_DataCard1 As typedDataCard.textualViewCard:
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="Comments"
@@ -619,14 +667,17 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =292
+                Width: =294
                 X: =2
                 Y: =2
                 ZIndex: =8
 
                 DataCardKey9 As label:
                     AutoHeight: =true
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
                     Height: =34
+                    Size: =15
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -656,31 +707,33 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =292
+                Width: =294
                 X: =0
                 Y: =3
                 ZIndex: =8
 
                 DataCardKey10 As label:
-                    AutoHeight: =true
-                    Height: =34
-                    Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
+                    Font: =Font.Lato
+                    FontWeight: =FontWeight.Semibold
+                    Height: =33
+                    Size: =15
+                    Text: |-
+                        ="Total Days:"
+                    Width: =128
                     Wrap: =false
                     X: =30
-                    Y: =10
+                    Y: =4
                     ZIndex: =1
 
                 DataCardValue10 As label:
-                    AutoHeight: =true
                     DisplayMode: =Parent.DisplayMode
-                    Height: =27
+                    Height: =33
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =Parent.Default
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                    Text: =Parent.Default&" Days"
+                    Width: =106
+                    X: =158
+                    Y: =4
                     ZIndex: =2
 

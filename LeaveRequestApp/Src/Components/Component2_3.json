@@ -34,7 +34,14 @@
             "NameMapSourceSchema": "?"
           },
           "Y",
-          "Width",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Width",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -114,7 +121,7 @@
         "Name": "Image2_1",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 113,
+        "PublishOrderIndex": 116,
         "Rules": [
           {
             "Category": "Data",
@@ -148,7 +155,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "58",
+            "InvariantScript": "53",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -385,7 +392,7 @@
         "Name": "Label5_1",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 114,
+        "PublishOrderIndex": 117,
         "Rules": [
           {
             "Category": "Data",
@@ -689,7 +696,7 @@
         "Name": "HtmlText2",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 115,
+        "PublishOrderIndex": 118,
         "Rules": [
           {
             "Category": "Data",
@@ -852,7 +859,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638156154427776894",
+    "LastModifiedTimestamp": "638156186410540467",
     "Name": "Component2_3",
     "Rules": [
       {
@@ -911,7 +918,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638156154427776894",
+  "LastModifiedTimestamp": "638156186410540467",
   "Name": "2c83fcd24b97406eb33eeade790d7b43",
   "OverridableProperties": {},
   "TemplateOriginalName": "9ddb115d1173464aa9db965d3d77cc36",

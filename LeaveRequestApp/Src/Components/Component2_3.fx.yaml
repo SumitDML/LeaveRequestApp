@@ -17,7 +17,7 @@ Component2_3 As CanvasComponent:
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
-        Width: =58
+        Width: =53
         X: =34
         Y: =17
         ZIndex: =1
