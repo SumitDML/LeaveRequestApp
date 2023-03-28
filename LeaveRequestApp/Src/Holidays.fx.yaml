@@ -35,7 +35,7 @@ Holidays As screen:
                 Height: =616
                 PaddingLeft: =20
                 Text: =""
-                Width: =1028
+                Width: =1073
                 X: =50
                 Y: =115
                 ZIndex: =2
@@ -51,7 +51,7 @@ Holidays As screen:
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =193
-        Width: =944
+        Width: =1012
         WrapCount: =4
         X: =290
         Y: =132
@@ -59,25 +59,25 @@ Holidays As screen:
 
         Label12 As label:
             Align: =Align.Center
-            Font: =Font.'Dancing Script'
-            Height: =38
+            Font: =Font.Verdana
+            Height: =37
             OnSelect: =Select(Parent)
+            Size: =10
             Text: =ThisItem.Day
-            Width: =118
-            X: =90
-            Y: =99
+            Width: =108
+            X: =105
+            Y: =100
             ZIndex: =2
 
         Label11 As label:
             Align: =Align.Center
-            Font: =Font.'Dancing Script'
-            Height: =52
+            Font: =Font.Verdana
+            Height: =47
             OnSelect: =Select(Parent)
-            Size: =15
             Text: =ThisItem.Occasion
-            Width: =108
+            Width: =125
             X: =110
-            Y: =58
+            Y: =53
             ZIndex: =3
 
         HtmlText5 As htmlViewer:
