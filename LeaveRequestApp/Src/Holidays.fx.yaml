@@ -44,14 +44,3 @@ Holidays As screen:
         X: =0.00
         ZIndex: =2
 
-    Gallery4 As gallery.galleryVertical:
-        DelayItemLoading: =true
-        Items: =CustomGallerySample
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =536
-        Width: =986
-        X: =287
-        Y: =151
-        ZIndex: =3
-
