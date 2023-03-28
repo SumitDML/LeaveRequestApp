@@ -18,8 +18,9 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(241, 244, 249, 1)
-            Height: =Parent.Height
-            Width: =Parent.Width
+            Height: =733
+            Visible: =true
+            Width: =1168
             X: =0
             Y: =0
             ZIndex: =1
@@ -39,10 +40,9 @@
 
             Circle1_1 As circle:
                 Fill: =RGBA(215, 223, 240, 0.5)
-                Height: =508
-                Width: =597
-                X: =20
-                Y: =488
+                Height: =506
+                Width: =566
+                Y: =500
                 ZIndex: =3
 
             Button3_2 As button:
@@ -244,7 +244,7 @@
                     Text: =Parent.Default
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                    Y: =39
                     ZIndex: =2
 
             Details_DataCard1 As typedDataCard.textualViewCard:
