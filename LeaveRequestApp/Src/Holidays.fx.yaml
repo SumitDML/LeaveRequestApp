@@ -51,7 +51,7 @@ Holidays As screen:
         ZIndex: =2
 
     "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =615
+        Height: =556
         Items: =holidaycal
         Layout: =Layout.Vertical
         ShowScrollbar: =false
@@ -61,7 +61,7 @@ Holidays As screen:
         Width: =1076
         WrapCount: =4
         X: =243
-        Y: =108
+        Y: =141
         ZIndex: =3
 
         HtmlText5 As htmlViewer:

@@ -76,11 +76,11 @@
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
         TemplatePadding: =0
-        TemplateSize: =241
+        TemplateSize: =243
         Transition: =Transition.Pop
-        Width: =1060
-        WrapCount: =4
-        X: =251
+        Width: =1071
+        WrapCount: =3
+        X: =249
         Y: =177
         ZIndex: =3
 
@@ -132,12 +132,11 @@
             ZIndex: =4
 
         HtmlText3 As htmlViewer:
-            Height: =242
+            Height: =247
             HtmlText: |-
-                ="<div style='margin:10px;width:240px;height:208px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; #ccc; border-radius:15px'></div>"
+                ="<div style='margin:10px;width:320px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
             OnSelect: =Select(Parent)
-            Width: =271
-            Y: =4
+            Width: =357
             ZIndex: =5
 
     DisplayLeave As group:
