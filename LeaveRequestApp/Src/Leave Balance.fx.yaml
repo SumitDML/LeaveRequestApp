@@ -1,5 +1,5 @@
 "'Leave Balance' As screen":
-    Fill: =RGBA(241, 244, 249, 1)
+    Fill: =RGBA(0, 0, 0, 0)
 
     Canvas1_3 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -13,7 +13,7 @@
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(251, 237, 255,1)
             Height: =Parent.Height
             Width: =Parent.Width
             X: =0.00
