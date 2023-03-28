@@ -53,6 +53,7 @@
       "exportimportcomponents2": true,
       "externalmessage": false,
       "fluentv9controls": true,
+      "fluentv9controlspreview": false,
       "formuladataprefetch": true,
       "formularepair": true,
       "generatedebugpublishedapp": false,
@@ -101,7 +102,7 @@
     "Id": "9cc4a68b-ee40-4050-97c9-97781f48eaf4",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Leave+Request+App.msapp",
+    "Name": "Leave Request App",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {

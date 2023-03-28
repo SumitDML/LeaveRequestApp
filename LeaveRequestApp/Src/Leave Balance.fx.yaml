@@ -28,8 +28,7 @@
 
             Button3_1 As button:
                 BorderColor: =RGBA(237, 237, 237, 1)
-                BorderThickness: =0.5
-                DisplayMode: =DisplayMode.View
+                BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =642
                 HoverColor: =
