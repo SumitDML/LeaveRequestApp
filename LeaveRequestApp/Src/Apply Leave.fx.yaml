@@ -47,24 +47,6 @@
                 Y: =90
                 ZIndex: =2
 
-            DatePicker1 As datepicker:
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =74
-                Width: =306
-                X: =68
-                Y: =476
-                ZIndex: =5
-
-            DatePicker1_1 As datepicker:
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =74
-                Width: =306
-                X: =68
-                Y: =592
-                ZIndex: =7
-
             Label14_1 As label:
                 Height: =32
                 Text: ="Details"
@@ -198,14 +180,6 @@
                 X: =742
                 Y: =251
                 ZIndex: =23
-
-            Rectangle2 As rectangle:
-                Fill: =RGBA(153, 160, 196, 1)
-                Height: =3
-                Width: =371
-                X: =731
-                Y: =452
-                ZIndex: =24
 
             Label14 As label:
                 Text: =Filter('Leave Balance_1','Leave Type'.Value=Dropdown1.SelectedText.Value)

@@ -30,14 +30,6 @@
                 X: =0.00
                 ZIndex: =1
 
-            Circle1 As circle:
-                Fill: =RGBA(215, 223, 240, 0.5)
-                Height: =538
-                Width: =513
-                X: =655
-                Y: =-200
-                ZIndex: =2
-
             Button3_2 As button:
                 BorderColor: =RGBA(237, 237, 237, 1)
                 BorderThickness: =1
@@ -52,82 +44,8 @@
                 Text: =""
                 Width: =1091
                 X: =38
-                Y: =90
+                Y: =89
                 ZIndex: =4
-
-            "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-                BorderColor: =RGBA(237, 237, 237, 1)
-                Height: =560
-                Items: =Filter('Leave Requests','Created By'.Email=User().Email)
-                Layout: =Layout.Vertical
-                OnSelect: =Set(temp,true)
-                TemplateSize: =240
-                Transition: =Transition.Push
-                Width: =1091
-                WrapCount: =4
-                X: =38
-                Y: =172
-                ZIndex: =5
-
-                Title6_1 As label:
-                    Align: =Align.Center
-                    Height: =35
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =18
-                    Text: =ThisItem.'Leave Type'.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.TemplateWidth
-                    X: =
-                    Y: =88
-                    ZIndex: =1
-
-                Subtitle6_1 As label:
-                    Align: =Align.Center
-                    Color: =If(ThisItem.Status.Value="Approved",Color.DarkGreen,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(235, 174, 52,1)))
-                    Height: =37
-                    OnSelect: =Select(Parent)
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =14
-                    Text: =ThisItem.Status.Value
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.TemplateWidth
-                    X: =Title6_1.X
-                    Y: =176
-                    ZIndex: =2
-
-                Label4 As label:
-                    Align: =Align.Center
-                    Height: =57
-                    OnSelect: =Select(Parent)
-                    Size: =14
-                    Text: =ThisItem.Title
-                    Width: =Parent.TemplateWidth
-                    Y: =31
-                    ZIndex: =3
-
-                Label7 As label:
-                    Align: =Align.Center
-                    Height: =35
-                    OnSelect: =Select(Parent)
-                    Size: =10
-                    Text: =ThisItem.From & " - " &ThisItem.To
-                    Width: =Parent.TemplateWidth
-                    Y: =132
-                    ZIndex: =4
-
-                HtmlText3 As htmlViewer:
-                    Height: =240
-                    HtmlText: |-
-                        ="<div style='margin:10px;width:240px;height:208px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
-                    Width: =266
-                    ZIndex: =5
 
             "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                 Height: =56
@@ -151,6 +69,20 @@
                     Y: =4
                     ZIndex: =3
 
+    "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(237, 237, 237, 1)
+        Height: =552
+        Items: =Filter('Leave Requests','Created By'.Email=User().Email)
+        Layout: =Layout.Vertical
+        OnSelect: =Set(temp,true)
+        TemplateSize: =240
+        Transition: =Transition.Push
+        Width: =1091
+        WrapCount: =4
+        X: =235
+        Y: =181
+        ZIndex: =3
+
     DisplayLeave As group:
         Height: =5
         Width: =5
@@ -161,9 +93,9 @@
         Rectangle3 As rectangle:
             Fill: =RGBA(202, 202, 202, 0.7)
             Height: =768
-            Visible: =temp
+            Visible: =varDisplay
             Width: =1366
-            ZIndex: =3
+            ZIndex: =4
 
         Button5 As button:
             Fill: =RGBA(255, 255, 255, 1)
@@ -177,23 +109,31 @@
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Text: ="Button"
-            Visible: =temp
+            Text: =""
+            Visible: =varDisplay
             Width: =1040
             X: =150
             Y: =93
-            ZIndex: =4
+            ZIndex: =5
+
+        Icon1 As icon.Cancel:
+            Height: =35
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varDisplay,false)
+            Visible: =varDisplay
+            Width: =33
+            X: =1096
+            Y: =124
+            ZIndex: =6
 
         FormViewer1 As formViewer:
             DataSource: ='Leave Requests'
-            Height: =529
             Item: =Gallery9_1.Selected
-            NumberOfColumns: =2
-            Visible: =temp
-            Width: =887
-            X: =253
-            Y: =119
-            ZIndex: =5
+            Visible: =varDisplay
+            Width: =878
+            X: =211
+            Y: =167
+            ZIndex: =7
 
             Title_DataCard1 As typedDataCard.textualViewCard:
                 BorderStyle: =BorderStyle.Solid
@@ -204,10 +144,10 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =true
-                Width: =443
+                Width: =292
                 X: =0
                 Y: =0
-                ZIndex: =6
+                ZIndex: =8
 
                 DataCardKey1 As label:
                     AutoHeight: =true
@@ -241,10 +181,10 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =443
+                Width: =292
                 X: =1
                 Y: =0
-                ZIndex: =6
+                ZIndex: =8
 
                 DataCardKey2 As label:
                     AutoHeight: =true
@@ -279,10 +219,10 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue3.Selected
-                Width: =443
-                X: =0
-                Y: =1
-                ZIndex: =6
+                Width: =292
+                X: =2
+                Y: =0
+                ZIndex: =8
 
                 DataCardKey3 As label:
                     AutoHeight: =true
@@ -343,10 +283,10 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =443
-                X: =1
+                Width: =292
+                X: =0
                 Y: =1
-                ZIndex: =6
+                ZIndex: =8
 
                 DataCardKey4 As label:
                     AutoHeight: =true
@@ -380,10 +320,10 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =443
-                X: =0
-                Y: =2
-                ZIndex: =6
+                Width: =292
+                X: =1
+                Y: =1
+                ZIndex: =8
 
                 DataCardKey5 As label:
                     AutoHeight: =true
@@ -418,10 +358,10 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue6.Selected
-                Width: =443
-                X: =1
-                Y: =2
-                ZIndex: =6
+                Width: =292
+                X: =2
+                Y: =1
+                ZIndex: =8
 
                 DataCardKey6 As label:
                     AutoHeight: =true
@@ -483,10 +423,10 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue7.Selected
-                Width: =443
+                Width: =292
                 X: =0
-                Y: =3
-                ZIndex: =6
+                Y: =2
+                ZIndex: =8
 
                 DataCardKey7 As label:
                     AutoHeight: =true
@@ -549,10 +489,10 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue8.Selected
-                Width: =443
+                Width: =292
                 X: =1
-                Y: =3
-                ZIndex: =6
+                Y: =2
+                ZIndex: =8
 
                 DataCardKey8 As label:
                     AutoHeight: =true
@@ -614,10 +554,10 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =443
-                X: =0
-                Y: =4
-                ZIndex: =6
+                Width: =292
+                X: =2
+                Y: =2
+                ZIndex: =8
 
                 DataCardKey9 As label:
                     AutoHeight: =true
@@ -651,10 +591,10 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
-                Width: =443
-                X: =1
-                Y: =4
-                ZIndex: =6
+                Width: =292
+                X: =0
+                Y: =3
+                ZIndex: =8
 
                 DataCardKey10 As label:
                     AutoHeight: =true
@@ -678,14 +618,4 @@
                     X: =30
                     Y: =DataCardKey10.Y + DataCardKey10.Height + 5
                     ZIndex: =2
-
-        Icon1 As icon.Cancel:
-            Height: =35
-            Icon: =Icon.Cancel
-            OnSelect: =Set(temp,false)
-            Visible: =temp
-            Width: =33
-            X: =1096
-            Y: =124
-            ZIndex: =6
 
