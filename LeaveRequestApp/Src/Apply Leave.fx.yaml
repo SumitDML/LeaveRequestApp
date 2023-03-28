@@ -182,7 +182,11 @@
                 ZIndex: =23
 
             Label14 As label:
-                Text: =Filter('Leave Balance_1','Leave Type'.Value=Dropdown1.SelectedText.Value)
+                Text: |-
+                    =ClearCollect(
+                        data,
+                        Filter('Leave Balance_1','Leave Type'.Value= Label13_2.Text)
+                    )
                 X: =930
                 Y: =463
                 ZIndex: =25
