@@ -102,7 +102,7 @@
 
                 Label4 As label:
                     Align: =Align.Center
-                    Height: =84
+                    Height: =55
                     OnSelect: =Select(Parent)
                     Size: =14
                     Text: =ThisItem.Title
