@@ -56,14 +56,14 @@ Holidays As screen:
         ZIndex: =3
 
         HtmlText5 As htmlViewer:
-            Height: =100
+            Height: =104
             HtmlText: |-
-                ="<div style='width:80px; height:fit-content; outline: 1.5px solid red; border-radius:5px;'>
-                <p style='background-color:red; margin:0; padding: 5px; text-align:center; color:white; font-weight: 600;'>"&ThisItem.Month&"</p>
+                ="<div style='width:80px; height:fit-content; outline: 1.5px solid "&ThisItem.Colour&"; border-radius:5px;'>
+                <p style='background-color:"&ThisItem.Colour&"; margin:0; padding: 5px; text-align:center; color:white; font-weight: 600;'>"&ThisItem.Month&"</p>
                 <p style='background-color:white; margin:0; padding: 15px; text-align:center;'>"&ThisItem.Date&"</p>
                 </div>"
             OnSelect: =Select(Parent)
-            Width: =120
+            Width: =103
             X: =12
             Y: =44
             ZIndex: =6
