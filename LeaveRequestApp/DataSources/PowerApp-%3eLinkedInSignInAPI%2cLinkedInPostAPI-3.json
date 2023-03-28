@@ -1,8 +1,0 @@
-[
-  {
-    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "Name": "PowerApp->LinkedInSignInAPI,LinkedInPostAPI-3",
-    "ServiceKind": "ConnectedWadl",
-    "Type": "ServiceInfo"
-  }
-]
