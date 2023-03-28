@@ -35,7 +35,7 @@ Holidays As screen:
                 Height: =616
                 PaddingLeft: =20
                 Text: =""
-                Width: =1073
+                Width: =1084
                 X: =50
                 Y: =115
                 ZIndex: =2
@@ -46,39 +46,18 @@ Holidays As screen:
         ZIndex: =2
 
     "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =570
         Items: =holidaycal
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =193
-        Width: =1012
+        TemplateSize: =184
+        Transition: =Transition.Pop
+        Width: =1020
         WrapCount: =4
-        X: =290
-        Y: =132
+        X: =261
+        Y: =137
         ZIndex: =3
-
-        Label12 As label:
-            Align: =Align.Center
-            Font: =Font.Verdana
-            Height: =37
-            OnSelect: =Select(Parent)
-            Size: =10
-            Text: =ThisItem.Day
-            Width: =108
-            X: =105
-            Y: =100
-            ZIndex: =2
-
-        Label11 As label:
-            Align: =Align.Center
-            Font: =Font.Verdana
-            Height: =47
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Occasion
-            Width: =125
-            X: =110
-            Y: =53
-            ZIndex: =3
 
         HtmlText5 As htmlViewer:
             Height: =104
@@ -88,8 +67,53 @@ Holidays As screen:
                 <p style='background-color:white; margin:0; padding: 15px; text-align:center;'>"&ThisItem.Date&"</p>
                 </div>"
             OnSelect: =Select(Parent)
-            Width: =93
-            X: =21
-            Y: =49
+            Width: =96
+            X: =20
+            Y: =41
+            ZIndex: =2
+
+        Label11 As label:
+            Align: =Align.Center
+            Font: =Font.Verdana
+            Height: =47
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Occasion
+            Width: =141
+            X: =105
+            Y: =53
+            ZIndex: =3
+
+        Label12 As label:
+            Align: =Align.Center
+            Font: =Font.Verdana
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.Day
+            Width: =108
+            X: =124
+            Y: =100
             ZIndex: =4
+
+        HtmlText4 As htmlViewer:
+            Height: =186
+            HtmlText: |-
+                ="<div style='margin:10px;width:220px;height:150px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
+            OnSelect: =
+            Width: =258
+            ZIndex: =5
+
+    Button4 As button:
+        BorderColor: =RGBA(204, 208, 225, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =73
+        HoverFill: =
+        OnSelect: =Select(Parent)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        Text: =""
+        Width: =63
+        X: =67
+        Y: =634
+        ZIndex: =4
 
