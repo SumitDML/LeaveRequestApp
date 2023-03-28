@@ -53,7 +53,14 @@
           "NameMapSourceSchema": "?"
         },
         "PressedFill",
-        "HoverFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(RGBA(56, 96, 178, 1), -20%)",
+          "InvariantPropertyName": "HoverFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Font",
         "FontWeight",
         "Align",
@@ -1203,7 +1210,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText4",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1333,7 +1340,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText5",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
