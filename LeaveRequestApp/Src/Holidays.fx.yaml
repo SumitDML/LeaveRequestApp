@@ -57,18 +57,6 @@ Holidays As screen:
         Y: =132
         ZIndex: =3
 
-        Button6 As button:
-            DisabledFill: =RGBA(255, 255, 255, 1)
-            DisplayMode: =DisplayMode.Disabled
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =157
-            OnSelect: =Select(Parent)
-            Text: =""
-            Width: =228
-            X: =12
-            Y: =16
-            ZIndex: =1
-
         Label12 As label:
             Align: =Align.Center
             Font: =Font.Verdana
