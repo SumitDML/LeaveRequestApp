@@ -194,6 +194,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Leave Status'.Gallery3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Leave Status'.Gallery3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Leave Status",
+                "type": "'Leave Status'.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Leave Status'.Gallery3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Leave Status'.Gallery3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Leave Status",
+                "type": "'Leave Status'.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Leave Balance'.Gallery2.AccessibleLabel"
                 }
               ],
@@ -254,19 +314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Leave Status'.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.DatePicker1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Leave Status'.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.DatePicker1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Leave Status",
-                "type": "'Leave Status'.Gallery3"
+                "module": "Apply Leave",
+                "type": "'Apply Leave'.Canvas1_1.DataCard1_1.DatePicker1_1"
               }
             }
           ],
@@ -284,19 +344,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Leave Status'.Gallery3.TabIndex"
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.DatePicker1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Leave Status'.Gallery3.TabIndex",
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.DatePicker1_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
-                "module": "Leave Status",
-                "type": "'Leave Status'.Gallery3"
+                "member": "AccessibleLabel",
+                "module": "Apply Leave",
+                "type": "'Apply Leave'.Canvas1_1.DataCard1_1.DatePicker1_2"
               }
             }
           ],
@@ -306,8 +366,68 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.TextInput1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.TextInput1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Apply Leave",
+                "type": "'Apply Leave'.Canvas1_1.DataCard1_1.TextInput1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.Dropdown1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Apply Leave'.Canvas1_1.DataCard1_1.Dropdown1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Apply Leave",
+                "type": "'Apply Leave'.Canvas1_1.DataCard1_1.Dropdown1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
