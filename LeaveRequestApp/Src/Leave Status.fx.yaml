@@ -71,16 +71,16 @@
                     ZIndex: =3
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =492
+        Height: =513
         Items: =Filter('Leave Requests','Created By'.Email=User().Email)
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
         TemplatePadding: =0
-        TemplateSize: =243
+        TemplateSize: =258
         Transition: =Transition.Pop
-        Width: =1071
+        Width: =1086
         WrapCount: =3
-        X: =249
+        X: =239
         Y: =218
         ZIndex: =3
 
@@ -132,11 +132,11 @@
             ZIndex: =4
 
         HtmlText3 As htmlViewer:
-            Height: =247
+            Height: =243
             HtmlText: |-
-                ="<div style='margin:10px;width:320px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+                ="<div style='margin:10px;width:330px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
             OnSelect: =Select(Parent)
-            Width: =357
+            Width: =362
             ZIndex: =5
 
     Label22 As label:

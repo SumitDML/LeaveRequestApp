@@ -48,14 +48,18 @@
                 ZIndex: =2
 
             Label14_1 As label:
+                Font: =Font.'Lato Black'
                 Height: =32
+                Size: =15
                 Text: ="Details"
                 X: =68
                 Y: =220
                 ZIndex: =9
 
             Label14_2 As label:
+                Font: =Font.'Lato Black'
                 Height: =33
+                Size: =15
                 Text: ="Reason"
                 X: =68
                 Y: =118
@@ -63,9 +67,10 @@
 
             Details As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
-                Default: ="Text input"
+                Default: =""
                 Height: =106
                 HoverFill: =RGBA(219, 219, 219, 1)
+                Reset: =true
                 Width: =572
                 X: =68
                 Y: =252
@@ -73,10 +78,12 @@
 
             Reason As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
+                Clear: =true
                 Default: =""
                 Height: =52
                 HoverBorderColor: =RGBA(128, 128, 128, 1)
                 HoverFill: =RGBA(219, 219, 219, 1)
+                Reset: =true
                 Width: =301
                 X: =68
                 Y: =151
@@ -90,6 +97,7 @@
                 HoverFill: =RGBA(219, 219, 219, 1)
                 Items: =Choices([@'Leave Requests'].'Leave Type')
                 PressedFill: =RGBA(128, 128, 128, 1)
+                Reset: =true
                 SelectionFill: =RGBA(128, 128, 128, 1)
                 Width: =222
                 X: =419
@@ -98,36 +106,44 @@
 
             Button7 As button:
                 Fill: =RGBA(51, 51, 51, 1)
-                OnSelect: |
+                OnSelect: |-
                     =Set(var,First(Office365Users.SearchUser({searchTerm:approver.SelectedText.Value})));
-                    
                     
                     Patch('Leave Requests',Defaults('Leave Requests'),
                     {Title:Reason.Text},
+                    {Details:Details.Text},
                     {'Leave Type':LeaveTypes.SelectedText},
                     {From:from.SelectedDate},
                     {To:to.SelectedDate},
-                    {'RequestedBy': {
-                        DisplayName:User().FullName,
-                        Claims:"i:0#.f|membership|" & Lower(User().Email),
+                    {'Total Days':Value(TotalDays.Text)},
+                    {ReuestedBy: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Claims:Lower(User().Email),
                         Department:"",
+                        DisplayName:User().FullName,
                         Email:User().Email,
                         JobTitle:"",
                         Picture:""
                         }},
-                    {'Reporting Manager':{
-                        DisplayName:var.DisplayName,
-                        Claims:"i:0#.f|membership|" & Lower(var.Mail),
+                    {HR: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Claims:Lower(User().Email),
                         Department:"",
-                        Email:var.Mail,
+                        DisplayName:User().FullName,
+                        Email:User().Email,
                         JobTitle:"",
                         Picture:""
                         }},
-                    {'Total Days':TotalDays}
+                    {'Reporting Manager':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Claims:Lower(var.Mail),
+                        Department:"",
+                        DisplayName:var.Department,
+                        Email:var.Mail,
+                        JobTitle:"",
+                        Picture:""
+                        }}
                     )
                 Text: ="Apply Leave"
-                X: =920
-                Y: =676
+                X: =921
+                Y: =666
                 ZIndex: =15
 
             Button8 As button:
@@ -135,8 +151,8 @@
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(0, 0, 0, 0)
                 Text: ="Cancel"
-                X: =711
-                Y: =676
+                X: =740
+                Y: =666
                 ZIndex: =16
 
             Button9 As button:
@@ -228,37 +244,46 @@
                 BorderColor: =RGBA(102, 102, 102, 1)
                 Height: =42
                 IconBackground: =RGBA(102, 102, 102, 102)
+                Reset: =true
                 Width: =272
                 X: =369
                 Y: =410
                 ZIndex: =26
 
             Label14_3 As label:
+                Font: =Font.'Lato Black'
                 Height: =33
+                Size: =15
                 Text: ="Leave Type"
                 X: =418
                 Y: =118
                 ZIndex: =28
 
             Label14_4 As label:
+                Font: =Font.'Lato Black'
                 Height: =33
+                Size: =15
                 Text: ="Start Date"
                 X: =68
                 Y: =377
                 ZIndex: =29
 
             Label14_5 As label:
+                Font: =Font.'Lato Black'
                 Height: =33
+                Size: =15
                 Text: ="End Date"
                 X: =369
                 Y: =377
                 ZIndex: =30
 
             Label14_6 As label:
+                Font: =Font.'Lato Black'
                 Height: =33
+                Size: =15
                 Text: ="Approver"
                 X: =68
-                Y: =470
+                Y: =489
                 ZIndex: =32
 
             approver As dropdown:
@@ -269,16 +294,18 @@
                 HoverFill: =RGBA(128, 128, 128, 1)
                 Items: =managers.Name
                 PressedFill: =RGBA(219, 219, 219, 1)
+                Reset: =true
                 SelectionFill: =RGBA(219, 219, 219, 1)
                 Width: =286
                 X: =68
-                Y: =503
+                Y: =522
                 ZIndex: =33
 
             from As datepicker:
                 BorderColor: =RGBA(102, 102, 102, 1)
                 Height: =42
                 IconBackground: =RGBA(102, 102, 102,1)
+                Reset: =true
                 Width: =272
                 X: =68
                 Y: =410
