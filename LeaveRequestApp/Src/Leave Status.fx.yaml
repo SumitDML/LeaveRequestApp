@@ -142,7 +142,7 @@
     Label22 As label:
         Font: =Font.'Lato Light'
         Size: =15
-        Text: ="Your Leave History"
+        Text: ="Your Leave History..."
         Width: =330
         X: =265
         Y: =178

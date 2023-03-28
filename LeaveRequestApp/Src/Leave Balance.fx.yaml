@@ -64,8 +64,8 @@
                 FontWeight: =FontWeight.Lighter
                 Size: =15
                 Text: ="Available Balance"
-                Width: =180
-                X: =803
+                Width: =165
+                X: =818
                 Y: =618
                 ZIndex: =5
 
