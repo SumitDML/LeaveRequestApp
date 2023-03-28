@@ -43,14 +43,40 @@
                 ZIndex: =2
 
             Label3 As label:
-                Font: =Font.'Lato Black'
-                Height: =110
+                FontWeight: =FontWeight.Lighter
                 Size: =15
                 Text: ="Total Balance"
-                Width: =160
-                X: =720
-                Y: =579
+                Width: =135
+                X: =533
+                Y: =618
                 ZIndex: =3
+
+            Label19 As label:
+                Height: =107
+                Size: =50
+                Text: =Text(Sum('Leave Balance_1','Total Leave'))
+                Width: =91
+                X: =668
+                Y: =571
+                ZIndex: =4
+
+            Label20 As label:
+                FontWeight: =FontWeight.Lighter
+                Size: =15
+                Text: ="Available Balance"
+                Width: =180
+                X: =803
+                Y: =618
+                ZIndex: =5
+
+            Label21 As label:
+                Height: =107
+                Size: =50
+                Text: =Text(Sum('Leave Balance_1',Balance))
+                Width: =109
+                X: =983
+                Y: =571
+                ZIndex: =6
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(219, 219, 219, 1)

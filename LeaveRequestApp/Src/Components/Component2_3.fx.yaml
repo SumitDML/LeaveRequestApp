@@ -1,7 +1,6 @@
 Component2_3 As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: |
-        =70
+    Height: =89
     Width: =Max(App.Width, App.MinScreenWidth)
     X: =0
     Y: =0
@@ -9,7 +8,7 @@ Component2_3 As CanvasComponent:
 
     Image2_1 As image:
         DisplayMode: =DisplayMode.View
-        Height: =65
+        Height: =53
         Image: =User().Image
         ImagePosition: =ImagePosition.Fill
         PaddingRight: =0.00
@@ -18,9 +17,9 @@ Component2_3 As CanvasComponent:
         RadiusBottomRight: =50
         RadiusTopLeft: =50
         RadiusTopRight: =50
-        Width: =69.00
-        X: =18.00
-        Y: =5
+        Width: =58
+        X: =34
+        Y: =17
         ZIndex: =1
 
     Label5_1 As label:
@@ -30,16 +29,18 @@ Component2_3 As CanvasComponent:
         Size: =13.00
         Text: ="Hello, "&User().FullName
         Width: =233.00
-        X: =103.00
+        X: =103
+        Y: =17
         ZIndex: =3
 
     HtmlText2 As htmlViewer:
+        Height: =34
         HtmlText: ="Welcome to <b>Leave Management System</b>"
         PaddingRight: =5.00
         PaddingTop: =5.00
-        Size: =8.50
-        Width: =247.00
+        Size: =9
+        Width: =259
         X: =103.00
-        Y: =30
+        Y: =46
         ZIndex: =4
 
