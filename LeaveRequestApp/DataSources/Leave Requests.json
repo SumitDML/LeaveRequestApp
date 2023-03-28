@@ -42,6 +42,8 @@
       "Modified": "Modified",
       "ReportingManager": "Reporting Manager",
       "ReportingManager#Claims": "Reporting Manager Claims",
+      "ReuestedBy": "ReuestedBy",
+      "ReuestedBy#Claims": "ReuestedBy Claims",
       "Status": "Status",
       "Status#Id": "Status Id",
       "Title": "Title",
