@@ -85,7 +85,7 @@ App As appinfo:
                     Day:"Monday",
                     Date:"02",
                     Month:"OCT",
-                    Colour:"#bd9997"
+                    Colour:"#879487"
                     
                 },
                       {
@@ -101,7 +101,7 @@ App As appinfo:
                     Day:"Sunday",
                     Date:"12",
                     Month:"NOV",
-                    Colour:"#bd9997"
+                    Colour:"#879487"
                     
                 },
                               {
@@ -117,7 +117,7 @@ App As appinfo:
                     Day:"Monday",
                     Date:"27",
                     Month:"NOV",
-                    Colour:"#bd9997"
+                    Colour:"#879487"
                 },
                                       {
                     Occasion: "Christmas Day",
