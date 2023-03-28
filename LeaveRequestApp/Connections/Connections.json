@@ -27,5 +27,22 @@
     "dependencies": {},
     "dependents": [],
     "id": "4d389b56-f094-40a5-bd48-370f78e0ddbc"
+  },
+  "b53750f6-d589-4c19-bebb-035000e3c271": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3200/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "b53750f6-d589-4c19-bebb-035000e3c271"
   }
 }

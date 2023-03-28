@@ -227,16 +227,6 @@
                 Y: =377
                 ZIndex: =30
 
-            Dropdown2 As dropdown:
-                ChevronBackground: =RGBA(102, 102, 102, 1)
-                ChevronHoverBackground: =ColorFade(RGBA(102, 102, 102, 1), -20%)
-                HoverFill: =RGBA(219, 219, 219, 1)
-                SelectionFill: =RGBA(219, 219, 219, 1)
-                Width: =278
-                X: =68
-                Y: =503
-                ZIndex: =31
-
             Label14_6 As label:
                 Height: =33
                 Text: ="Approver"

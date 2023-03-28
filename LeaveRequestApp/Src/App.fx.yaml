@@ -27,6 +27,35 @@ App As appinfo:
                 }
             )
         );
+        ClearCollect(
+            managers,
+            Table(
+                {
+                    Name: "Sourabh Choudhary",
+                    mailaddress:"sourabh.choudhary@digimantra.com"
+                },
+                { 
+                    Name: "Sumit Pradhan",
+                    mailaddress:"sumit.pradhan@digimantra.com"
+                },
+                 {
+                    Name: "Manish Kumar",
+                    mailaddress:"manish.kumar@digimantra.com"
+                },
+                 {
+                    Name: "Ankit Aman",
+                    mailaddress:"ankit.aman@digimantra.com"
+                }, 
+                 {
+                    Name: "Anmoldeep Singh",
+                    mailaddress:"anmoldeep.singh@digimantra.com"
+                },
+                         {
+                    Name: "Naveen Babbar",
+                    mailaddress:"naveen.babbar@digimantra.com"
+                }
+            )
+        );
         
         ClearCollect(
             holidaycal,
