@@ -35,84 +35,96 @@ App As appinfo:
                     Occasion: "Republic Day",
                     Day:"Thursday",
                     Date:"26",
-                    Month:"JAN"
+                    Month:"JAN",
+                    Colour:"#bd9997"
                     
                 },
                       {
                     Occasion: "Holi",
                     Day:"Wednesday",
                     Date:"08",
-                    Month:"MAR"
+                    Month:"MAR",
+                    Colour:"#879487"
                     
                 },
                       {
                     Occasion: "Bakr Eid",
                     Day:"Thursday",
                     Date:"29",
-                    Month:"JUN"
+                    Month:"JUN",
+                    Colour:"bd9997"
                     
                 },
                       {
                     Occasion: "Independence Day",
                     Day:"Tuesday",
                     Date:"15",
-                    Month:"AUG"
+                    Month:"AUG",
+                    Colour:"bd9997"
+                    
                     
                 },
                       {
                     Occasion: "Raksha Bandhan",
                     Day:"Thursday",
                     Date:"31",
-                    Month:"AUG"
+                    Month:"AUG",
+                    Colour:"bd9997"
                     
                 },
                       {
                     Occasion: "Janamashtmi",
                     Day:"Thursday",
                     Date:"07",
-                    Month:"SEP"
+                    Month:"SEP",
+                    Colour:"bd9997"
                     
                 },
                       {
                     Occasion: "Gandhi Jayanti",
                     Day:"Monday",
                     Date:"02",
-                    Month:"OCT"
+                    Month:"OCT",
+                    Colour:"bd9997"
                     
                 },
                       {
                     Occasion: "Diwali",
                     Day:"Saturday",
                     Date:"11",
-                    Month:"NOV"
+                    Month:"NOV",
+                    Colour:"bd9997"
                     
                 },
                               {
                     Occasion: "Diwali",
                     Day:"Sunday",
                     Date:"12",
-                    Month:"NOV"
+                    Month:"NOV",
+                    Colour:"bd9997"
                     
                 },
                               {
                     Occasion: "Diwali",
                     Day:"Monday",
                     Date:"13",
-                    Month:"NOV"
+                    Month:"NOV",
+                    Colour:"bd9997"
                     
                 },
                                       {
                     Occasion: "Gurpurab",
                     Day:"Monday",
                     Date:"27",
-                    Month:"NOV"
-                    
+                    Month:"NOV",
+                    Colour:"bd9997"
                 },
                                       {
                     Occasion: "Christmas Day",
                     Day:"Monday",
                     Date:"25",
-                    Month:"DEC"
+                    Month:"DEC",
+                    Colour:"bd9997"
                     
                 } 
             )

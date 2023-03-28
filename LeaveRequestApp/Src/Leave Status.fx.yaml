@@ -76,6 +76,14 @@
                 Y: =172
                 ZIndex: =5
 
+                HtmlText3 As htmlViewer:
+                    Height: =239
+                    HtmlText: |-
+                        ="<div style='margin:10px;width:240px;height:208px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
+                    OnSelect: =Select(Parent)
+                    Width: =273
+                    ZIndex: =1
+
                 Title6_1 As label:
                     Align: =Align.Center
                     Height: =35
@@ -90,7 +98,7 @@
                     Width: =Parent.TemplateWidth
                     X: =
                     Y: =88
-                    ZIndex: =1
+                    ZIndex: =2
 
                 Subtitle6_1 As label:
                     Align: =Align.Center
@@ -107,7 +115,7 @@
                     Width: =Parent.TemplateWidth
                     X: =Title6_1.X
                     Y: =176
-                    ZIndex: =2
+                    ZIndex: =3
 
                 Label4 As label:
                     Align: =Align.Center
@@ -117,7 +125,7 @@
                     Text: =ThisItem.Title
                     Width: =Parent.TemplateWidth
                     Y: =31
-                    ZIndex: =3
+                    ZIndex: =4
 
                 Label7 As label:
                     Align: =Align.Center
@@ -127,14 +135,6 @@
                     Text: =ThisItem.From & " - " &ThisItem.To
                     Width: =Parent.TemplateWidth
                     Y: =132
-                    ZIndex: =4
-
-                HtmlText3 As htmlViewer:
-                    Height: =239
-                    HtmlText: |-
-                        ="<div style='margin:10px;width:240px;height:208px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
-                    OnSelect: =Select(Parent)
-                    Width: =273
                     ZIndex: =5
 
             "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
