@@ -97,12 +97,16 @@
         "dataSources": {
           "Leave Balance_1": {
             "tableName": "a513462a-2e63-4c2e-a13b-cea33ac178ed"
+          },
+          "Leave Requests": {
+            "tableName": "d8cd2b11-4c71-4296-8e02-6644912aa08a"
           }
         }
       }
     },
     "dataSources": [
-      "Leave Balance_1"
+      "Leave Balance_1",
+      "Leave Requests"
     ],
     "dependencies": {},
     "dependents": [],
