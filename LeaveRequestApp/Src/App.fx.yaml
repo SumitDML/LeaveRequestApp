@@ -27,5 +27,95 @@ App As appinfo:
                 }
             )
         );
+        
+        ClearCollect(
+            holidaycal,
+            Table(
+                {
+                    Occasion: "Republic Day",
+                    Day:"Thursday",
+                    Date:"26",
+                    Month:"JAN"
+                    
+                },
+                      {
+                    Occasion: "Holi",
+                    Day:"Wednesday",
+                    Date:"08",
+                    Month:"MAR"
+                    
+                },
+                      {
+                    Occasion: "Bakr Eid",
+                    Day:"Thursday",
+                    Date:"29",
+                    Month:"JUN"
+                    
+                },
+                      {
+                    Occasion: "Independence Day",
+                    Day:"Tuesday",
+                    Date:"15",
+                    Month:"AUG"
+                    
+                },
+                      {
+                    Occasion: "Raksha Bandhan",
+                    Day:"Thursday",
+                    Date:"31",
+                    Month:"AUG"
+                    
+                },
+                      {
+                    Occasion: "Janamashtmi",
+                    Day:"Thursday",
+                    Date:"07",
+                    Month:"SEP"
+                    
+                },
+                      {
+                    Occasion: "Gandhi Jayanti",
+                    Day:"Monday",
+                    Date:"02",
+                    Month:"OCT"
+                    
+                },
+                      {
+                    Occasion: "Diwali",
+                    Day:"Saturday",
+                    Date:"11",
+                    Month:"NOV"
+                    
+                },
+                              {
+                    Occasion: "Diwali",
+                    Day:"Sunday",
+                    Date:"12",
+                    Month:"NOV"
+                    
+                },
+                              {
+                    Occasion: "Diwali",
+                    Day:"Monday",
+                    Date:"13",
+                    Month:"NOV"
+                    
+                },
+                                      {
+                    Occasion: "Gurpurab",
+                    Day:"Monday",
+                    Date:"27",
+                    Month:"NOV"
+                    
+                },
+                                      {
+                    Occasion: "Christmas Day",
+                    Day:"Monday",
+                    Date:"25",
+                    Month:"DEC"
+                    
+                } 
+            )
+        );
     StartScreen: ='Splash Screen'
 

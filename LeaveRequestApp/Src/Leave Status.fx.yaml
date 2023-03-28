@@ -174,30 +174,6 @@
         Y: =40
         ZIndex: =7
 
-        Rectangle2 As rectangle:
-            Fill: =RGBA(202, 202, 202, 0.8)
-            Height: =768
-            Visible: =varView
-            Width: =1366
-            ZIndex: =3
-
-        Button2 As button:
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =582
-            HoverColor: =
-            HoverFill: =
-            RadiusBottomLeft: =12
-            RadiusBottomRight: =12
-            RadiusTopLeft: =12
-            RadiusTopRight: =12
-            Text: ="Button"
-            Visible: =varView
-            Width: =969
-            X: =198
-            Y: =93
-            ZIndex: =4
-
         FormViewer1 As formViewer:
             DataSource: ='Leave Requests'
             Height: =540
