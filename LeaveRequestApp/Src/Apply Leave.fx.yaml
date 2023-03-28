@@ -43,7 +43,146 @@
                 Size: =15.00
                 Text: =""
                 Width: =1095
-                X: =33
-                Y: =90
+                X: =34
+                Y: =86
                 ZIndex: =2
+
+            "DatePicker1_1 As 'Date picker'":
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =RGBA(241, 244, 249, 0.5)
+                Height: =103
+                PCFTeamsTheme: =TeamsTheme.Default
+                Visible: =true
+                Width: =254
+                X: =170
+                Y: =108
+                ZIndex: =3
+
+            "DatePicker1_2 As 'Date picker'":
+                AllowTextInput: =true
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =RGBA(241, 244, 249, 0.5)
+                FontSize: =14
+                Height: =103
+                PCFTeamsTheme: =TeamsTheme.Default
+                Value: =
+                Visible: =true
+                Width: =254
+                X: =575
+                Y: =109
+                ZIndex: =5
+
+            Label4_1 As label:
+                Height: =20
+                Size: =9
+                Text: ="To Date"
+                Width: =186
+                X: =487
+                Y: =587
+                ZIndex: =6
+
+            TextInput1 As text:
+                Default: ="Text input"
+                Height: =176
+                Width: =495
+                X: =263
+                Y: =346
+                ZIndex: =7
+
+            Dropdown1 As dropdown:
+                Items: =DropDownSample
+                X: =230
+                Y: =280
+                ZIndex: =8
+
+            Button2 As button:
+                Text: ="Button"
+                X: =773
+                Y: =577
+                ZIndex: =9
+
+            Button5 As button:
+                Text: ="Button"
+                X: =898
+                Y: =482
+                ZIndex: =10
+
+            Rectangle2 As rectangle:
+                BorderThickness: =0.5
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =103
+                Width: =254
+                X: =170
+                Y: =108
+                ZIndex: =11
+
+            Rectangle2_1 As rectangle:
+                BorderThickness: =0.5
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =103
+                Width: =254
+                X: =575
+                Y: =108
+                ZIndex: =12
+
+            Group2 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =16
+
+                Rectangle3 As rectangle:
+                    BorderColor: =RGBA(128, 128, 128, 1)
+                    BorderThickness: =0.5
+                    Fill: =RGBA(247, 249, 250, 1)
+                    Height: =103
+                    Width: =151
+                    X: =424
+                    Y: =108
+                    ZIndex: =13
+
+                Label1_1 As Label:
+                    Alignment: =Align.Center
+                    DisplayMode: =DisplayMode.Disabled
+                    FontSize: =10
+                    Height: =41
+                    PCFTeamsTheme: =TeamsTheme.Default
+                    Text: |-
+                        =If(
+                            And(
+                                IsBlank(DatePicker1_1),
+                                IsBlank(DatePicker1_2)
+                            ),
+                            0&" Days",
+                            DateDiff(
+                                DatePicker1_1.Value,
+                                DatePicker1_2.Value
+                            )
+                         + 1&" Days")
+                    Width: =151
+                    X: =424
+                    Y: =140
+                    ZIndex: =14
+
+    Label11 As label:
+        Align: =Align.Center
+        DisplayMode: =DisplayMode.Disabled
+        Height: =44
+        Text: |-
+            =If(
+                And(
+                    IsBlank(DatePicker1_1),
+                    IsBlank(DatePicker1_2)
+                ),
+                0,
+                DateDiff(
+                    DatePicker1_1.Value,
+                    DatePicker1_2.Value
+                )
+             + 1)
+        Width: =88
+        X: =1165
+        Y: =190
+        ZIndex: =5
 

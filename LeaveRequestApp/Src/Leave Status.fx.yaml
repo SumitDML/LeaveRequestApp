@@ -133,16 +133,3 @@
                 Y: =108
                 ZIndex: =4
 
-                Button4 As button:
-                    BorderColor: =RGBA(202, 202, 202, 1)
-                    Color: =RGBA(128, 128, 128, 1)
-                    Fill: =RGBA(237, 237, 237, 1)
-                    Font: =Font.'Lato Black'
-                    Height: =38
-                    OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =ThisItem.Filter
-                    Width: =138
-                    Y: =8
-                    ZIndex: =3
-
