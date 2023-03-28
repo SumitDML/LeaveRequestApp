@@ -58,7 +58,7 @@
         "Name": "Rectangle1",
         "Parent": "Left Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 47,
+        "PublishOrderIndex": 92,
         "Rules": [
           {
             "Category": "Design",
@@ -221,7 +221,7 @@
         "Name": "Image1",
         "Parent": "Left Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 48,
+        "PublishOrderIndex": 93,
         "Rules": [
           {
             "Category": "Data",
@@ -443,7 +443,7 @@
             "Name": "galleryTemplate1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 50,
+            "PublishOrderIndex": 95,
             "Rules": [
               {
                 "Category": "Design",
@@ -573,7 +573,7 @@
             "Name": "Button1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 51,
+            "PublishOrderIndex": 96,
             "Rules": [
               {
                 "Category": "Data",
@@ -910,7 +910,7 @@
             "Name": "Image3",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 52,
+            "PublishOrderIndex": 97,
             "Rules": [
               {
                 "Category": "Data",
@@ -1188,7 +1188,7 @@
             "Name": "Label1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 53,
+            "PublishOrderIndex": 98,
             "Rules": [
               {
                 "Category": "Data",
@@ -1475,7 +1475,7 @@
             "Name": "Group1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 54,
+            "PublishOrderIndex": 99,
             "Rules": [
               {
                 "Category": "Design",
@@ -1587,7 +1587,7 @@
         "Name": "Gallery1",
         "Parent": "Left Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 49,
+        "PublishOrderIndex": 94,
         "Rules": [
           {
             "Category": "Data",

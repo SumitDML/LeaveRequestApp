@@ -3,7 +3,7 @@
 
     "'Left Navigation_2' As 'Left Navigation'":
         Width: ='Left Navigation_4'.MenuWidth
-        X: =0.00
+        X: =1
 
     Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -17,7 +17,7 @@
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(241, 244, 249, 1)
             Height: =Parent.Height
             Width: =Parent.Width
             X: =0
@@ -28,6 +28,22 @@
                 Width: =Parent.Width
                 X: =0.00
                 ZIndex: =1
+
+            Circle1 As circle:
+                Fill: =RGBA(215, 223, 240, 0.5)
+                Height: =538
+                Width: =513
+                X: =655
+                Y: =-200
+                ZIndex: =2
+
+            Circle1_1 As circle:
+                Fill: =RGBA(215, 223, 240, 0.5)
+                Height: =508
+                Width: =597
+                X: =20
+                Y: =488
+                ZIndex: =3
 
             Button3_2 As button:
                 BorderColor: =RGBA(237, 237, 237, 1)
@@ -44,20 +60,21 @@
                 Width: =1091
                 X: =38
                 Y: =90
-                ZIndex: =2
+                ZIndex: =4
 
             "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                 BorderColor: =RGBA(237, 237, 237, 1)
                 Height: =560
                 Items: =Filter('Leave Requests','Created By'.Email=User().Email)
                 Layout: =Layout.Vertical
+                OnSelect: =Set(varView,true)
                 TemplateSize: =240
                 Transition: =Transition.Push
                 Width: =1073
                 WrapCount: =4
                 X: =38
                 Y: =172
-                ZIndex: =3
+                ZIndex: =5
 
                 Title6_1 As label:
                     Align: =Align.Center
@@ -73,7 +90,7 @@
                     Width: =Parent.TemplateWidth
                     X: =
                     Y: =88
-                    ZIndex: =2
+                    ZIndex: =1
 
                 Subtitle6_1 As label:
                     Align: =Align.Center
@@ -90,15 +107,7 @@
                     Width: =Parent.TemplateWidth
                     X: =Title6_1.X
                     Y: =176
-                    ZIndex: =3
-
-                HtmlText3 As htmlViewer:
-                    Height: =239
-                    HtmlText: |-
-                        ="<div style='margin:10px;width:240px;height:208px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
-                    OnSelect: =Select(Parent)
-                    Width: =273
-                    ZIndex: =4
+                    ZIndex: =2
 
                 Label4 As label:
                     Align: =Align.Center
@@ -108,7 +117,7 @@
                     Text: =ThisItem.Title
                     Width: =Parent.TemplateWidth
                     Y: =31
-                    ZIndex: =5
+                    ZIndex: =3
 
                 Label7 As label:
                     Align: =Align.Center
@@ -118,7 +127,15 @@
                     Text: =ThisItem.From & " - " &ThisItem.To
                     Width: =Parent.TemplateWidth
                     Y: =132
-                    ZIndex: =6
+                    ZIndex: =4
+
+                HtmlText3 As htmlViewer:
+                    Height: =239
+                    HtmlText: |-
+                        ="<div style='margin:10px;width:240px;height:208px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
+                    OnSelect: =Select(Parent)
+                    Width: =273
+                    ZIndex: =5
 
             "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                 Height: =64
@@ -132,10 +149,11 @@
                 WrapCount: =4
                 X: =63
                 Y: =108
-                ZIndex: =4
+                ZIndex: =6
 
                 Button4 As button:
                     BorderColor: =RGBA(202, 202, 202, 1)
+                    BorderThickness: =0.5
                     Color: =RGBA(128, 128, 128, 1)
                     Fill: =RGBA(237, 237, 237, 1)
                     Font: =Font.'Lato Black'
@@ -148,4 +166,546 @@
                     X: =2
                     Y: =8
                     ZIndex: =3
+
+    DisplayLeave As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Rectangle2 As rectangle:
+            Fill: =RGBA(202, 202, 202, 0.8)
+            Height: =768
+            Visible: =varView
+            Width: =1366
+            ZIndex: =3
+
+        Button2 As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =582
+            HoverColor: =
+            HoverFill: =
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Text: ="Button"
+            Visible: =varView
+            Width: =969
+            X: =198
+            Y: =93
+            ZIndex: =4
+
+        FormViewer1 As formViewer:
+            DataSource: ='Leave Requests'
+            Height: =540
+            Item: =Gallery9_1.Selected
+            NumberOfColumns: =2
+            Visible: =varView
+            Width: =887
+            X: =228
+            Y: =113
+            ZIndex: =5
+
+            Title_DataCard1 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Title"
+                Default: =ThisItem.Title
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"Title")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =true
+                Width: =443
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey1 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    PaddingBottom: =0
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue1 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =27
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                    ZIndex: =2
+
+            Details_DataCard1 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Details"
+                Default: =ThisItem.Details
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"Details")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =443
+                X: =1
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey2 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    PaddingBottom: =0
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue2 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =27
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                    ZIndex: =2
+
+            "'Leave Type_DataCard1' As typedDataCard.comboBoxViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="LeaveType"
+                Default: =ThisItem.'Leave Type'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"LeaveType")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue3.Selected
+                Width: =443
+                X: =0
+                Y: =1
+                ZIndex: =6
+
+                DataCardKey3 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue3 As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["Value"]
+                    DisplayMode: =Parent.DisplayMode
+                    Items: =Choices([@'Leave Requests'].LeaveType)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =Choices('Leave Requests'.LeaveType,DataCardValue3.SearchText)
+                    SelectMultiple: =false
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage1 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue3.Y + DataCardValue3.Height
+                    ZIndex: =3
+
+                StarVisible1 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey3.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey3.Y
+                    ZIndex: =4
+
+            From_DataCard1 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="From"
+                Default: =ThisItem.From
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"From")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =443
+                X: =1
+                Y: =1
+                ZIndex: =6
+
+                DataCardKey4 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    PaddingBottom: =0
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue4 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =27
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                    ZIndex: =2
+
+            To_DataCard1 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="To"
+                Default: =ThisItem.To
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"To")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =443
+                X: =0
+                Y: =2
+                ZIndex: =6
+
+                DataCardKey5 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    PaddingBottom: =0
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue5 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =27
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                    ZIndex: =2
+
+            Status_DataCard1 As typedDataCard.comboBoxViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Status"
+                Default: =ThisItem.Status
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"Status")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue6.Selected
+                Width: =443
+                X: =1
+                Y: =2
+                ZIndex: =6
+
+                DataCardKey6 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue6 As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["Value"]
+                    DisplayMode: =Parent.DisplayMode
+                    Items: =Choices([@'Leave Requests'].Status)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =Choices('Leave Requests'.Status,DataCardValue6.SearchText)
+                    SelectMultiple: =false
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage2 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue6.Y + DataCardValue6.Height
+                    ZIndex: =3
+
+                StarVisible2 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey6.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey6.Y
+                    ZIndex: =4
+
+            "'Reporting Manager_DataCard1' As typedDataCard.comboBoxViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="ReportingManager"
+                Default: =ThisItem.'Reporting Manager'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"ReportingManager")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue7.Selected
+                Width: =443
+                X: =0
+                Y: =3
+                ZIndex: =6
+
+                DataCardKey7 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue7 As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["DisplayName","Email","Picture"]
+                    DisplayMode: =Parent.DisplayMode
+                    Items: =Choices([@'Leave Requests'].ReportingManager)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["DisplayName"]
+                    SearchItems: =Choices('Leave Requests'.ReportingManager,DataCardValue7.SearchText)
+                    SelectMultiple: =false
+                    Template: =ListItemTemplate.Person
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage3 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue7.Y + DataCardValue7.Height
+                    ZIndex: =3
+
+                StarVisible3 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey7.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey7.Y
+                    ZIndex: =4
+
+            HR_DataCard1 As typedDataCard.comboBoxViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="HR"
+                Default: =ThisItem.HR
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"HR")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue8.Selected
+                Width: =443
+                X: =1
+                Y: =3
+                ZIndex: =6
+
+                DataCardKey8 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue8 As combobox:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    DefaultSelectedItems: =Parent.Default
+                    DisplayFields: =["DisplayName","Email","Picture"]
+                    DisplayMode: =Parent.DisplayMode
+                    Items: =Choices([@'Leave Requests'].HR)
+                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                    SearchFields: =["DisplayName"]
+                    SearchItems: =Choices('Leave Requests'.HR,DataCardValue8.SearchText)
+                    SelectMultiple: =false
+                    Template: =ListItemTemplate.Person
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                    ZIndex: =2
+
+                ErrorMessage4 As label:
+                    AutoHeight: =true
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue8.Y + DataCardValue8.Height
+                    ZIndex: =3
+
+                StarVisible4 As label:
+                    Align: =Align.Center
+                    Height: =DataCardKey8.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey8.Y
+                    ZIndex: =4
+
+            Comments_DataCard1 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Comments"
+                Default: =ThisItem.Comments
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"Comments")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =443
+                X: =0
+                Y: =4
+                ZIndex: =6
+
+                DataCardKey9 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    PaddingBottom: =0
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue9 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =27
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                    ZIndex: =2
+
+            "'Total Days_DataCard1' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="TotalDays"
+                Default: =ThisItem.'Total Days'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"TotalDays")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =443
+                X: =1
+                Y: =4
+                ZIndex: =6
+
+                DataCardKey10 As label:
+                    AutoHeight: =true
+                    Height: =34
+                    PaddingBottom: =0
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue10 As label:
+                    AutoHeight: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =27
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Default
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                    ZIndex: =2
+
+        Icon1 As icon.Cancel:
+            Height: =35
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varView,false)
+            Visible: =varView
+            Width: =33
+            X: =1096
+            Y: =124
+            ZIndex: =7
 
