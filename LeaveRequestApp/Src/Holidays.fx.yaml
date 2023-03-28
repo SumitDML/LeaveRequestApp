@@ -13,7 +13,7 @@ Holidays As screen:
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(241, 244, 249, 1)
             Height: =769
             Width: =Parent.Width
             X: =Parent.X
@@ -32,13 +32,17 @@ Holidays As screen:
                 DisabledBorderColor: =
                 DisabledFill: =RGBA(255, 255, 255, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =616
+                Height: =634
                 HoverFill: =
                 PaddingLeft: =20
+                RadiusBottomLeft: =14
+                RadiusBottomRight: =14
+                RadiusTopLeft: =14
+                RadiusTopRight: =14
                 Text: =""
-                Width: =1084
-                X: =50
-                Y: =115
+                Width: =1104
+                X: =30
+                Y: =96
                 ZIndex: =2
 
     "'Left Navigation_4' As 'Left Navigation'":
@@ -47,21 +51,21 @@ Holidays As screen:
         ZIndex: =2
 
     "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =570
+        Height: =615
         Items: =holidaycal
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =184
         Transition: =Transition.Pop
-        Width: =1020
+        Width: =1076
         WrapCount: =4
-        X: =261
-        Y: =137
+        X: =243
+        Y: =108
         ZIndex: =3
 
         HtmlText5 As htmlViewer:
-            Height: =104
+            Height: =102
             HtmlText: |-
                 ="<div style='width:80px; height:fit-content; outline: 1.5px solid "&ThisItem.Colour&"; border-radius:5px;'>
                 <p style='background-color:"&ThisItem.Colour&"; margin:0; padding: 5px; text-align:center; color:white; font-weight: 600;'>"&ThisItem.Month&"</p>
@@ -69,52 +73,40 @@ Holidays As screen:
                 </div>"
             OnSelect: =Select(Parent)
             Width: =96
-            X: =20
-            Y: =41
+            X: =31
+            Y: =42
             ZIndex: =2
 
         Label11 As label:
             Align: =Align.Center
             Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
             Height: =47
             OnSelect: =Select(Parent)
+            Size: =11
             Text: =ThisItem.Occasion
             Width: =141
-            X: =105
-            Y: =53
+            X: =116
+            Y: =42
             ZIndex: =3
 
         Label12 As label:
             Align: =Align.Center
             Font: =Font.Verdana
-            Height: =25
+            Height: =32
             OnSelect: =Select(Parent)
-            Size: =10
+            Size: =14
             Text: =ThisItem.Day
-            Width: =108
-            X: =124
-            Y: =100
+            Width: =130
+            X: =116
+            Y: =89
             ZIndex: =4
 
         HtmlText4 As htmlViewer:
             Height: =186
             HtmlText: |-
-                ="<div style='margin:10px;width:220px;height:150px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
+                ="<div style='margin:10px;width:240px;height:140px;background-color:#;box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;:;  #ccc; border-radius:15px'></div>"
             OnSelect: =
-            Width: =258
+            Width: =269
             ZIndex: =5
-
-    Button4 As button:
-        BorderColor: =RGBA(204, 208, 225, 1)
-        DisabledFill: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =73
-        HoverFill: =
-        OnSelect: =Select(Parent)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        Text: =""
-        Width: =63
-        X: =67
-        Y: =634
-        ZIndex: =4
 
