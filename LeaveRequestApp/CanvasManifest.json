@@ -99,14 +99,14 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "445efb9a-75f7-4846-b2d8-c362e4bacdd7",
-    "Id": "9cc4a68b-ee40-4050-97c9-97781f48eaf4",
+    "Id": "436f9922-b930-4087-8dd6-98baeb457b51",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Leave Request App",
+    "Name": "LeaveApp2",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
-    "AppName": "Leave Request App",
+    "AppName": "LeaveApp2",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
