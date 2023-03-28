@@ -46,23 +46,90 @@
                 Y: =90
                 ZIndex: =2
 
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =64
-        Items: |-
-            =Table({Filter:"All"},{Filter:"Pending"},{Filter:"Approved"},{Filter:"Rejected"})
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =60
-        Transition: =Transition.Pop
-        Width: =694
-        WrapCount: =4
-        X: =280
-        Y: =120
-        ZIndex: =3
+            "Gallery9_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =0.5
+                Height: =537
+                Items: =Filter('Leave Requests','Created By'.Email=User().Email)
+                Layout: =Layout.Vertical
+                TemplatePadding: =10
+                TemplateSize: =240
+                Transition: =Transition.Push
+                Width: =792
+                WrapCount: =2
+                X: =63
+                Y: =172
+                ZIndex: =3
 
-        Button4 As button:
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Filter
-            Y: =8
-            ZIndex: =3
+                Title6_1 As label:
+                    Align: =Align.Center
+                    Height: =35
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.'Leave Type'.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth
+                    X: =
+                    Y: =88
+                    ZIndex: =2
+
+                Subtitle6_1 As label:
+                    Align: =Align.Center
+                    Color: =If(ThisItem.Status.Value="Approved",Color.DarkGreen,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(235, 174, 52,1)))
+                    Height: =37
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =15
+                    Text: =ThisItem.Status.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth
+                    X: =Title6_1.X
+                    Y: =176
+                    ZIndex: =3
+
+                HtmlText3 As htmlViewer:
+                    Height: =239
+                    HtmlText: |-
+                        ="<div style='margin:10px;width:345px;height:208px;background-color:#;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 9px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  #ccc; border-radius:15px'></div>"
+                    OnSelect: =Select(Parent)
+                    Width: =381
+                    ZIndex: =4
+
+                Label4 As label:
+                    Align: =Align.Center
+                    Height: =84
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Title
+                    Width: =Parent.TemplateWidth
+                    Y: =18
+                    ZIndex: =5
+
+                Label7 As label:
+                    Align: =Align.Center
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.From & " - " &ThisItem.To
+                    Width: =211
+                    X: =85
+                    Y: =129
+                    ZIndex: =6
+
+            "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                Height: =64
+                Items: |-
+                    =Table({Filter:"All"},{Filter:"Pending"},{Filter:"Approved"},{Filter:"Rejected"})
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =60
+                Transition: =Transition.Pop
+                Width: =596
+                WrapCount: =4
+                X: =63
+                Y: =108
+                ZIndex: =4
 

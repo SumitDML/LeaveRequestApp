@@ -58,15 +58,6 @@
                 Y: =108
                 ZIndex: =3
 
-            Label4 As label:
-                Height: =20
-                Size: =9
-                Text: ="From Date"
-                Width: =229
-                X: =34
-                Y: =557
-                ZIndex: =4
-
             "DatePicker1_2 As 'Date picker'":
                 AllowTextInput: =true
                 DisplayMode: =DisplayMode.Edit
