@@ -16,7 +16,7 @@
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
-            DisplayMode: =DisplayMode.Edit
+            DisplayMode: =DisplayMode.View
             Fill: =RGBA(241, 244, 249, 1)
             Height: =733
             Visible: =true
@@ -37,13 +37,6 @@
                 X: =655
                 Y: =-200
                 ZIndex: =2
-
-            Circle1_1 As circle:
-                Fill: =RGBA(215, 223, 240, 0.5)
-                Height: =506
-                Width: =566
-                Y: =500
-                ZIndex: =3
 
             Button3_2 As button:
                 BorderColor: =RGBA(237, 237, 237, 1)
@@ -67,10 +60,10 @@
                 Height: =560
                 Items: =Filter('Leave Requests','Created By'.Email=User().Email)
                 Layout: =Layout.Vertical
-                OnSelect: =Set(varView,true)
+                OnSelect: =Set(varDisplay,true)
                 TemplateSize: =240
                 Transition: =Transition.Push
-                Width: =1073
+                Width: =1081
                 WrapCount: =4
                 X: =38
                 Y: =172
@@ -172,17 +165,40 @@
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =7
+        ZIndex: =8
+
+        Rectangle3 As rectangle:
+            Fill: =RGBA(202, 202, 202, 0.7)
+            Height: =768
+            Width: =1366
+            ZIndex: =3
+
+        Button5 As button:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =581
+            HoverColor: =
+            HoverFill: =
+            PressedBorderColor: =
+            PressedColor: =
+            PressedFill: =
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Button"
+            Width: =1040
+            X: =163
+            Y: =92
+            ZIndex: =4
 
         FormViewer1 As formViewer:
             DataSource: ='Leave Requests'
-            Height: =540
+            Height: =529
             Item: =Gallery9_1.Selected
             NumberOfColumns: =2
-            Visible: =varView
             Width: =887
-            X: =228
-            Y: =113
+            X: =253
+            Y: =119
             ZIndex: =5
 
             Title_DataCard1 As typedDataCard.textualViewCard:
@@ -678,10 +694,9 @@
         Icon1 As icon.Cancel:
             Height: =35
             Icon: =Icon.Cancel
-            OnSelect: =Set(varView,false)
-            Visible: =varView
+            OnSelect: =Set(varDisplay,false)
             Width: =33
             X: =1096
             Y: =124
-            ZIndex: =7
+            ZIndex: =6
 
