@@ -40,7 +40,7 @@ Holidays As screen:
                 ZIndex: =2
 
     "'Left Navigation_4' As 'Left Navigation'":
-        Width: ='Left Navigation_4'.MenuWidth
+        Width: =198
         X: =0.00
         ZIndex: =2
 
