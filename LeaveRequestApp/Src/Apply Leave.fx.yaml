@@ -61,7 +61,7 @@
                 Y: =118
                 ZIndex: =10
 
-            TextInput1 As text:
+            Details As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
                 Default: ="Text input"
                 Height: =106
@@ -71,7 +71,7 @@
                 Y: =252
                 ZIndex: =12
 
-            TextInput1_1 As text:
+            Reason As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
                 Default: =""
                 Height: =52
@@ -82,7 +82,7 @@
                 Y: =151
                 ZIndex: =13
 
-            Dropdown1 As dropdown:
+            LeaveTypes As dropdown:
                 BorderColor: =RGBA(102, 102, 102, 1)
                 ChevronBackground: =RGBA(102, 102, 102, 1)
                 ChevronHoverBackground: =
@@ -92,12 +92,21 @@
                 PressedFill: =RGBA(128, 128, 128, 1)
                 SelectionFill: =RGBA(128, 128, 128, 1)
                 Width: =222
-                X: =418
+                X: =419
                 Y: =151
                 ZIndex: =14
 
             Button7 As button:
                 Fill: =RGBA(51, 51, 51, 1)
+                OnSelect: |-
+                    =Patch('Leave Requests',Defaults('Leave Requests'),
+                    {Title:Reason},
+                    {'Leave Type':LeaveTypes.SelectedText.Value},
+                    {From:from.SelectedDate},
+                    {To:to.SelectedDate},
+                    {'Reporting Manager':approver.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BName'},
+                    {'Created By':User()}
+                    )
                 Text: ="Apply Leave"
                 X: =920
                 Y: =676
@@ -114,9 +123,9 @@
 
             Button9 As button:
                 BorderThickness: =0.05
-                DisabledFill: =RGBA(227, 234, 243, 1)
+                DisabledFill: =RGBA(237, 237, 237, 1)
                 DisplayMode: =DisplayMode.Disabled
-                Fill: =RGBA(227, 234, 243, 1)
+                Fill: =RGBA(219, 219, 219, 1)
                 Height: =410
                 RadiusBottomLeft: =15
                 RadiusBottomRight: =15
@@ -147,7 +156,7 @@
                 ZIndex: =19
 
             Label13_2 As label:
-                Text: =Dropdown1.SelectedText.Value
+                Text: =LeaveTypes.SelectedText.Value
                 Width: =136
                 X: =889
                 Y: =203
@@ -165,13 +174,13 @@
                 Text: |-
                     =If(
                         And(
-                            IsBlank(DatePicker1),
-                            IsBlank(DatePicker1_1)
+                            IsBlank(from),
+                            IsBlank(to)
                         ),
                         0,
                         DateDiff(
-                            DatePicker1.SelectedDate,
-                            DatePicker1_1.SelectedDate
+                            from.SelectedDate,
+                            to.SelectedDate
                         )
                      + 1)
                 Width: =136
@@ -197,7 +206,7 @@
                 Y: =463
                 ZIndex: =25
 
-            DatePicker1_1 As datepicker:
+            to As datepicker:
                 BorderColor: =RGBA(102, 102, 102, 1)
                 Height: =42
                 IconBackground: =RGBA(102, 102, 102, 102)
@@ -234,12 +243,26 @@
                 Y: =470
                 ZIndex: =32
 
-    DatePicker1 As datepicker:
-        BorderColor: =RGBA(102, 102, 102, 1)
-        Height: =42
-        IconBackground: =RGBA(102, 102, 102,1)
-        Width: =272
-        X: =272
-        Y: =412
-        ZIndex: =3
+            approver As dropdown:
+                BorderColor: =RGBA(102, 102, 102, 1)
+                ChevronBackground: =RGBA(102, 102, 102, 1)
+                ChevronHoverBackground: =
+                Height: =42
+                HoverFill: =RGBA(128, 128, 128, 1)
+                Items: =managers.Name
+                PressedFill: =RGBA(219, 219, 219, 1)
+                SelectionFill: =RGBA(219, 219, 219, 1)
+                Width: =286
+                X: =68
+                Y: =503
+                ZIndex: =33
+
+            from As datepicker:
+                BorderColor: =RGBA(102, 102, 102, 1)
+                Height: =42
+                IconBackground: =RGBA(102, 102, 102,1)
+                Width: =272
+                X: =68
+                Y: =410
+                ZIndex: =34
 
