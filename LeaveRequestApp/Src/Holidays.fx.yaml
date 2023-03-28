@@ -95,7 +95,7 @@ Holidays As screen:
             Font: =Font.Verdana
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =14
+            Size: =10
             Text: =ThisItem.Day
             Width: =130
             X: =116

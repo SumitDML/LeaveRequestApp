@@ -78,8 +78,8 @@
 
             TextInput1_1 As text:
                 Default: ="Text input"
-                Height: =43
-                Width: =401
+                Height: =53
+                Width: =174
                 X: =68
                 Y: =151
                 ZIndex: =13
@@ -190,4 +190,14 @@
                 X: =930
                 Y: =463
                 ZIndex: =25
+
+            DatePicker1_1 As datepicker:
+                X: =68
+                Y: =582
+                ZIndex: =26
+
+    DatePicker1 As datepicker:
+        X: =267
+        Y: =486
+        ZIndex: =3
 

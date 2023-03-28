@@ -314,10 +314,10 @@
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Items: =Choices([@'Leave Requests'].LeaveType)
+                    Items: =Choices([@'Leave Requests'].'Leave Type')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
-                    SearchItems: =Choices('Leave Requests'.LeaveType,DataCardValue3.SearchText)
+                    SearchItems: =Choices('Leave Requests'.'Leave Type',DataCardValue3.SearchText)
                     SelectMultiple: =false
                     Width: =260
                     X: =30
@@ -531,10 +531,10 @@
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["DisplayName","Email","Picture"]
                     DisplayMode: =Parent.DisplayMode
-                    Items: =Choices([@'Leave Requests'].ReportingManager)
+                    Items: =Choices([@'Leave Requests'].'Reporting Manager')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["DisplayName"]
-                    SearchItems: =Choices('Leave Requests'.ReportingManager,DataCardValue7.SearchText)
+                    SearchItems: =Choices('Leave Requests'.'Reporting Manager',DataCardValue7.SearchText)
                     SelectMultiple: =false
                     Template: =ListItemTemplate.Person
                     Width: =205
