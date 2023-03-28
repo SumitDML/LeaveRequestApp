@@ -29,3 +29,40 @@
                 X: =0.00
                 ZIndex: =1
 
+            Button3_2 As button:
+                BorderColor: =RGBA(237, 237, 237, 1)
+                BorderThickness: =1
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =642
+                HoverColor: =
+                HoverFill: =
+                PaddingRight: =5.00
+                PaddingTop: =5.00
+                Size: =15.00
+                Text: =""
+                Width: =1091
+                X: =38
+                Y: =90
+                ZIndex: =2
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =64
+        Items: |-
+            =Table({Filter:"All"},{Filter:"Pending"},{Filter:"Approved"},{Filter:"Rejected"})
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =60
+        Transition: =Transition.Pop
+        Width: =694
+        WrapCount: =4
+        X: =280
+        Y: =120
+        ZIndex: =3
+
+        Button4 As button:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Filter
+            Y: =8
+            ZIndex: =3
+
