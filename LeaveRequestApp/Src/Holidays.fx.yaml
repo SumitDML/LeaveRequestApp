@@ -45,6 +45,16 @@ Holidays As screen:
                 Y: =96
                 ZIndex: =2
 
+            Label16 As label:
+                FontWeight: =FontWeight.Lighter
+                Height: =36
+                Size: =12
+                Text: ="List Of Company Holidays..."
+                Width: =271
+                X: =60
+                Y: =112
+                ZIndex: =3
+
     "'Left Navigation_4' As 'Left Navigation'":
         Width: =198
         X: =0.00
