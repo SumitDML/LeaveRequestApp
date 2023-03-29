@@ -139,15 +139,6 @@
         Y: =102
         ZIndex: =5
 
-        Button6 As button:
-            Color: =RGBA(77, 77, 77, 1)
-            Fill: =RGBA(242, 242, 241,1)
-            OnSelect: =If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),ClearCollect(MyLeaves,Filter('Leave Requests',Status.Value=ThisItem.Value,RequestedBy.Email=User().Email)))
-            Text: =ThisItem.Filter
-            X: =8
-            Y: =12
-            ZIndex: =3
-
     DisplayLeave As group:
         Height: =5
         Width: =5
