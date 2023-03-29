@@ -127,7 +127,7 @@
             "'Apply Leave Button' As button":
                 DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
                 Fill: =RGBA(51, 51, 51, 1)
-                OnSelect: |-
+                OnSelect: |
                     =If(from.SelectedDate<Today(),[Set(errordisplay,true),Set(err,"Please enter a valid start date")],
                     from.SelectedDate>to.SelectedDate,[Set(errordisplay,true),Set(err,"Please enter valid end date")],
                     Int(TotalDays.Text)>Int(RemainingBalance.Text),[Set(errordisplay,true),Set(err,"You don't have enough leave balance.")],
@@ -180,8 +180,6 @@
                     Reset(from);
                     Reset(to);
                     Reset(approver);
-                    
-                    Navigate('Leave Status');
                 Text: ="Apply Leave"
                 X: =921
                 Y: =666
