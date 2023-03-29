@@ -54,7 +54,8 @@
             Label19 As label:
                 Height: =107
                 Size: =50
-                Text: =Text(Sum('Leave Balance_1','Total Leave'))
+                Text: |
+                    =Sum('Leave Balance_1','Total Leave')
                 Width: =91
                 X: =668
                 Y: =571
@@ -72,7 +73,9 @@
             Label21 As label:
                 Height: =107
                 Size: =50
-                Text: =Text(Sum('Leave Balance_1',Balance))
+                Text: |-
+                    =
+                    Sum('Leave Balance_1','Total Leave') - Sum(Filter('Leave Requests',RequestedBy.Email=User().Email),'Total Days')
                 Width: =109
                 X: =983
                 Y: =571
@@ -115,13 +118,13 @@
         Label6 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Lighter
-            Height: =82
+            Height: =70
             OnSelect: =Select(Parent)
             Size: =25
-            Text: =Text(Round(Value(ThisItem.Balance),0)&"/"&ThisItem.'Total Leave')
+            Text: =ThisItem.'Total Leave'- Sum(Filter('Leave Requests','Leave Id'.Id=ThisItem.Id && RequestedBy.Email=User().Email),'Total Days') & "/"&ThisItem.'Total Leave'
             Width: =187
-            X: =26
-            Y: =194
+            X: =28
+            Y: =201
             ZIndex: =6
 
         Image11 As image:

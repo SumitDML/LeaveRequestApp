@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |
+    OnStart: |+
         =
         ClearCollect(
             lmsnav,
@@ -158,5 +158,7 @@ App As appinfo:
                 } 
             )
         );
+        
+        
     StartScreen: ='Splash Screen'
 
