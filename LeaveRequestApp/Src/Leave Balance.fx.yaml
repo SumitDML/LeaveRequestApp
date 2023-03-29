@@ -53,7 +53,7 @@
                 Text: ="Total Balance"
                 Width: =135
                 X: =533
-                Y: =618
+                Y: =637
                 ZIndex: =3
 
             Label19 As label:
@@ -63,7 +63,7 @@
                     =Sum('Leave Balance_1','Total Leave')
                 Width: =91
                 X: =668
-                Y: =571
+                Y: =590
                 ZIndex: =4
 
             Label20 As label:
@@ -72,7 +72,7 @@
                 Text: ="Available Balance"
                 Width: =165
                 X: =818
-                Y: =618
+                Y: =637
                 ZIndex: =5
 
             Label21 As label:
@@ -83,21 +83,22 @@
                     Sum('Leave Balance_1','Total Leave') - Sum(Filter('Leave Requests',RequestedBy.Email=User().Email),'Total Days')
                 Width: =109
                 X: =983
-                Y: =571
+                Y: =590
                 ZIndex: =6
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(219, 219, 219, 1)
-        Height: =455
+        Height: =443
         Items: ='Leave Balance_1'
         Layout: =Layout.Vertical
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =454
         Transition: =Transition.Pop
         Width: =1037
         WrapCount: =4
-        X: =264
-        Y: =111
+        X: =262
+        Y: =162
         ZIndex: =2
 
         HtmlText6 As htmlViewer:
@@ -174,4 +175,14 @@
         Width: ='Left Navigation_4'.MenuWidth
         X: =0.00
         ZIndex: =3
+
+    Label27 As label:
+        Font: =Font.'Lato Light'
+        Height: =51
+        Size: =15
+        Text: ="Your Leave Balance.."
+        Width: =234
+        X: =277
+        Y: =111
+        ZIndex: =4
 
