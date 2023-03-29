@@ -459,7 +459,7 @@
                     Height: =32
                     Text: =First(TotalLeave).Value - First(LeaveSum).Value
                     Width: =62
-                    X: =899
+                    X: =916
                     Y: =461
                     ZIndex: =18
 
@@ -523,7 +523,7 @@
                     Height: =32
                     Text: =If(Int(TotalDays.Text)<Int(RemainingBalance.Text),RemainingBalance-TotalDays,0)
                     Width: =106
-                    X: =936
+                    X: =952
                     Y: =490
                     ZIndex: =30
 
@@ -651,7 +651,7 @@
             BorderThickness: =0.5
             DisabledFill: =
             DisplayMode: =DisplayMode.Disabled
-            Fill: =RGBA(255, 255, 255, 0.7)
+            Fill: =RGBA(255, 255, 255, 0.5)
             Height: =767
             Visible: =succesfulSubmission
             Width: =1366
