@@ -7531,7 +7531,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DisplayLeave",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8970,7 +8970,14 @@
         "TemplateSize",
         "TemplatePadding",
         "Layout",
-        "Transition",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Transition",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LoadingSpinner",
         "LoadingSpinnerColor",
         "DisplayMode",
@@ -9175,8 +9182,7 @@
         "Y",
         "Width",
         "Height",
-        "ZIndex",
-        "Visible"
+        "ZIndex"
       ],
       "GalleryTemplateChildName": "galleryTemplate4",
       "HasDynamicProperties": false,
@@ -9310,11 +9316,6 @@
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],

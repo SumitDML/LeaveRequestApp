@@ -487,6 +487,8 @@
         Rectangle4_1 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 0.5)
             BorderThickness: =0.5
+            DisabledFill: =Self.Fill-80%
+            DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(255, 255, 255, 0.2)
             Height: =767
             Visible: =sucessfulSubmission
