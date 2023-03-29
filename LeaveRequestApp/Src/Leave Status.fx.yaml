@@ -48,7 +48,7 @@
                 ZIndex: =4
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =501
+        Height: =517
         Items: =MyLeaves
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
@@ -58,7 +58,7 @@
         Width: =1059
         WrapCount: =3
         X: =251
-        Y: =218
+        Y: =199
         ZIndex: =3
 
         HtmlText3 As htmlViewer:
@@ -122,22 +122,8 @@
         Text: ="Your Leave History..."
         Width: =330
         X: =265
-        Y: =168
+        Y: =159
         ZIndex: =4
-
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =57
-        Items: |-
-            =Table({Filter:"All",Value:"All"},{Filter:"Approved",Value:"Approved"},{Filter:"Rejected",Value:"Rejected"},{Filter:"Pending",Value:"Pending TL Approval"})
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =53
-        Transition: =Transition.Push
-        Width: =692
-        WrapCount: =4
-        X: =251
-        Y: =102
-        ZIndex: =5
 
     DisplayLeave As group:
         Height: =5
@@ -727,4 +713,47 @@
                     X: =158
                     Y: =4
                     ZIndex: =2
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =66
+        Items: =tabs
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =60
+        Width: =650
+        WrapCount: =4
+        X: =265
+        Y: =102
+        ZIndex: =10
+
+        Button6 As button:
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(219, 219, 219, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            Height: =42
+            HoverFill: =RGBA(149, 149, 149, 0.7)
+            OnSelect: |-
+                =If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),ClearCollect(MyLeaves,Filter('Leave Requests',Status.Value=ThisItem.Value,RequestedBy.Email=User().Email)));
+                
+                If(IsEmpty(MyLeaves),UpdateContext({message:"No Records found at this moment."}),UpdateContext({message:""}));
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: =ThisItem.Filter
+            Width: =150
+            X: =4
+            Y: =8
+            ZIndex: =3
+
+    Label23 As label:
+        Align: =Align.Center
+        Height: =100
+        Text: =message
+        Width: =370
+        X: =596
+        Y: =336
+        ZIndex: =11
 
