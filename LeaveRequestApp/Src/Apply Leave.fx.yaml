@@ -487,22 +487,22 @@
         Rectangle4_1 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 0.5)
             BorderThickness: =0.5
-            Fill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 0.2)
             Height: =767
-            Visible: =errordisplay
+            Visible: =sucessfulSubmission
             Width: =1366
             Y: =1
             ZIndex: =7
 
         Timer2_1 As timer:
             Duration: =1500
-            Height: =280
-            OnTimerEnd: =Set(errordisplay,false)
+            Height: =25
+            OnTimerEnd: =Set(succesfulSubmission,false)
             Start: =errordisplay
-            Visible: =errordisplay
-            Width: =170
-            X: =1070
-            Y: =488
+            Visible: =sucessfulSubmission
+            Width: =24
+            X: =1266
+            Y: =571
             ZIndex: =8
 
         Button4 As button:
@@ -510,11 +510,11 @@
             Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(255, 255, 255, 1)
             DisabledFill: =RGBA(255, 255, 255, 1)
-            DisplayMode: =DisplayMode.Disabled
             Fill: =RGBA(26, 26, 26, 1)
             Height: =251
             HoverFill: =
             Text: =""
+            Visible: =sucessfulSubmission
             Width: =406
             X: =430
             Y: =217
@@ -522,6 +522,7 @@
 
         Icon3 As icon.Check:
             Icon: =Icon.Check
+            Visible: =sucessfulSubmission
             X: =446
             Y: =297
             ZIndex: =10
@@ -531,7 +532,7 @@
             Color: =RGBA(77, 77, 77, 1)
             Height: =79
             Text: ="Leave Successfully Applied."
-            Visible: =errordisplay
+            Visible: =sucessfulSubmission
             Width: =291
             X: =526
             Y: =297
