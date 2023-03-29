@@ -498,7 +498,7 @@
             Duration: =1500
             Height: =25
             OnTimerEnd: =Set(succesfulSubmission,false)
-            Start: =errordisplay
+            Start: =succesfulSubmission
             Visible: =sucessfulSubmission
             Width: =24
             X: =1266
