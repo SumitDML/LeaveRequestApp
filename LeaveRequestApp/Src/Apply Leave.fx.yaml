@@ -7,6 +7,7 @@
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
+        Fill: =RGBA(255, 232, 234, 0.6)
         Height: =767
         Width: =Parent.Width-'Left Navigation_1'.Width
         X: ='Left Navigation_1'.Width
