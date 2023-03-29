@@ -41,8 +41,8 @@
                 ZIndex: =3
 
             Button3 As button:
-                BorderThickness: =0
-                DisplayMode: =DisplayMode.View
+                BorderColor: =RGBA(219, 219, 219, 1)
+                BorderThickness: =0.5
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =642
                 HoverColor: =
@@ -142,52 +142,99 @@
                 HoverColor: =Color.White
                 HoverFill: =RGBA(151, 186, 227,0.8)
                 OnSelect: |
-                    =If(from.SelectedDate<Today(),[Set(errordisplay,true),Set(err,"Please enter a valid start date")],
-                    from.SelectedDate>to.SelectedDate,[Set(errordisplay,true),Set(err,"Please enter valid end date")],
-                    Int(TotalDays.Text)>Int(RemainingBalance.Text),[Set(errordisplay,true),Set(err,"You don't have enough leave balance.")],
-                    
-                    Set(var,First(Office365Users.SearchUser({searchTerm:approver.SelectedText.Value})));
-                    
-                    Patch('Leave Requests',Defaults('Leave Requests'),
-                    {Title:Reason.Text},
-                    {Details:Details.Text},
-                    {'Leave Type':LeaveTypes.SelectedText},
-                    {From:from.SelectedDate},
-                    {To:to.SelectedDate},
-                    {'Total Days':Value(TotalDays.Text)},
-                    {'Leave Id':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Id:vardata.Id,
-                        Value:LeaveTypes.SelectedText.Value
-                    }},
-                    {RequestedBy: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(User().Email),
-                        Department:"",
-                        DisplayName:User().FullName,
-                        Email:User().Email,
-                        JobTitle:"",
-                        Picture:""
-                        }},
-                    {HR: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(User().Email),
-                        Department:"",
-                        DisplayName:User().FullName,
-                        Email:User().Email,
-                        JobTitle:"",
-                        Picture:""
-                        }},
-                    {'Reporting Manager':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(var.Mail),
-                        Department:"",
-                        DisplayName:var.Department,
-                        Email:var.Mail,
-                        JobTitle:"",
-                        Picture:""
-                        }}
-                    )
+                    =If(
+                        from.SelectedDate < Today(),
+                        [
+                            Set(
+                                errordisplay,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please enter a valid start date"
+                            )
+                        ],
+                        from.SelectedDate > to.SelectedDate,
+                        [
+                            Set(
+                                errordisplay,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Please enter valid end date"
+                            )
+                        ],
+                        Int(TotalDays.Text) > Int(RemainingBalance.Text),
+                        [
+                            Set(
+                                errordisplay,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "You don't have enough leave balance."
+                            )
+                        ],
+                        Set(
+                            var,
+                            First(Office365Users.SearchUser({searchTerm: approver.SelectedText.Value}))
+                        );
+                        Patch(
+                            'Leave Requests',
+                            Defaults('Leave Requests'),
+                            {Title: Reason.Text},
+                            {Details: Details.Text},
+                            {'Leave Type': LeaveTypes.SelectedText},
+                            {From: from.SelectedDate},
+                            {To: to.SelectedDate},
+                            {'Total Days': Value(TotalDays.Text)},
+                            {
+                                'Leave Id': {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                    Id: vardata.Id,
+                                    Value: LeaveTypes.SelectedText.Value
+                                }
+                            },
+                            {
+                                RequestedBy: {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                    Claims: Lower(User().Email),
+                                    Department: "",
+                                    DisplayName: User().FullName,
+                                    Email: User().Email,
+                                    JobTitle: "",
+                                    Picture: ""
+                                }
+                            },
+                            {
+                                HR: {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                    Claims: Lower(User().Email),
+                                    Department: "",
+                                    DisplayName: User().FullName,
+                                    Email: User().Email,
+                                    JobTitle: "",
+                                    Picture: ""
+                                }
+                            },
+                            {
+                                'Reporting Manager': {
+                                    '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                                    Claims: Lower(var.Mail),
+                                    Department: "",
+                                    DisplayName: var.Department,
+                                    Email: var.Mail,
+                                    JobTitle: "",
+                                    Picture: ""
+                                }
+                            }
+                        )
                     );
-                    
-                    Set(succesfulSubmission,true);
-                    
+                    Set(
+                        succesfulSubmission,
+                        true
+                    );
                     Reset(Reason);
                     Reset(LeaveTypes);
                     Reset(Details);
@@ -200,7 +247,7 @@
                 RadiusTopRight: =15
                 Text: ="Apply Leave"
                 Width: =188
-                X: =921
+                X: =912
                 Y: =651
                 ZIndex: =10
 
@@ -226,7 +273,7 @@
                 RadiusTopRight: =15
                 Text: ="Cancel"
                 Width: =188
-                X: =711
+                X: =686
                 Y: =651
                 ZIndex: =11
 
@@ -326,8 +373,8 @@
                     RadiusTopRight: =15
                     Text: =""
                     Width: =384
-                    X: =725
-                    Y: =112
+                    X: =711
+                    Y: =151
                     ZIndex: =12
 
                 Label13 As label:
@@ -341,7 +388,7 @@
                         ="Your Request Includes:"
                     Width: =196
                     X: =740
-                    Y: =118
+                    Y: =157
                     ZIndex: =13
 
                 Label13_1 As label:
@@ -356,7 +403,7 @@
                         =LeaveTypes.SelectedText.Value&" Balance:"
                     Width: =199
                     X: =753
-                    Y: =431
+                    Y: =461
                     ZIndex: =14
 
                 Label13_3 As label:
@@ -369,7 +416,7 @@
                     Text: =LeaveTypes.SelectedText.Value
                     Width: =221
                     X: =862
-                    Y: =166
+                    Y: =205
                     ZIndex: =15
 
                 TotalDays As label:
@@ -386,7 +433,7 @@
                         Switch(Weekday(from.SelectedDate),1,1,0)
                     Width: =61
                     X: =891
-                    Y: =274
+                    Y: =313
                     ZIndex: =16
 
                 Label13_5 As label:
@@ -401,7 +448,7 @@
                         ="Number of Days:"
                     Width: =147
                     X: =765
-                    Y: =274
+                    Y: =313
                     ZIndex: =17
 
                 RemainingBalance As label:
@@ -412,8 +459,8 @@
                     Height: =32
                     Text: =First(TotalLeave).Value - First(LeaveSum).Value
                     Width: =62
-                    X: =900
-                    Y: =431
+                    X: =899
+                    Y: =461
                     ZIndex: =18
 
                 Rectangle2 As rectangle:
@@ -422,8 +469,8 @@
                     Fill: =RGBA(102, 106, 138, 1)
                     Height: =1
                     Width: =328
-                    X: =753
-                    Y: =418
+                    X: =755
+                    Y: =446
                     ZIndex: =26
 
                 Label4 As label:
@@ -437,7 +484,7 @@
                         ="Reason:"
                     Width: =76
                     X: =765
-                    Y: =313
+                    Y: =352
                     ZIndex: =27
 
                 ReasonsText As label:
@@ -449,8 +496,8 @@
                     Text: =Reason.Text
                     VerticalAlign: =VerticalAlign.Top
                     Width: =242
-                    X: =841
-                    Y: =319
+                    X: =826
+                    Y: =357
                     ZIndex: =28
 
                 Label13_4 As label:
@@ -465,7 +512,7 @@
                         ="New "&LeaveTypes.SelectedText.Value&" Balance:"
                     Width: =237
                     X: =753
-                    Y: =463
+                    Y: =490
                     ZIndex: =29
 
                 Label7 As label:
@@ -477,7 +524,7 @@
                     Text: =If(Int(TotalDays.Text)<Int(RemainingBalance.Text),RemainingBalance-TotalDays,0)
                     Width: =106
                     X: =936
-                    Y: =463
+                    Y: =490
                     ZIndex: =30
 
                 Label8 As label:
@@ -489,8 +536,8 @@
                     Text: |
                         =from.SelectedDate
                     Width: =177
-                    X: =825
-                    Y: =204
+                    X: =814
+                    Y: =242
                     ZIndex: =31
 
                 Label8_1 As label:
@@ -503,7 +550,7 @@
                         =to.SelectedDate
                     Width: =177
                     X: =795
-                    Y: =239
+                    Y: =276
                     ZIndex: =32
 
                 Label24 As label:
@@ -516,7 +563,7 @@
                         ="To: "
                     Width: =30
                     X: =765
-                    Y: =238
+                    Y: =277
                     ZIndex: =33
 
                 Label25 As label:
@@ -528,7 +575,7 @@
                         ="From: "
                     Width: =60
                     X: =766
-                    Y: =200
+                    Y: =239
                     ZIndex: =34
 
                 Label26 As label:
@@ -541,7 +588,7 @@
                         ="Leave Type:"
                     Width: =110
                     X: =765
-                    Y: =166
+                    Y: =205
                     ZIndex: =35
 
     errordisplaypop As group:
@@ -612,11 +659,13 @@
             ZIndex: =7
 
         Timer2_1 As timer:
+            AutoStart: =
             Duration: =1500
+            Fill: =RGBA(0, 0, 0, 0)
             Height: =25
             OnTimerEnd: =Set(succesfulSubmission,false)
             Start: =succesfulSubmission
-            Visible: =false
+            Visible: =succesfulSubmission
             Width: =24
             X: =1266
             Y: =571
@@ -633,15 +682,17 @@
             Text: =""
             Visible: =succesfulSubmission
             Width: =406
-            X: =959
-            Y: =28
+            X: =937
+            Y: =24
             ZIndex: =9
 
         Icon3 As icon.Check:
+            Height: =55
             Icon: =Icon.Check
             Visible: =succesfulSubmission
-            X: =981
-            Y: =40
+            Width: =47
+            X: =973
+            Y: =44
             ZIndex: =10
 
         Label14_7 As label:
@@ -652,7 +703,18 @@
             Text: ="Leave Successfully Applied."
             Visible: =succesfulSubmission
             Width: =291
-            X: =1045
-            Y: =36
+            X: =1020
+            Y: =32
             ZIndex: =12
+
+    Label28 As label:
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Lighter
+        Height: =46
+        Size: =14
+        Text: ="*All Fields Are Mandatory."
+        Width: =380
+        X: =267
+        Y: =654
+        ZIndex: =13
 

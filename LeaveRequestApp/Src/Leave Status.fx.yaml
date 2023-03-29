@@ -54,10 +54,11 @@
                 ZIndex: =4
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =517
+        Height: =515
         Items: =MyLeaves
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =258
         Transition: =Transition.Pop
@@ -163,7 +164,8 @@
             Height: =46
             HoverFill: =RGBA(116, 116, 116, 0.6)
             OnSelect: |-
-                =If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),
+                =UpdateContext({OneClicked:true});
+                If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),
                 ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email,Status.Value=ThisItem.Value)));
                 
                 If(IsEmpty(MyLeaves),UpdateContext({dataMessage:"No Records Found!"}),UpdateContext({dataMessage:""}));
