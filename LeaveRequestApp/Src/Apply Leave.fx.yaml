@@ -118,7 +118,11 @@
             Button7 As button:
                 Fill: =RGBA(51, 51, 51, 1)
                 OnSelect: |-
-                    =Set(var,First(Office365Users.SearchUser({searchTerm:approver.SelectedText.Value})));
+                    =If(Reason.Text="",Set(errordisplay,true));
+                    
+                    
+                    
+                    Set(var,First(Office365Users.SearchUser({searchTerm:approver.SelectedText.Value})));
                     
                     Patch('Leave Requests',Defaults('Leave Requests'),
                     {Title:Reason.Text},
@@ -243,8 +247,8 @@
                         )
                      + 1)
                 Width: =133
-                X: =911
-                Y: =278
+                X: =912
+                Y: =274
                 ZIndex: =22
 
             Label13_5 As label:
@@ -360,10 +364,10 @@
 
             ReasonsText As label:
                 Color: =RGBA(116, 116, 116, 1)
-                Text: =Reason.Text
+                Text: =
                 Width: =255
                 X: =841
-                Y: =309
+                Y: =316
                 ZIndex: =38
 
             Label13_4 As label:
@@ -404,4 +408,40 @@
                 X: =765
                 Y: =240
                 ZIndex: =42
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Timer2 As timer:
+            Duration: =600
+            Height: =38
+            OnTimerEnd: =Set(errordisplay,false)
+            Visible: =errordisplay
+            Width: =57
+            X: =1266
+            Y: =86
+            ZIndex: =3
+
+        Rectangle4 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =104
+            Visible: =errordisplay
+            Width: =457
+            X: =908
+            Y: =20
+            ZIndex: =4
+
+        Label14 As label:
+            Align: =Align.Center
+            Height: =104
+            Text: ="sss"
+            Visible: =errordisplay
+            Width: =441
+            X: =908
+            Y: =20
+            ZIndex: =5
 
