@@ -64,10 +64,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 100,
+                  "charLength": 104,
                   "charOffset": 117,
                   "snippet": {
-                    "text": "Sum(Filter('Leave Requests','Leave Id'.Value=vardata.Id && ReuestedBy.Email=User().Email),TotalDays)"
+                    "text": "Sum(Filter('Leave Requests','Leave Id'.Value=vardata.Id && RequestedBy.Email=User().Email),'Total Days')"
                   }
                 }
               },
@@ -105,7 +105,7 @@
                 },
                 "region": {
                   "charLength": 58,
-                  "charOffset": 247,
+                  "charOffset": 251,
                   "snippet": {
                     "text": "Sum(Filter('Leave Balance_1',Id=vardata.Id),'Total Leave')"
                   }

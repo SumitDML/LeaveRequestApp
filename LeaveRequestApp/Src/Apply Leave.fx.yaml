@@ -104,7 +104,7 @@
                     =Set(vardata,LookUp('Leave Balance_1', 'Leave Type'.Value=LeaveTypes.SelectedText.Value));
                     
                     
-                    ClearCollect(LeaveSum,Sum(Filter('Leave Requests','Leave Id'.Value=vardata.Id && ReuestedBy.Email=User().Email),TotalDays));
+                    ClearCollect(LeaveSum,Sum(Filter('Leave Requests','Leave Id'.Value=vardata.Id && RequestedBy.Email=User().Email),'Total Days'));
                     
                     ClearCollect(TotalLeave,Sum(Filter('Leave Balance_1',Id=vardata.Id),'Total Leave'))
                 PressedFill: =RGBA(128, 128, 128, 1)
@@ -115,12 +115,12 @@
                 Y: =151
                 ZIndex: =14
 
-            Button7 As button:
+            "'Apply Leave Button' As button":
+                DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
                 Fill: =RGBA(51, 51, 51, 1)
                 OnSelect: |-
-                    =If(Reason.Text="",[Set(errordisplay,true)]);
-                    
-                    
+                    =If(from.SelectedDate<Today(),[Set(errordisplay,true),Set(err,"Please enter a valid start date")],
+                    from.SelectedDate>to.SelectedDate,[Set(errordisplay,true),Set(err,"Please enter valid end date")],
                     
                     Set(var,First(Office365Users.SearchUser({searchTerm:approver.SelectedText.Value})));
                     
@@ -131,31 +131,32 @@
                     {From:from.SelectedDate},
                     {To:to.SelectedDate},
                     {'Total Days':Value(TotalDays.Text)},
-                    {ReuestedBy: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(User().Email),
-                        Department:"",
-                        DisplayName:User().FullName,
-                        Email:User().Email,
-                        JobTitle:"",
-                        Picture:""
-                        }},
+                    {RequestedBy: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Claims:Lower(User().Email),
+                        Department:"",
+                        DisplayName:User().FullName,
+                        Email:User().Email,
+                        JobTitle:"",
+                        Picture:""
+                        }},
                     {HR: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(User().Email),
-                        Department:"",
-                        DisplayName:User().FullName,
-                        Email:User().Email,
-                        JobTitle:"",
-                        Picture:""
-                        }},
+                        Claims:Lower(User().Email),
+                        Department:"",
+                        DisplayName:User().FullName,
+                        Email:User().Email,
+                        JobTitle:"",
+                        Picture:""
+                        }},
                     {'Reporting Manager':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(var.Mail),
-                        Department:"",
-                        DisplayName:var.Department,
-                        Email:var.Mail,
-                        JobTitle:"",
-                        Picture:""
-                        }}
+                        Claims:Lower(var.Mail),
+                        Department:"",
+                        DisplayName:var.Department,
+                        Email:var.Mail,
+                        JobTitle:"",
+                        Picture:""
+                        }}
                     )
+                    );
                 Text: ="Apply Leave"
                 X: =921
                 Y: =666
@@ -208,7 +209,7 @@
                 Height: =32
                 Text: |-
                     =LeaveTypes.SelectedText.Value&" Balance:"
-                Width: =237
+                Width: =199
                 X: =764
                 Y: =431
                 ZIndex: =19
@@ -265,8 +266,8 @@
                 Height: =32
                 Text: =First(TotalLeave).Value - First(LeaveSum).Value
                 Width: =62
-                X: =957
-                Y: =433
+                X: =963
+                Y: =431
                 ZIndex: =25
 
             to As datepicker:
@@ -417,7 +418,7 @@
         ZIndex: =7
 
         Timer2 As timer:
-            Duration: =600
+            Duration: =1000
             Height: =38
             OnTimerEnd: =Set(errordisplay,false)
             Start: =errordisplay
@@ -441,7 +442,7 @@
         Label14 As label:
             Align: =Align.Center
             Height: =104
-            Text: ="sss"
+            Text: =err
             Visible: =errordisplay
             Width: =441
             X: =908
