@@ -121,8 +121,8 @@
         Size: =15
         Text: ="Your Leave History..."
         Width: =330
-        X: =265
-        Y: =159
+        X: =266
+        Y: =167
         ZIndex: =4
 
     DisplayLeave As group:
@@ -732,7 +732,7 @@
             Fill: =RGBA(219, 219, 219, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Normal
-            Height: =42
+            Height: =49
             HoverFill: =RGBA(149, 149, 149, 0.7)
             OnSelect: |-
                 =If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),ClearCollect(MyLeaves,Filter('Leave Requests',Status.Value=ThisItem.Value,RequestedBy.Email=User().Email)));
