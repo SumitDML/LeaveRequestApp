@@ -764,25 +764,3 @@
                     Y: =4
                     ZIndex: =2
 
-    Image7_1 As image:
-        Height: =76
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Width: =76
-        X: =276
-        Y: =489
-        ZIndex: =11
-
-    Image8_1 As image:
-        Height: =67
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Width: =73
-        X: =893
-        Y: =475
-        ZIndex: =12
-

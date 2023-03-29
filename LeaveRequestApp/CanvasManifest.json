@@ -102,11 +102,11 @@
     "Id": "c152f57f-0926-47ca-a268-d6e6f019fc20",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "LeaveApp2",
+    "Name": "Leave Management System(BackUp)",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
-    "AppName": "LeaveApp2",
+    "AppName": "Leave Management System(BackUp)",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
