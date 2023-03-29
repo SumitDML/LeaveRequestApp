@@ -61,14 +61,6 @@
         Y: =199
         ZIndex: =3
 
-        HtmlText3 As htmlViewer:
-            Height: =243
-            HtmlText: |-
-                ="<div style='margin:10px;width:320px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
-            OnSelect: =Select(Parent)
-            Width: =353
-            ZIndex: =1
-
         Label18 As label:
             Align: =Align.Center
             Color: =If(ThisItem.Status.Value="Approved",Color.Green,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(212, 171, 23,1)))
@@ -78,7 +70,7 @@
             Text: =ThisItem.Status.Value
             Width: =Parent.TemplateWidth
             Y: =161
-            ZIndex: =2
+            ZIndex: =1
 
         Label17 As label:
             Align: =Align.Center
@@ -87,7 +79,7 @@
             Text: =ThisItem.From&" - "&ThisItem.To
             Width: =Parent.TemplateWidth
             Y: =119
-            ZIndex: =3
+            ZIndex: =2
 
         Label15 As label:
             Align: =Align.Center
@@ -97,7 +89,7 @@
             Text: =ThisItem.'Leave Type'.Value
             Width: =Parent.TemplateWidth
             Y: =79
-            ZIndex: =4
+            ZIndex: =3
 
         Title1 As label:
             Align: =Align.Center
@@ -114,6 +106,14 @@
             Width: =Parent.TemplateWidth
             X: =
             Y: =44
+            ZIndex: =4
+
+        HtmlText3 As htmlViewer:
+            Height: =243
+            HtmlText: |-
+                ="<div style='margin:10px;width:320px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+            OnSelect: =Select(Parent)
+            Width: =353
             ZIndex: =5
 
     Label22 As label:
@@ -124,6 +124,50 @@
         X: =266
         Y: =167
         ZIndex: =4
+
+    Label23 As label:
+        Align: =Align.Center
+        Height: =100
+        Text: =dataMessage
+        Width: =370
+        X: =596
+        Y: =336
+        ZIndex: =5
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Items: =tabs
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =57
+        Width: =710
+        WrapCount: =4
+        X: =266
+        Y: =107
+        ZIndex: =6
+
+        Button7 As button:
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(219, 219, 219, 1)
+            Font: =Font.'Segoe UI'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 0.6)
+            OnSelect: |-
+                =If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),
+                ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email,Status.Value=ThisItem.Value)));
+                
+                If(IsEmpty(MyLeaves),UpdateContext({dataMessage:"No Records Found!"}),UpdateContext({dataMessage:""}));
+            RadiusBottomLeft: =13
+            RadiusBottomRight: =13
+            RadiusTopLeft: =13
+            RadiusTopRight: =13
+            Text: =ThisItem.Filter
+            X: =8
+            Y: =4
+            ZIndex: =3
 
     DisplayLeave As group:
         Height: =5
@@ -137,7 +181,7 @@
             Height: =768
             Visible: =varDisplay
             Width: =1366
-            ZIndex: =6
+            ZIndex: =7
 
         Button5 As button:
             Fill: =RGBA(255, 255, 255, 1)
@@ -156,7 +200,7 @@
             Width: =1040
             X: =150
             Y: =93
-            ZIndex: =7
+            ZIndex: =8
 
         Icon1 As icon.Cancel:
             Height: =35
@@ -166,7 +210,7 @@
             Width: =33
             X: =1096
             Y: =124
-            ZIndex: =8
+            ZIndex: =9
 
         FormViewer1 As formViewer:
             DataSource: ='Leave Requests'
@@ -176,7 +220,7 @@
             Width: =883
             X: =205
             Y: =126
-            ZIndex: =9
+            ZIndex: =10
 
             Title_DataCard1 As typedDataCard.textualViewCard:
                 BorderStyle: =BorderStyle.Solid
@@ -713,25 +757,4 @@
                     X: =158
                     Y: =4
                     ZIndex: =2
-
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =66
-        Items: =tabs
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =60
-        Width: =650
-        WrapCount: =4
-        X: =265
-        Y: =102
-        ZIndex: =10
-
-    Label23 As label:
-        Align: =Align.Center
-        Height: =100
-        Text: =message
-        Width: =370
-        X: =596
-        Y: =336
-        ZIndex: =11
 
