@@ -84,6 +84,44 @@
         Y: =218
         ZIndex: =3
 
+        HtmlText3 As htmlViewer:
+            Height: =243
+            HtmlText: |-
+                ="<div style='margin:10px;width:330px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+            OnSelect: =Select(Parent)
+            Width: =362
+            ZIndex: =1
+
+        Label18 As label:
+            Align: =Align.Center
+            Color: =If(ThisItem.Status.Value="Approved",Color.Green,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(248, 228, 92,1)))
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: =ThisItem.Status.Value
+            Width: =Parent.TemplateWidth
+            Y: =161
+            ZIndex: =2
+
+        Label17 As label:
+            Align: =Align.Center
+            Height: =42
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.From&" - "&ThisItem.To
+            Width: =Parent.TemplateWidth
+            Y: =119
+            ZIndex: =3
+
+        Label15 As label:
+            Align: =Align.Center
+            Font: =Font.'Lato Black'
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.'Leave Type'.Value
+            Width: =Parent.TemplateWidth
+            Y: =79
+            ZIndex: =4
+
         Title1 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Lighter
@@ -99,44 +137,6 @@
             Width: =Parent.TemplateWidth
             X: =
             Y: =44
-            ZIndex: =1
-
-        Label15 As label:
-            Align: =Align.Center
-            Font: =Font.'Lato Black'
-            OnSelect: =Select(Parent)
-            Size: =16
-            Text: =ThisItem.'Leave Type'.Value
-            Width: =Parent.TemplateWidth
-            Y: =79
-            ZIndex: =2
-
-        Label17 As label:
-            Align: =Align.Center
-            Height: =42
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.From&" - "&ThisItem.To
-            Width: =Parent.TemplateWidth
-            Y: =119
-            ZIndex: =3
-
-        Label18 As label:
-            Align: =Align.Center
-            Color: =If(ThisItem.Status.Value="Approved",Color.Green,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(248, 228, 92,1)))
-            FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
-            Size: =15
-            Text: =ThisItem.Status.Value
-            Width: =Parent.TemplateWidth
-            Y: =161
-            ZIndex: =4
-
-        HtmlText3 As htmlViewer:
-            Height: =243
-            HtmlText: |-
-                ="<div style='margin:10px;width:330px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
-            OnSelect: =Select(Parent)
-            Width: =362
             ZIndex: =5
 
     Label22 As label:

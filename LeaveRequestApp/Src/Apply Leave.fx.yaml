@@ -192,8 +192,8 @@
             Label13_2 As label:
                 Text: =LeaveTypes.SelectedText.Value
                 Width: =136
-                X: =889
-                Y: =203
+                X: =849
+                Y: =204
                 ZIndex: =20
 
             Label13_3 As label:
@@ -218,8 +218,8 @@
                         )
                      + 1)
                 Width: =136
-                X: =900
-                Y: =250
+                X: =889
+                Y: =254
                 ZIndex: =22
 
             Label13_5 As label:
