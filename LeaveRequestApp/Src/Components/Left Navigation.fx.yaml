@@ -48,6 +48,8 @@
             ZIndex: =4
 
             Label1 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =43
                 OnSelect: =Navigate(ThisItem.Screen)
                 PaddingRight: =5.00
@@ -55,17 +57,17 @@
                 Size: =13.00
                 Text: =ThisItem.Title
                 Width: =110
-                X: =60
+                X: =63
                 Y: =22
                 ZIndex: =1
 
             Image3 As image:
-                Height: =43
+                Height: =40
                 Image: =ThisItem.Icon
                 OnSelect: =Navigate(ThisItem.Screen)
                 PaddingRight: =0.00
                 PaddingTop: =0.00
-                Width: =42
+                Width: =40
                 X: =18
                 Y: =22
                 ZIndex: =2

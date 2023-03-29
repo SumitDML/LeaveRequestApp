@@ -63,6 +63,7 @@ Homepage As screen:
             Icon4 As icon.Add:
                 Color: =RGBA(50, 86, 160, 1)
                 Icon: =Icon.Add
+                OnSelect: =Navigate('Apply Leave')
                 X: =176
                 Y: =353
                 ZIndex: =5
@@ -141,7 +142,7 @@ Homepage As screen:
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(205, 222, 240, 0.4)
-            Height: =390
+            Height: =725
             Width: =1168
             X: =0
             Y: =1
@@ -165,6 +166,86 @@ Homepage As screen:
                 X: =39
                 Y: =33
                 ZIndex: =1
+
+            Label34 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Height: =56
+                Size: =15
+                Text: ="Today On Leave"
+                Width: =236
+                X: =93
+                Y: =63
+                ZIndex: =2
+
+            "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                Height: =539
+                Items: =Filter('Leave Requests',From=Today())
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =158
+                Width: =1028
+                X: =82
+                Y: =119
+                ZIndex: =3
+
+                Image6 As image:
+                    Height: =80
+                    Image: =User().Image
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =50
+                    RadiusBottomRight: =50
+                    RadiusTopLeft: =50
+                    RadiusTopRight: =50
+                    Width: =76
+                    X: =48
+                    Y: =28
+                    ZIndex: =1
+
+                HtmlText7 As htmlViewer:
+                    Height: =158
+                    HtmlText: |-
+                        ="<div style='margin:9px;width:970px;height:110px;background-color:#;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; border-radius:15px'></div>"
+                    OnSelect: =Select(Parent)
+                    Width: =1028
+                    ZIndex: =4
+
+                HtmlText9 As htmlViewer:
+                    Font: =Font.'Segoe UI'
+                    Height: =52
+                    HtmlText: ="<b>"&ThisItem.RequestedBy.DisplayName&"</b> is on leave today"
+                    OnSelect: =Select(Parent)
+                    Size: =20
+                    Width: =538
+                    X: =144
+                    Y: =39
+                    ZIndex: =5
+
+                Label35 As label:
+                    Align: =Align.Center
+                    Color: =If(ThisItem.Status.Value="Approved",Color.Green,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(212, 171, 23,1)))
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =52
+                    OnSelect: =Select(Parent)
+                    Size: =17
+                    Text: =ThisItem.'Leave Type'.Value
+                    Width: =258
+                    X: =702
+                    Y: =39
+                    ZIndex: =6
+
+        DataCard2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =766
+            Width: =1168
+            X: =0
+            Y: =2
+            ZIndex: =3
 
     "'Left Navigation_5' As 'Left Navigation'":
         Width: =198
