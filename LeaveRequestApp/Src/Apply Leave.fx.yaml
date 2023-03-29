@@ -67,8 +67,10 @@
 
             Details As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
+                BorderThickness: =1
                 Default: =""
                 Height: =106
+                HintText: ="Please ellaborate the reason for applying leave."
                 HoverFill: =RGBA(219, 219, 219, 1)
                 Reset: =true
                 Width: =572
@@ -78,9 +80,11 @@
 
             Reason As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
+                BorderThickness: =1
                 Clear: =true
                 Default: =""
                 Height: =52
+                HintText: ="Enter the Reason"
                 HoverBorderColor: =RGBA(128, 128, 128, 1)
                 HoverFill: =RGBA(219, 219, 219, 1)
                 Reset: =true
@@ -150,6 +154,13 @@
                 BorderColor: =RGBA(128, 128, 128, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(0, 0, 0, 0)
+                OnSelect: |-
+                    =Reset(Reason);
+                    Reset(LeaveTypes);
+                    Reset(Details);
+                    Reset(from);
+                    Reset(to);
+                    Reset(approver);
                 Text: ="Cancel"
                 X: =740
                 Y: =666
@@ -174,37 +185,44 @@
             Label13 As label:
                 Color: =RGBA(102, 102, 102, 1)
                 Height: =53
-                Text: ="Your Request Includes"
+                Text: |-
+                    ="Your Request Includes:"
                 Width: =196
-                X: =753
+                X: =740
                 Y: =118
                 ZIndex: =18
 
             Label13_1 As label:
+                Color: =RGBA(116, 116, 116, 1)
                 Height: =32
                 Text: |-
-                    ="Remaining Leaves:"
-                Width: =167
-                X: =753
-                Y: =470
+                    ="Current Remaining Leaves:"
+                Width: =237
+                X: =764
+                Y: =431
                 ZIndex: =19
 
             Label13_2 As label:
+                Color: =RGBA(116, 116, 116, 1)
                 Text: =LeaveTypes.SelectedText.Value
                 Width: =136
-                X: =849
-                Y: =204
+                X: =865
+                Y: =182
                 ZIndex: =20
 
             Label13_3 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Height: =38
+                PaddingRight: =0
                 Text: |-
                     ="Leave Type:"
-                Width: =136
-                X: =742
-                Y: =204
+                Width: =101
+                X: =764
+                Y: =182
                 ZIndex: =21
 
             TotalDays As label:
+                Color: =RGBA(116, 116, 116, 1)
                 Text: |-
                     =If(
                         And(
@@ -217,31 +235,36 @@
                             to.SelectedDate
                         )
                      + 1)
-                Width: =136
-                X: =889
-                Y: =254
+                Width: =133
+                X: =905
+                Y: =222
                 ZIndex: =22
 
             Label13_5 As label:
+                Color: =RGBA(116, 116, 116, 1)
                 Text: |-
                     ="Number of Days:"
                 Width: =147
-                X: =742
-                Y: =251
+                X: =764
+                Y: =222
                 ZIndex: =23
 
             Label14 As label:
+                Color: =RGBA(102, 102, 102, 1)
+                Height: =32
                 Text: |-
                     =ClearCollect(
                         data,
                         Filter('Leave Balance_1','Leave Type'.Value= Label13_2.Text)
                     )
-                X: =930
-                Y: =463
+                Width: =62
+                X: =992
+                Y: =431
                 ZIndex: =25
 
             to As datepicker:
                 BorderColor: =RGBA(102, 102, 102, 1)
+                BorderThickness: =1
                 Height: =42
                 IconBackground: =RGBA(102, 102, 102, 102)
                 Reset: =true
@@ -281,13 +304,15 @@
                 Font: =Font.'Lato Black'
                 Height: =33
                 Size: =15
-                Text: ="Approver"
+                Text: ="Reporting Manager"
+                Width: =200
                 X: =68
                 Y: =489
                 ZIndex: =32
 
             approver As dropdown:
                 BorderColor: =RGBA(102, 102, 102, 1)
+                BorderThickness: =1
                 ChevronBackground: =RGBA(102, 102, 102, 1)
                 ChevronHoverBackground: =
                 Height: =42
@@ -303,6 +328,7 @@
 
             from As datepicker:
                 BorderColor: =RGBA(102, 102, 102, 1)
+                BorderThickness: =1
                 Height: =42
                 IconBackground: =RGBA(102, 102, 102,1)
                 Reset: =true
@@ -310,4 +336,48 @@
                 X: =68
                 Y: =410
                 ZIndex: =34
+
+            Rectangle2 As rectangle:
+                BorderColor: =RGBA(102, 102, 102, 1)
+                Fill: =RGBA(77, 77, 77, 1)
+                Height: =1
+                Width: =328
+                X: =752
+                Y: =408
+                ZIndex: =36
+
+            Label4 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Text: |-
+                    ="Reason:"
+                Width: =76
+                X: =764
+                Y: =262
+                ZIndex: =37
+
+            Label4_1 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Text: =Reason.Text
+                X: =835
+                Y: =262
+                ZIndex: =38
+
+            Label13_4 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Height: =32
+                Text: |-
+                    ="New Remaining Leaves:"
+                Width: =221
+                X: =764
+                Y: =463
+                ZIndex: =39
+
+            Label7 As label:
+                Color: =RGBA(102, 102, 102, 1)
+                Height: =32
+                Text: =""
+                Width: =79
+                X: =975
+                Y: =463
+                ZIndex: =40
 
