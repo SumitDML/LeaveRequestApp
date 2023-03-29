@@ -76,6 +76,7 @@
                 Default: =""
                 Height: =106
                 HintText: ="Please ellaborate the reason for applying leave."
+                HoverBorderColor: =RGBA(128, 128, 128, 1)
                 HoverFill: =RGBA(219, 219, 219, 1)
                 Reset: =true
                 Width: =572
@@ -179,6 +180,8 @@
                     Reset(from);
                     Reset(to);
                     Reset(approver);
+                    
+                    Navigate('Leave Status');
                 Text: ="Apply Leave"
                 X: =921
                 Y: =666
