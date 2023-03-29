@@ -1,13 +1,21 @@
 "'Leave Balance' As screen":
     Fill: =RGBA(0, 0, 0, 0)
 
+    Circle1_5 As circle:
+        Fill: =RGBA(205, 222, 240, 0.7)
+        Height: =558
+        Width: =562
+        X: =804
+        Y: =-300
+        ZIndex: =2
+
     Canvas1_3 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(255, 255, 255, 0)
         Height: =768
         Width: =Parent.Width-'Left Navigation_3'.Width
         X: ='Left Navigation_3'.Width
-        ZIndex: =1
+        ZIndex: =3
 
         DataCard1_3 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -99,7 +107,7 @@
         WrapCount: =4
         X: =262
         Y: =162
-        ZIndex: =2
+        ZIndex: =4
 
         HtmlText6 As htmlViewer:
             Height: =454
@@ -174,7 +182,7 @@
     "'Left Navigation_3' As 'Left Navigation'":
         Width: ='Left Navigation_4'.MenuWidth
         X: =0.00
-        ZIndex: =3
+        ZIndex: =5
 
     Label27 As label:
         Font: =Font.'Lato Light'
@@ -184,5 +192,5 @@
         Width: =234
         X: =277
         Y: =111
-        ZIndex: =4
+        ZIndex: =6
 

@@ -1,9 +1,18 @@
 "'Leave Status' As screen":
     Fill: =
 
+    Circle1_3 As circle:
+        Fill: =RGBA(205, 222, 240, 0.7)
+        Height: =303
+        Width: =280
+        X: =28
+        Y: =465
+        ZIndex: =1
+
     "'Left Navigation_2' As 'Left Navigation'":
         Width: ='Left Navigation_4'.MenuWidth
         X: =1
+        ZIndex: =2
 
     Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -11,7 +20,7 @@
         Height: =768
         Width: =Parent.Width-'Left Navigation_2'.Width
         X: ='Left Navigation_2'.Width
-        ZIndex: =2
+        ZIndex: =3
 
         DataCard1_2 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -26,10 +35,18 @@
             Y: =0
             ZIndex: =1
 
+            Circle1_2 As circle:
+                Fill: =RGBA(205, 222, 240, 0.7)
+                Height: =413
+                Width: =444
+                X: =724
+                Y: =-100
+                ZIndex: =1
+
             Component2_5 As Component2_3:
                 Width: =Parent.Width
                 X: =0.00
-                ZIndex: =1
+                ZIndex: =2
 
             Button3_2 As button:
                 BorderColor: =RGBA(219, 219, 219, 1)
@@ -51,7 +68,7 @@
                 Width: =1091
                 X: =38
                 Y: =89
-                ZIndex: =4
+                ZIndex: =3
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =515
@@ -65,8 +82,8 @@
         Width: =1059
         WrapCount: =3
         X: =251
-        Y: =199
-        ZIndex: =3
+        Y: =207
+        ZIndex: =4
 
         Label18 As label:
             Align: =Align.Center
@@ -130,7 +147,7 @@
         Width: =330
         X: =266
         Y: =167
-        ZIndex: =4
+        ZIndex: =5
 
     Label23 As label:
         Align: =Align.Center
@@ -139,7 +156,7 @@
         Width: =370
         X: =596
         Y: =336
-        ZIndex: =5
+        ZIndex: =6
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(255, 255, 255, 1)
@@ -154,7 +171,7 @@
         WrapCount: =4
         X: =259
         Y: =107
-        ZIndex: =6
+        ZIndex: =7
 
         Button7 As button:
             BorderThickness: =1
@@ -190,7 +207,7 @@
             Height: =768
             Visible: =varDisplay
             Width: =1366
-            ZIndex: =7
+            ZIndex: =8
 
         Button5 As button:
             Fill: =RGBA(255, 255, 255, 1)
@@ -209,7 +226,7 @@
             Width: =1040
             X: =150
             Y: =93
-            ZIndex: =8
+            ZIndex: =9
 
         Icon1 As icon.Cancel:
             Height: =35
@@ -219,7 +236,7 @@
             Width: =33
             X: =1096
             Y: =124
-            ZIndex: =9
+            ZIndex: =10
 
         FormViewer1 As formViewer:
             DataSource: ='Leave Requests'
@@ -229,7 +246,7 @@
             Width: =883
             X: =205
             Y: =126
-            ZIndex: =10
+            ZIndex: =11
 
             Title_DataCard1 As typedDataCard.textualViewCard:
                 BorderStyle: =BorderStyle.Solid
