@@ -134,6 +134,10 @@
                     {From:from.SelectedDate},
                     {To:to.SelectedDate},
                     {'Total Days':Value(TotalDays.Text)},
+                    {'Leave Id':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
+                        Id:vardata.Id,
+                        Value:LeaveTypes.SelectedText.Value
+                    }},
                     {RequestedBy: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
                         Claims:Lower(User().Email),
                         Department:"",
@@ -376,10 +380,12 @@
 
             ReasonsText As label:
                 Color: =RGBA(116, 116, 116, 1)
-                Text: =
-                Width: =255
+                Height: =77
+                Text: =Reason.Text
+                VerticalAlign: =VerticalAlign.Top
+                Width: =242
                 X: =841
-                Y: =316
+                Y: =319
                 ZIndex: =38
 
             Label13_4 As label:
