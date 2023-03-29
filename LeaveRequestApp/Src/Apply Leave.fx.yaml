@@ -84,7 +84,7 @@
                 Clear: =true
                 Default: =""
                 Height: =52
-                HintText: ="Enter the Reason"
+                HintText: ="Enter the reason"
                 HoverBorderColor: =RGBA(128, 128, 128, 1)
                 HoverFill: =RGBA(219, 219, 219, 1)
                 Reset: =true
@@ -236,8 +236,8 @@
                         )
                      + 1)
                 Width: =133
-                X: =905
-                Y: =222
+                X: =911
+                Y: =278
                 ZIndex: =22
 
             Label13_5 As label:
@@ -246,7 +246,7 @@
                     ="Number of Days:"
                 Width: =147
                 X: =764
-                Y: =222
+                Y: =274
                 ZIndex: =23
 
             Label14 As label:
@@ -342,8 +342,8 @@
                 Fill: =RGBA(77, 77, 77, 1)
                 Height: =1
                 Width: =328
-                X: =752
-                Y: =408
+                X: =753
+                Y: =418
                 ZIndex: =36
 
             Label4 As label:
@@ -352,14 +352,15 @@
                     ="Reason:"
                 Width: =76
                 X: =764
-                Y: =262
+                Y: =313
                 ZIndex: =37
 
             Label4_1 As label:
                 Color: =RGBA(116, 116, 116, 1)
                 Text: =Reason.Text
-                X: =835
-                Y: =262
+                Width: =203
+                X: =851
+                Y: =315
                 ZIndex: =38
 
             Label13_4 As label:
