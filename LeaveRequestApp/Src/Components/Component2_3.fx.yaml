@@ -44,3 +44,11 @@ Component2_3 As CanvasComponent:
         Y: =46
         ZIndex: =4
 
+    Image8 As image:
+        Height: =45
+        Image: =notification
+        Width: =45
+        X: =1270
+        Y: =20
+        ZIndex: =5
+

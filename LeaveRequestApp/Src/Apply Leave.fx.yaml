@@ -85,7 +85,7 @@
                 Height: =106
                 HintText: ="Please ellaborate the reason for applying leave."
                 HoverBorderColor: =RGBA(128, 128, 128, 1)
-                HoverFill: =RGBA(219, 219, 219, 1)
+                HoverFill: =RGBA(237, 237, 237, 0.3)
                 Reset: =true
                 Width: =572
                 X: =68
@@ -100,7 +100,7 @@
                 Height: =52
                 HintText: ="Enter the reason"
                 HoverBorderColor: =RGBA(128, 128, 128, 1)
-                HoverFill: =RGBA(219, 219, 219, 1)
+                HoverFill: =RGBA(237, 237, 237, 0.3)
                 Reset: =true
                 Width: =301
                 X: =68
@@ -114,7 +114,7 @@
                 ChevronHoverBackground: =
                 Default: =varLeaveType
                 Height: =52
-                HoverFill: =RGBA(219, 219, 219, 1)
+                HoverFill: =RGBA(237, 237, 237, 0.3)
                 Items: =Choices([@'Leave Requests'].'Leave Type')
                 OnChange: |-
                     =Set(vardata,LookUp('Leave Balance_1', 'Leave Type'.Value=LeaveTypes.SelectedText.Value));
@@ -246,6 +246,7 @@
                 RadiusTopLeft: =15
                 RadiusTopRight: =15
                 Text: ="Apply Leave"
+                Tooltip: ="Click To Apply Leave"
                 Width: =188
                 X: =912
                 Y: =651
@@ -272,6 +273,7 @@
                 RadiusTopLeft: =15
                 RadiusTopRight: =15
                 Text: ="Cancel"
+                Tooltip: ="Click To Cancel"
                 Width: =188
                 X: =686
                 Y: =651
@@ -331,7 +333,7 @@
                 ChevronBackground: =RGBA(102, 102, 102, 1)
                 ChevronHoverBackground: =
                 Height: =42
-                HoverFill: =RGBA(128, 128, 128, 1)
+                HoverFill: =RGBA(237, 237, 237, 0.3)
                 Items: =managers.Name
                 PressedFill: =RGBA(219, 219, 219, 1)
                 Reset: =true

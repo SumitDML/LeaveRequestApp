@@ -56,7 +56,7 @@ Homepage As screen:
             HtmlText8 As htmlViewer:
                 Height: =285
                 HtmlText: |-
-                    ="<div style='margin:30px;width:200px;height:200px;background-color:#;box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;;;  #ccc; border-radius:1000px'></div>"
+                    ="<div style='margin:30px;width:200px;height:200px;background-color:#;box-shadow: rgba(136, 165, 191, 0.48) 1px 6px 20px 4px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;;;  #ccc; border-radius:1000px'></div>"
                 Width: =304
                 X: =75
                 Y: =246
