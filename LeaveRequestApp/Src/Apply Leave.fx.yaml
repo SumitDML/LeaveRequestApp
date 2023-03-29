@@ -99,7 +99,14 @@
                 ChevronHoverBackground: =
                 Height: =52
                 HoverFill: =RGBA(219, 219, 219, 1)
-                Items: =Choices([@'Leave Requests'].'Leave Type')
+                Items: =Choices([@'Leave Balance_1'].'Leave Type')
+                OnSelect: |-
+                    =Set(vardata,LookUp('Leave Balance_1', 'Leave Type'.Value=LeaveTypes.SelectedText.Value));
+                    
+                    
+                    ClearCollect(LeaveSum,Sum(Filter('Leave Requests','Leave Id'.Value=vardata.Id && ReuestedBy.Email=User().Email),TotalDays));
+                    
+                    ClearCollect(TotalLeave,Sum(Filter('Leave Balance_1',Id=vardata.Id),'Total Leave'))
                 PressedFill: =RGBA(128, 128, 128, 1)
                 Reset: =true
                 SelectionFill: =RGBA(128, 128, 128, 1)
@@ -196,7 +203,7 @@
                 Color: =RGBA(116, 116, 116, 1)
                 Height: =32
                 Text: |-
-                    ="Current Remaining Leaves:"
+                    =LeaveTypes.SelectedText.Value&" Balance:"
                 Width: =237
                 X: =764
                 Y: =431
@@ -204,21 +211,21 @@
 
             Label13_2 As label:
                 Color: =RGBA(116, 116, 116, 1)
-                Text: =LeaveTypes.SelectedText.Value
+                Text: =
                 Width: =136
                 X: =865
-                Y: =182
+                Y: =166
                 ZIndex: =20
 
             Label13_3 As label:
                 Color: =RGBA(116, 116, 116, 1)
-                Height: =38
+                Height: =37
                 PaddingRight: =0
                 Text: |-
-                    ="Leave Type:"
-                Width: =101
+                    ="Leave Type: "&LeaveTypes.SelectedText.Value
+                Width: =238
                 X: =764
-                Y: =182
+                Y: =166
                 ZIndex: =21
 
             TotalDays As label:
@@ -245,21 +252,17 @@
                 Text: |-
                     ="Number of Days:"
                 Width: =147
-                X: =764
+                X: =765
                 Y: =274
                 ZIndex: =23
 
-            Label14 As label:
+            RemainingBalance As label:
                 Color: =RGBA(102, 102, 102, 1)
                 Height: =32
-                Text: |-
-                    =ClearCollect(
-                        data,
-                        Filter('Leave Balance_1','Leave Type'.Value= Label13_2.Text)
-                    )
+                Text: =First(TotalLeave).Value - First(LeaveSum).Value
                 Width: =62
-                X: =992
-                Y: =431
+                X: =957
+                Y: =433
                 ZIndex: =25
 
             to As datepicker:
@@ -351,24 +354,24 @@
                 Text: |-
                     ="Reason:"
                 Width: =76
-                X: =764
+                X: =765
                 Y: =313
                 ZIndex: =37
 
-            Label4_1 As label:
+            ReasonsText As label:
                 Color: =RGBA(116, 116, 116, 1)
                 Text: =Reason.Text
-                Width: =203
-                X: =851
-                Y: =315
+                Width: =255
+                X: =841
+                Y: =309
                 ZIndex: =38
 
             Label13_4 As label:
                 Color: =RGBA(116, 116, 116, 1)
                 Height: =32
                 Text: |-
-                    ="New Remaining Leaves:"
-                Width: =221
+                    ="New "&LeaveTypes.SelectedText.Value&" Balance:"
+                Width: =237
                 X: =764
                 Y: =463
                 ZIndex: =39
@@ -376,9 +379,29 @@
             Label7 As label:
                 Color: =RGBA(102, 102, 102, 1)
                 Height: =32
-                Text: =""
+                Text: =RemainingBalance-TotalDays
                 Width: =79
-                X: =975
+                X: =1001
                 Y: =463
                 ZIndex: =40
+
+            Label8 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Height: =30
+                Text: |
+                    ="From: "&from.SelectedDate
+                Width: =237
+                X: =765
+                Y: =204
+                ZIndex: =41
+
+            Label8_1 As label:
+                Color: =RGBA(116, 116, 116, 1)
+                Height: =30
+                Text: |
+                    ="To: "&to.SelectedDate
+                Width: =237
+                X: =765
+                Y: =240
+                ZIndex: =42
 
