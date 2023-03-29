@@ -99,14 +99,14 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "445efb9a-75f7-4846-b2d8-c362e4bacdd7",
-    "Id": "65d85e31-ec5d-4b67-9367-715067338241",
+    "Id": "c152f57f-0926-47ca-a268-d6e6f019fc20",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "LeaveApp2",
+    "Name": "LeaveApp2+-+V2.msapp",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
-    "AppName": "LeaveApp2",
+    "AppName": "LeaveApp2 - V2",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
