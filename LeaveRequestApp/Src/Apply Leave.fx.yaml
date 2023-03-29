@@ -84,7 +84,7 @@
                 Clear: =true
                 Default: =""
                 Height: =52
-                HintText: ="Enter the Reason"
+                HintText: ="Enter the reason"
                 HoverBorderColor: =RGBA(128, 128, 128, 1)
                 HoverFill: =RGBA(219, 219, 219, 1)
                 Reset: =true
@@ -115,10 +115,14 @@
                 Y: =151
                 ZIndex: =14
 
-            Button7 As button:
+            "'Apply Leave Button' As button":
+                DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
                 Fill: =RGBA(51, 51, 51, 1)
                 OnSelect: |-
-                    =Set(var,First(Office365Users.SearchUser({searchTerm:approver.SelectedText.Value})));
+                    =If(from.SelectedDate<Today(),[Set(errordisplay,true),Set(err,"Please enter a valid start date")],
+                    from.SelectedDate>to.SelectedDate,[Set(errordisplay,true),Set(err,"Please enter valid end date")],
+                    
+                    Set(var,First(Office365Users.SearchUser({searchTerm:approver.SelectedText.Value})));
                     
                     Patch('Leave Requests',Defaults('Leave Requests'),
                     {Title:Reason.Text},
@@ -128,30 +132,31 @@
                     {To:to.SelectedDate},
                     {'Total Days':Value(TotalDays.Text)},
                     {RequestedBy: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(User().Email),
-                        Department:"",
-                        DisplayName:User().FullName,
-                        Email:User().Email,
-                        JobTitle:"",
-                        Picture:""
-                        }},
+                        Claims:Lower(User().Email),
+                        Department:"",
+                        DisplayName:User().FullName,
+                        Email:User().Email,
+                        JobTitle:"",
+                        Picture:""
+                        }},
                     {HR: {'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(User().Email),
-                        Department:"",
-                        DisplayName:User().FullName,
-                        Email:User().Email,
-                        JobTitle:"",
-                        Picture:""
-                        }},
+                        Claims:Lower(User().Email),
+                        Department:"",
+                        DisplayName:User().FullName,
+                        Email:User().Email,
+                        JobTitle:"",
+                        Picture:""
+                        }},
                     {'Reporting Manager':{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",
-                        Claims:Lower(var.Mail),
-                        Department:"",
-                        DisplayName:var.Department,
-                        Email:var.Mail,
-                        JobTitle:"",
-                        Picture:""
-                        }}
+                        Claims:Lower(var.Mail),
+                        Department:"",
+                        DisplayName:var.Department,
+                        Email:var.Mail,
+                        JobTitle:"",
+                        Picture:""
+                        }}
                     )
+                    );
                 Text: ="Apply Leave"
                 X: =921
                 Y: =666
@@ -204,7 +209,7 @@
                 Height: =32
                 Text: |-
                     =LeaveTypes.SelectedText.Value&" Balance:"
-                Width: =237
+                Width: =199
                 X: =764
                 Y: =431
                 ZIndex: =19
@@ -244,7 +249,7 @@
                      + 1)
                 Width: =133
                 X: =912
-                Y: =269
+                Y: =274
                 ZIndex: =22
 
             Label13_5 As label:
@@ -253,7 +258,7 @@
                     ="Number of Days:"
                 Width: =147
                 X: =765
-                Y: =269
+                Y: =274
                 ZIndex: =23
 
             RemainingBalance As label:
@@ -261,8 +266,8 @@
                 Height: =32
                 Text: =First(TotalLeave).Value - First(LeaveSum).Value
                 Width: =62
-                X: =957
-                Y: =433
+                X: =963
+                Y: =431
                 ZIndex: =25
 
             to As datepicker:
@@ -345,8 +350,8 @@
                 Fill: =RGBA(77, 77, 77, 1)
                 Height: =1
                 Width: =328
-                X: =752
-                Y: =408
+                X: =753
+                Y: =418
                 ZIndex: =36
 
             Label4 As label:
@@ -355,15 +360,15 @@
                     ="Reason:"
                 Width: =76
                 X: =765
-                Y: =303
+                Y: =313
                 ZIndex: =37
 
             ReasonsText As label:
                 Color: =RGBA(116, 116, 116, 1)
-                Text: =Reason.Text
+                Text: =
                 Width: =255
                 X: =841
-                Y: =309
+                Y: =316
                 ZIndex: =38
 
             Label13_4 As label:
@@ -404,4 +409,52 @@
                 X: =765
                 Y: =240
                 ZIndex: =42
+
+    errordisplaypop As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Timer2 As timer:
+            Duration: =1000
+            Height: =38
+            OnTimerEnd: =Set(errordisplay,false)
+            Start: =errordisplay
+            Visible: =errordisplay
+            Width: =57
+            X: =1266
+            Y: =86
+            ZIndex: =3
+
+        Rectangle4 As rectangle:
+            BorderColor: =RGBA(255, 255, 255, 0.5)
+            BorderThickness: =0.5
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =104
+            Visible: =errordisplay
+            Width: =457
+            X: =908
+            Y: =20
+            ZIndex: =4
+
+        Label14 As label:
+            Align: =Align.Center
+            Height: =104
+            Text: =err
+            Visible: =errordisplay
+            Width: =441
+            X: =908
+            Y: =20
+            ZIndex: =5
+
+        Icon2 As icon.Error:
+            Height: =46
+            Icon: =Icon.Error
+            Visible: =errordisplay
+            Width: =44
+            X: =937
+            Y: =49
+            ZIndex: =6
 
