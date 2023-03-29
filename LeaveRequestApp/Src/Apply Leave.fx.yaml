@@ -160,6 +160,13 @@
                         }}
                     )
                     );
+                    
+                    Reset(Reason);
+                    Reset(LeaveTypes);
+                    Reset(Details);
+                    Reset(from);
+                    Reset(to);
+                    Reset(approver);
                 Text: ="Apply Leave"
                 X: =921
                 Y: =666
@@ -422,7 +429,7 @@
         ZIndex: =7
 
         Timer2 As timer:
-            Duration: =1000
+            Duration: =1500
             Height: =38
             OnTimerEnd: =Set(errordisplay,false)
             Start: =errordisplay
