@@ -1,8 +1,9 @@
 Holidays As screen:
-    Fill: =RGBA(241, 244, 249, 0.4)
+    Fill: =RGBA(255, 255, 255, 0)
 
     Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
+        Fill: =RGBA(255, 255, 255, 0)
         Height: =Parent.Height
         Width: =Parent.Width-'Left Navigation_4'.Width
         X: ='Left Navigation_4'.Width
@@ -13,7 +14,7 @@ Holidays As screen:
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(230, 255, 235, 0.7)
+            Fill: =RGBA(205, 222, 240, 0.4)
             Height: =769
             Width: =Parent.Width
             X: =Parent.X

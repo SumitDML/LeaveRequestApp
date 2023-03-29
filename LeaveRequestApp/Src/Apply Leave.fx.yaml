@@ -1,5 +1,5 @@
 "'Apply Leave' As screen":
-    Fill: =RGBA(241, 244, 249, 1)
+    Fill: =
 
     "'Left Navigation_1' As 'Left Navigation'":
         Width: ='Left Navigation_4'.MenuWidth
@@ -7,7 +7,7 @@
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
-        Fill: =RGBA(255, 229, 209, 0.3)
+        Fill: =RGBA(255, 255, 255, 0)
         Height: =767
         Width: =Parent.Width-'Left Navigation_1'.Width
         X: ='Left Navigation_1'.Width
@@ -19,7 +19,7 @@
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(205, 222, 240, 0.4)
             Height: =Parent.Height
             Width: =Parent.Width
             X: =0
@@ -126,7 +126,7 @@
 
             "'Apply Leave Button' As button":
                 DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
-                Fill: =RGBA(51, 51, 51, 1)
+                Fill: =RGBA(0, 121, 187, 1)
                 OnSelect: |
                     =If(from.SelectedDate<Today(),[Set(errordisplay,true),Set(err,"Please enter a valid start date")],
                     from.SelectedDate>to.SelectedDate,[Set(errordisplay,true),Set(err,"Please enter valid end date")],
@@ -284,10 +284,12 @@
                 ZIndex: =43
 
                 Button9 As button:
+                    BorderColor: =Color.Blue
                     BorderThickness: =0.05
-                    DisabledFill: =RGBA(237, 237, 237, 1)
+                    DisabledBorderColor: =RGBA(205, 222, 240, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
                     DisplayMode: =DisplayMode.Disabled
-                    Fill: =RGBA(245, 245, 245, 1)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =410
                     RadiusBottomLeft: =15
                     RadiusBottomRight: =15
@@ -300,7 +302,10 @@
                     ZIndex: =17
 
                 Label13 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(102, 102, 102, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =53
                     Text: |-
                         ="Your Request Includes:"
@@ -310,7 +315,10 @@
                     ZIndex: =18
 
                 Label13_1 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =32
                     Text: |-
                         =LeaveTypes.SelectedText.Value&" Balance:"
@@ -320,7 +328,10 @@
                     ZIndex: =19
 
                 Label13_2 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Text: =
                     Width: =136
                     X: =865
@@ -328,7 +339,10 @@
                     ZIndex: =20
 
                 Label13_3 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =37
                     PaddingRight: =0
                     Text: |-
@@ -339,7 +353,10 @@
                     ZIndex: =21
 
                 TotalDays As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =39
                     Text: |-
                         =1 + ((DateDiff(from.SelectedDate,to.SelectedDate)) 
@@ -353,7 +370,10 @@
                     ZIndex: =22
 
                 Label13_5 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Text: |-
                         ="Number of Days:"
                     Width: =147
@@ -362,7 +382,10 @@
                     ZIndex: =23
 
                 RemainingBalance As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(102, 102, 102, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =32
                     Text: =First(TotalLeave).Value - First(LeaveSum).Value
                     Width: =62
@@ -371,8 +394,9 @@
                     ZIndex: =25
 
                 Rectangle2 As rectangle:
-                    BorderColor: =RGBA(102, 102, 102, 1)
-                    Fill: =RGBA(77, 77, 77, 1)
+                    BorderColor: =Color.Blue
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =1
                     Width: =328
                     X: =753
@@ -380,7 +404,10 @@
                     ZIndex: =36
 
                 Label4 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Text: |-
                         ="Reason:"
                     Width: =76
@@ -389,7 +416,10 @@
                     ZIndex: =37
 
                 ReasonsText As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =77
                     Text: =Reason.Text
                     VerticalAlign: =VerticalAlign.Top
@@ -399,7 +429,10 @@
                     ZIndex: =38
 
                 Label13_4 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =32
                     Text: |-
                         ="New "&LeaveTypes.SelectedText.Value&" Balance:"
@@ -409,7 +442,10 @@
                     ZIndex: =39
 
                 Label7 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(102, 102, 102, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =32
                     Text: =If(Int(TotalDays.Text)<Int(RemainingBalance.Text),RemainingBalance-TotalDays,0)
                     Width: =106
@@ -418,7 +454,10 @@
                     ZIndex: =40
 
                 Label8 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =30
                     Text: |
                         ="From: "&from.SelectedDate
@@ -428,7 +467,10 @@
                     ZIndex: =41
 
                 Label8_1 As label:
+                    BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
+                    DisabledFill: =RGBA(205, 222, 240, 0.3)
+                    Fill: =RGBA(255, 255, 255, 0.3)
                     Height: =30
                     Text: |
                         ="To: "&to.SelectedDate

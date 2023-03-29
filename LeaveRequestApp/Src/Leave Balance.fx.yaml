@@ -3,6 +3,7 @@
 
     Canvas1_3 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
+        Fill: =RGBA(255, 255, 255, 0)
         Height: =768
         Width: =Parent.Width-'Left Navigation_3'.Width
         X: ='Left Navigation_3'.Width
@@ -13,7 +14,7 @@
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(251, 237, 255,0.9)
+            Fill: =RGBA(205, 222, 240, 0.4)
             Height: =Parent.Height
             Width: =Parent.Width
             X: =0.00

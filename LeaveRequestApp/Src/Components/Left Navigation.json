@@ -447,7 +447,7 @@
             "Rules": [
               {
                 "Category": "Design",
-                "InvariantScript": "",
+                "InvariantScript": "If(ThisItem.IsSelected,Color.AliceBlue)",
                 "Property": "TemplateFill",
                 "RuleProviderType": "Unknown"
               }
@@ -910,7 +910,7 @@
             "Name": "Image3",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 152,
+            "PublishOrderIndex": 153,
             "Rules": [
               {
                 "Category": "Data",
@@ -1188,7 +1188,7 @@
             "Name": "Label1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 153,
+            "PublishOrderIndex": 154,
             "Rules": [
               {
                 "Category": "Data",
@@ -1475,7 +1475,7 @@
             "Name": "Group1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 154,
+            "PublishOrderIndex": 152,
             "Rules": [
               {
                 "Category": "Design",
@@ -1801,7 +1801,7 @@
       },
       "NavItems"
     ],
-    "LastModifiedTimestamp": "638157053549328431",
+    "LastModifiedTimestamp": "638157062848169233",
     "Name": "Left Navigation",
     "Rules": [
       {
@@ -1891,7 +1891,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638157053549328431",
+  "LastModifiedTimestamp": "638157062848169233",
   "Name": "784fa766a3ea40dfb2045a277d69d5b8",
   "OverridableProperties": {},
   "TemplateOriginalName": "0103d0576242426c9eeb751b9fd6cb43",

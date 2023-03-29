@@ -1,5 +1,5 @@
 "'Leave Status' As screen":
-    Fill: =RGBA(241, 244, 249, 1)
+    Fill: =
 
     "'Left Navigation_2' As 'Left Navigation'":
         Width: ='Left Navigation_4'.MenuWidth
@@ -7,6 +7,7 @@
 
     Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
+        Fill: =RGBA(255, 255, 255, 0)
         Height: =768
         Width: =Parent.Width-'Left Navigation_2'.Width
         X: ='Left Navigation_2'.Width
@@ -17,7 +18,7 @@
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
             DisplayMode: =DisplayMode.View
-            Fill: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(205, 222, 240, 0.4)
             Height: =Parent.Height
             Visible: =true
             Width: =1168
@@ -144,6 +145,7 @@
         Height: =60
         Items: =tabs
         Layout: =Layout.Vertical
+        TemplateFill: =If(ThisItem.IsSelected,Color.AliceBlue)
         TemplatePadding: =0
         TemplateSize: =57
         Width: =688
