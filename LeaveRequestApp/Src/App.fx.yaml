@@ -1,10 +1,14 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |+
-        =
-        ClearCollect(
+    OnStart: |-
+        =ClearCollect(
             lmsnav,
             Table(
+                {
+                    Title: "Homepage",
+                    Screen: Homepage,
+                    Icon: home
+                },
                 {
                     Title: "Apply Leave",
                     Screen: 'Apply Leave',
@@ -15,12 +19,12 @@ App As appinfo:
                     Screen: 'Leave Status',
                     Icon: 'leaveStatus-7'
                 },
-                        {
+                {
                     Title: "Leave Balance",
                     Screen: 'Leave Balance',
                     Icon: leave_balance
                 },
-                    {
+                {
                     Title: "Holidays",
                     Screen: Holidays,
                     Icon: holidays
@@ -32,134 +36,139 @@ App As appinfo:
             Table(
                 {
                     Name: "Sourabh Choudhary",
-                    mailaddress:"sourabh.choudhary@digimantra.com"
+                    mailaddress: "sourabh.choudhary@digimantra.com"
                 },
-                { 
+                {
                     Name: "Sumit Pradhan",
-                    mailaddress:"sumit.pradhan@digimantra.com"
+                    mailaddress: "sumit.pradhan@digimantra.com"
                 },
-                 {
+                {
                     Name: "Manish Kumar",
-                    mailaddress:"manish.kumar@digimantra.com"
+                    mailaddress: "manish.kumar@digimantra.com"
                 },
-                 {
+                {
                     Name: "Ankit Aman",
-                    mailaddress:"ankit.aman@digimantra.com"
-                }, 
-                 {
-                    Name: "Anmoldeep Singh",
-                    mailaddress:"anmoldeep.singh@digimantra.com"
+                    mailaddress: "ankit.aman@digimantra.com"
                 },
-                         {
+                {
+                    Name: "Anmoldeep Singh",
+                    mailaddress: "anmoldeep.singh@digimantra.com"
+                },
+                {
                     Name: "Naveen Babbar",
-                    mailaddress:"naveen.babbar@digimantra.com"
+                    mailaddress: "naveen.babbar@digimantra.com"
                 }
             )
         );
-        
         ClearCollect(
             holidaycal,
             Table(
                 {
                     Occasion: "Republic Day",
-                    Day:"Thursday",
-                    Date:"26",
-                    Month:"JAN",
-                    Colour:"#bd9997"
-                    
+                    Day: "Thursday",
+                    Date: "26",
+                    Month: "JAN",
+                    Colour: "#bd9997"
                 },
-                      {
+                {
                     Occasion: "Holi",
-                    Day:"Wednesday",
-                    Date:"08",
-                    Month:"MAR",
-                    Colour:"#879487"
-                    
+                    Day: "Wednesday",
+                    Date: "08",
+                    Month: "MAR",
+                    Colour: "#879487"
                 },
-                      {
+                {
                     Occasion: "Bakr Eid",
-                    Day:"Thursday",
-                    Date:"29",
-                    Month:"JUN",
-                    Colour:"#bd9997"
-                    
+                    Day: "Thursday",
+                    Date: "29",
+                    Month: "JUN",
+                    Colour: "#bd9997"
                 },
-                      {
+                {
                     Occasion: "Independence Day",
-                    Day:"Tuesday",
-                    Date:"15",
-                    Month:"AUG",
-                    Colour:"#bd9997"
-                    
-                    
+                    Day: "Tuesday",
+                    Date: "15",
+                    Month: "AUG",
+                    Colour: "#bd9997"
                 },
-                      {
+                {
                     Occasion: "Raksha Bandhan",
-                    Day:"Thursday",
-                    Date:"31",
-                    Month:"AUG",
-                    Colour:"#879487"
-                    
+                    Day: "Thursday",
+                    Date: "31",
+                    Month: "AUG",
+                    Colour: "#879487"
                 },
-                      {
+                {
                     Occasion: "Janamashtmi",
-                    Day:"Thursday",
-                    Date:"07",
-                    Month:"SEP",
-                    Colour:"#bd9997"
-                    
+                    Day: "Thursday",
+                    Date: "07",
+                    Month: "SEP",
+                    Colour: "#bd9997"
                 },
-                      {
+                {
                     Occasion: "Gandhi Jayanti",
-                    Day:"Monday",
-                    Date:"02",
-                    Month:"OCT",
-                    Colour:"#879487"
-                    
+                    Day: "Monday",
+                    Date: "02",
+                    Month: "OCT",
+                    Colour: "#879487"
                 },
-                      {
+                {
                     Occasion: "Diwali",
-                    Day:"Saturday",
-                    Date:"11",
-                    Month:"NOV",
-                    Colour:"#bd9997"
-                    
+                    Day: "Saturday",
+                    Date: "11",
+                    Month: "NOV",
+                    Colour: "#bd9997"
                 },
-                              {
+                {
                     Occasion: "Diwali",
-                    Day:"Sunday",
-                    Date:"12",
-                    Month:"NOV",
-                    Colour:"#879487"
-                    
+                    Day: "Sunday",
+                    Date: "12",
+                    Month: "NOV",
+                    Colour: "#879487"
                 },
-                              {
+                {
                     Occasion: "Diwali",
-                    Day:"Monday",
-                    Date:"13",
-                    Month:"NOV",
-                    Colour:"#bd9997"
-                    
+                    Day: "Monday",
+                    Date: "13",
+                    Month: "NOV",
+                    Colour: "#bd9997"
                 },
-                                      {
+                {
                     Occasion: "Gurpurab",
-                    Day:"Monday",
-                    Date:"27",
-                    Month:"NOV",
-                    Colour:"#879487"
+                    Day: "Monday",
+                    Date: "27",
+                    Month: "NOV",
+                    Colour: "#879487"
                 },
-                                      {
+                {
                     Occasion: "Christmas Day",
-                    Day:"Monday",
-                    Date:"25",
-                    Month:"DEC",
-                    Colour:"#bd9997"
-                    
-                } 
+                    Day: "Monday",
+                    Date: "25",
+                    Month: "DEC",
+                    Colour: "#bd9997"
+                }
             )
         );
-        ClearCollect(tabs,Table({Filter:"All",Value:"All"},{Filter:"Approved",Value:"Approved"},{Filter:"Rejected",Value:"Rejected"},{Filter:"Pending",Value:"Pending TL Approval"}))
-        
-        
+        ClearCollect(
+            tabs,
+            Table(
+                {
+                    Filter: "All",
+                    Value: "All"
+                },
+                {
+                    Filter: "Approved",
+                    Value: "Approved"
+                },
+                {
+                    Filter: "Rejected",
+                    Value: "Rejected"
+                },
+                {
+                    Filter: "Pending",
+                    Value: "Pending TL Approval"
+                }
+            )
+        );
     StartScreen: ='Splash Screen'
 

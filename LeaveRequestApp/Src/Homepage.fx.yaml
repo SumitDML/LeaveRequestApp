@@ -1,0 +1,173 @@
+Homepage As screen:
+
+    Canvas1_5 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Fill: =RGBA(255, 255, 255, 0)
+        Height: =Parent.Height
+        Width: =Parent.Width-'Left Navigation_4'.Width
+        X: ='Left Navigation_4'.Width
+        ZIndex: =1
+
+        DataCard1_5 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(205, 222, 240, 0.4)
+            Height: =769
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Component2_8 As Component2_3:
+                Height: =70
+                Width: =Parent.Width
+                X: =0.00
+                ZIndex: =1
+
+            Button2_1 As button:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =0.5
+                DisabledBorderColor: =
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =642
+                HoverFill: =
+                PaddingLeft: =20
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Text: =""
+                Width: =1091
+                X: =39
+                Y: =90
+                ZIndex: =2
+
+            HtmlText8 As htmlViewer:
+                Height: =285
+                HtmlText: |-
+                    ="<div style='margin:30px;width:200px;height:200px;background-color:#;box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;;  #ccc; border-radius:1000px'></div>"
+                Width: =304
+                X: =75
+                Y: =246
+                ZIndex: =3
+
+            Label29 As label:
+                Text: ="Text"
+                X: =40
+                Y: =40
+                ZIndex: =4
+
+            Icon4 As icon.Add:
+                Color: =RGBA(50, 86, 160, 1)
+                Icon: =Icon.Add
+                X: =176
+                Y: =353
+                ZIndex: =5
+
+            Label30 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                Font: =Font.'Lato Black'
+                Height: =46
+                Size: =15
+                Text: ="Apply For Leave"
+                Width: =166
+                X: =134
+                Y: =497
+                ZIndex: =6
+
+            Label31 As label:
+                Color: =RGBA(102, 102, 102, 1)
+                Font: =Font.'Lato Black'
+                Height: =56
+                Size: =15
+                Text: ="Total Leaves Consumed"
+                Width: =238
+                X: =604
+                Y: =118
+                ZIndex: =7
+
+            "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                Height: =519
+                Items: ='Leave Balance_1'
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =248
+                Transition: =Transition.Push
+                Width: =680
+                WrapCount: =2
+                X: =399
+                Y: =174
+                ZIndex: =8
+
+                HtmlText10 As htmlViewer:
+                    Height: =238
+                    HtmlText: |-
+                        ="<div style='margin:10px;width:300px;height:200px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+                    OnSelect: =Select(Parent)
+                    Width: =340
+                    Y: =6
+                    ZIndex: =2
+
+                Label32 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Lato Light'
+                    Height: =54
+                    OnSelect: =Select(Parent)
+                    Size: =18
+                    Text: =ThisItem.'Leave Type'.Value
+                    Width: =300
+                    X: =12
+                    Y: =136
+                    ZIndex: =3
+
+                Label33 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(102, 113, 166, 1)
+                    Font: =Font.'Lato Black'
+                    Height: =116
+                    OnSelect: =Select(Parent)
+                    Size: =60
+                    Text: =If(IsBlank(Sum(Filter('Leave Requests','Leave Id'.Id=ThisItem.Id && RequestedBy.Email=User().Email),'Total Days')),0,Sum(Filter('Leave Requests','Leave Id'.Id=ThisItem.Id && RequestedBy.Email=User().Email),'Total Days'))
+                    Width: =300
+                    X: =12
+                    Y: =36
+                    ZIndex: =4
+
+        DataCard1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(205, 222, 240, 0.4)
+            Height: =390
+            Width: =1168
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Button2_2 As button:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =0.5
+                DisabledBorderColor: =
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =642
+                HoverFill: =
+                PaddingLeft: =20
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Text: =""
+                Width: =1091
+                X: =39
+                Y: =33
+                ZIndex: =1
+
+    "'Left Navigation_5' As 'Left Navigation'":
+        Width: =198
+        X: =0.00
+        ZIndex: =2
+

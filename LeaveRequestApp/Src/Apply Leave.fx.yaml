@@ -676,7 +676,7 @@
             Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(255, 255, 255, 1)
             DisabledFill: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(202, 202, 202, 0.7)
             Height: =96
             HoverFill: =
             Text: =""
