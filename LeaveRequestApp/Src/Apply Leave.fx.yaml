@@ -127,7 +127,7 @@
             "'Apply Leave Button' As button":
                 DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
                 Fill: =RGBA(51, 51, 51, 1)
-                OnSelect: |-
+                OnSelect: |
                     =If(from.SelectedDate<Today(),[Set(errordisplay,true),Set(err,"Please enter a valid start date")],
                     from.SelectedDate>to.SelectedDate,[Set(errordisplay,true),Set(err,"Please enter valid end date")],
                     Int(TotalDays.Text)>Int(RemainingBalance.Text),[Set(errordisplay,true),Set(err,"You don't have enough leave balance.")],
@@ -180,8 +180,6 @@
                     Reset(from);
                     Reset(to);
                     Reset(approver);
-                    
-                    Navigate('Leave Status');
                 Text: ="Apply Leave"
                 X: =921
                 Y: =666
@@ -344,17 +342,11 @@
                     Color: =RGBA(116, 116, 116, 1)
                     Height: =39
                     Text: |-
-                        =If(
-                            And(
-                                IsBlank(from),
-                                IsBlank(to)
-                            ),
-                            0,
-                            DateDiff(
-                                from.SelectedDate,
-                                to.SelectedDate
-                            )
-                         + 1)
+                        =1 + ((DateDiff(from.SelectedDate,to.SelectedDate)) 
+                        * 5 - ((Weekday(from.SelectedDate) - 
+                        Weekday(to.SelectedDate))*2)) / 7 - 
+                        Switch(Weekday(to.SelectedDate),7,1,0) - 
+                        Switch(Weekday(from.SelectedDate),1,1,0)
                     Width: =61
                     X: =912
                     Y: =274
@@ -517,7 +509,7 @@
             Height: =25
             OnTimerEnd: =Set(succesfulSubmission,false)
             Start: =succesfulSubmission
-            Visible: =succesfulSubmission
+            Visible: =false
             Width: =24
             X: =1266
             Y: =571
