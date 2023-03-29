@@ -71,30 +71,30 @@
                     ZIndex: =3
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =513
-        Items: =Filter('Leave Requests','Created By'.Email=User().Email)
+        Height: =501
+        Items: =Filter('Leave Requests',RequestedBy.Email=User().Email)
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
         TemplatePadding: =0
         TemplateSize: =258
         Transition: =Transition.Pop
-        Width: =1086
+        Width: =1059
         WrapCount: =3
-        X: =239
+        X: =251
         Y: =218
         ZIndex: =3
 
         HtmlText3 As htmlViewer:
             Height: =243
             HtmlText: |-
-                ="<div style='margin:10px;width:330px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+                ="<div style='margin:10px;width:320px;height:208px;background-color:#;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
             OnSelect: =Select(Parent)
-            Width: =362
+            Width: =353
             ZIndex: =1
 
         Label18 As label:
             Align: =Align.Center
-            Color: =If(ThisItem.Status.Value="Approved",Color.Green,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(248, 228, 92,1)))
+            Color: =If(ThisItem.Status.Value="Approved",Color.Green,If(ThisItem.Status.Value="Rejected",Color.Red,RGBA(212, 171, 23,1)))
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
             Size: =15
