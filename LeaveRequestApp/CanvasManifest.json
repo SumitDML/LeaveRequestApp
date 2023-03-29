@@ -99,10 +99,10 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "445efb9a-75f7-4846-b2d8-c362e4bacdd7",
-    "Id": "c152f57f-0926-47ca-a268-d6e6f019fc20",
+    "Id": "e30fcc93-7878-48ea-9f75-957c508ea069",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "LeaveApp2",
+    "Name": "LeaveApp2.msapp",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
