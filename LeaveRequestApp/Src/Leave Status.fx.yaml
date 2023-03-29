@@ -48,7 +48,7 @@
                 ZIndex: =4
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =501
+        Height: =517
         Items: =MyLeaves
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
@@ -58,7 +58,7 @@
         Width: =1059
         WrapCount: =3
         X: =251
-        Y: =218
+        Y: =199
         ZIndex: =3
 
         HtmlText3 As htmlViewer:
@@ -121,23 +121,9 @@
         Size: =15
         Text: ="Your Leave History..."
         Width: =330
-        X: =265
-        Y: =168
+        X: =266
+        Y: =167
         ZIndex: =4
-
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =57
-        Items: |-
-            =Table({Filter:"All",Value:"All"},{Filter:"Approved",Value:"Approved"},{Filter:"Rejected",Value:"Rejected"},{Filter:"Pending",Value:"Pending TL Approval"})
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =53
-        Transition: =Transition.Push
-        Width: =692
-        WrapCount: =4
-        X: =251
-        Y: =102
-        ZIndex: =5
 
     DisplayLeave As group:
         Height: =5
@@ -727,4 +713,25 @@
                     X: =158
                     Y: =4
                     ZIndex: =2
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =66
+        Items: =tabs
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =60
+        Width: =650
+        WrapCount: =4
+        X: =265
+        Y: =102
+        ZIndex: =10
+
+    Label23 As label:
+        Align: =Align.Center
+        Height: =100
+        Text: =message
+        Width: =370
+        X: =596
+        Y: =336
+        ZIndex: =11
 
