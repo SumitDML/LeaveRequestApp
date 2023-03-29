@@ -47,32 +47,9 @@
                 Y: =89
                 ZIndex: =4
 
-            "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-                Height: =57
-                Items: |-
-                    =Table({Filter:"All"},{Filter:"Approved"},{Filter:"Rejected"},{Filter:"Pending"})
-                Layout: =Layout.Vertical
-                TemplatePadding: =0
-                TemplateSize: =53
-                Transition: =Transition.Push
-                Width: =692
-                WrapCount: =4
-                X: =54
-                Y: =114
-                ZIndex: =6
-
-                Button6 As button:
-                    Color: =RGBA(77, 77, 77, 1)
-                    Fill: =RGBA(242, 242, 241,1)
-                    OnSelect: =If(ThisItem.Filter="Approved",Set(varFilter,Filter('Leave Requests',Status.Value="Approved")))
-                    Text: =ThisItem.Filter
-                    X: =9
-                    Y: =4
-                    ZIndex: =3
-
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =501
-        Items: =Filter('Leave Requests',RequestedBy.Email=User().Email)
+        Items: =MyLeaves
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
         TemplatePadding: =0
@@ -145,8 +122,31 @@
         Text: ="Your Leave History..."
         Width: =330
         X: =265
-        Y: =178
+        Y: =168
         ZIndex: =4
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =57
+        Items: |-
+            =Table({Filter:"All",Value:"All"},{Filter:"Approved",Value:"Approved"},{Filter:"Rejected",Value:"Rejected"},{Filter:"Pending",Value:"Pending TL Approval"})
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =53
+        Transition: =Transition.Push
+        Width: =692
+        WrapCount: =4
+        X: =251
+        Y: =102
+        ZIndex: =5
+
+        Button6 As button:
+            Color: =RGBA(77, 77, 77, 1)
+            Fill: =RGBA(242, 242, 241,1)
+            OnSelect: =If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),ClearCollect(MyLeaves,Filter('Leave Requests',Status.Value=ThisItem.Value,RequestedBy.Email=User().Email)))
+            Text: =ThisItem.Filter
+            X: =8
+            Y: =12
+            ZIndex: =3
 
     DisplayLeave As group:
         Height: =5
@@ -160,7 +160,7 @@
             Height: =768
             Visible: =varDisplay
             Width: =1366
-            ZIndex: =5
+            ZIndex: =6
 
         Button5 As button:
             Fill: =RGBA(255, 255, 255, 1)
@@ -179,7 +179,7 @@
             Width: =1040
             X: =150
             Y: =93
-            ZIndex: =6
+            ZIndex: =7
 
         Icon1 As icon.Cancel:
             Height: =35
@@ -189,7 +189,7 @@
             Width: =33
             X: =1096
             Y: =124
-            ZIndex: =7
+            ZIndex: =8
 
         FormViewer1 As formViewer:
             DataSource: ='Leave Requests'
@@ -199,7 +199,7 @@
             Width: =883
             X: =205
             Y: =126
-            ZIndex: =8
+            ZIndex: =9
 
             Title_DataCard1 As typedDataCard.textualViewCard:
                 BorderStyle: =BorderStyle.Solid
