@@ -26,11 +26,19 @@
             Y: =0
             ZIndex: =1
 
+            Circle1 As circle:
+                Fill: =RGBA(205, 222, 240, 0.7)
+                Height: =558
+                Width: =568.3333333333333
+                X: =700
+                Y: =-200
+                ZIndex: =2
+
             Component2_4 As Component2_3:
                 Height: =70
                 Width: =Parent.Width
                 X: =0.00
-                ZIndex: =1
+                ZIndex: =3
 
             Button3 As button:
                 BorderThickness: =0
@@ -50,7 +58,7 @@
                 Width: =1095
                 X: =36
                 Y: =90
-                ZIndex: =2
+                ZIndex: =4
 
             Label14_1 As label:
                 Font: =Font.'Lato Black'
@@ -59,7 +67,7 @@
                 Text: ="Details"
                 X: =68
                 Y: =220
-                ZIndex: =9
+                ZIndex: =5
 
             Label14_2 As label:
                 Font: =Font.'Lato Black'
@@ -68,7 +76,7 @@
                 Text: ="Reason"
                 X: =68
                 Y: =118
-                ZIndex: =10
+                ZIndex: =6
 
             Details As text:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -82,7 +90,7 @@
                 Width: =572
                 X: =68
                 Y: =252
-                ZIndex: =12
+                ZIndex: =7
 
             Reason As text:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -97,7 +105,7 @@
                 Width: =301
                 X: =68
                 Y: =151
-                ZIndex: =13
+                ZIndex: =8
 
             LeaveTypes As dropdown:
                 BorderColor: =RGBA(219, 219, 219, 1)
@@ -122,11 +130,17 @@
                 Width: =222
                 X: =419
                 Y: =151
-                ZIndex: =14
+                ZIndex: =9
 
             "'Apply Leave Button' As button":
+                BorderColor: =RGBA(103, 143, 189,1)
+                BorderThickness: =1
                 DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
-                Fill: =RGBA(0, 121, 187, 1)
+                Fill: =RGBA(151, 186, 227,1)
+                Font: =Font.'Lato Black'
+                Height: =55
+                HoverColor: =Color.White
+                HoverFill: =RGBA(151, 186, 227,0.8)
                 OnSelect: |
                     =If(from.SelectedDate<Today(),[Set(errordisplay,true),Set(err,"Please enter a valid start date")],
                     from.SelectedDate>to.SelectedDate,[Set(errordisplay,true),Set(err,"Please enter valid end date")],
@@ -180,15 +194,25 @@
                     Reset(from);
                     Reset(to);
                     Reset(approver);
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
                 Text: ="Apply Leave"
+                Width: =188
                 X: =921
-                Y: =666
-                ZIndex: =15
+                Y: =651
+                ZIndex: =10
 
             Button8 As button:
-                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =1
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.'Lato Black'
+                Height: =55
+                HoverColor: =RGBA(128, 128, 128, 1)
+                HoverFill: =RGBA(237, 237, 237, 1)
                 OnSelect: |-
                     =Reset(Reason);
                     Reset(LeaveTypes);
@@ -196,10 +220,15 @@
                     Reset(from);
                     Reset(to);
                     Reset(approver);
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
                 Text: ="Cancel"
-                X: =740
-                Y: =666
-                ZIndex: =16
+                Width: =188
+                X: =711
+                Y: =651
+                ZIndex: =11
 
             to As datepicker:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -210,7 +239,7 @@
                 Width: =272
                 X: =369
                 Y: =410
-                ZIndex: =26
+                ZIndex: =19
 
             Label14_3 As label:
                 Font: =Font.'Lato Black'
@@ -219,7 +248,7 @@
                 Text: ="Leave Type"
                 X: =418
                 Y: =118
-                ZIndex: =28
+                ZIndex: =20
 
             Label14_4 As label:
                 Font: =Font.'Lato Black'
@@ -228,7 +257,7 @@
                 Text: ="Start Date"
                 X: =68
                 Y: =377
-                ZIndex: =29
+                ZIndex: =21
 
             Label14_5 As label:
                 Font: =Font.'Lato Black'
@@ -237,7 +266,7 @@
                 Text: ="End Date"
                 X: =369
                 Y: =377
-                ZIndex: =30
+                ZIndex: =22
 
             Label14_6 As label:
                 Font: =Font.'Lato Black'
@@ -247,7 +276,7 @@
                 Width: =200
                 X: =68
                 Y: =489
-                ZIndex: =32
+                ZIndex: =23
 
             approver As dropdown:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -263,7 +292,7 @@
                 Width: =286
                 X: =68
                 Y: =522
-                ZIndex: =33
+                ZIndex: =24
 
             from As datepicker:
                 BorderColor: =RGBA(219, 219, 219, 1)
@@ -274,14 +303,14 @@
                 Width: =272
                 X: =68
                 Y: =410
-                ZIndex: =34
+                ZIndex: =25
 
             SideBox As group:
                 Height: =5
                 Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =43
+                X: =60
+                Y: =60
+                ZIndex: =47
 
                 Button9 As button:
                     BorderColor: =Color.Blue
@@ -299,64 +328,55 @@
                     Width: =384
                     X: =725
                     Y: =112
-                    ZIndex: =17
+                    ZIndex: =12
 
                 Label13 As label:
                     BorderColor: =Color.Blue
-                    Color: =RGBA(102, 102, 102, 1)
+                    Color: =RGBA(102, 106, 138, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
+                    Font: =Font.'Segoe UI'
                     Height: =53
                     Text: |-
                         ="Your Request Includes:"
                     Width: =196
                     X: =740
                     Y: =118
-                    ZIndex: =18
+                    ZIndex: =13
 
                 Label13_1 As label:
                     BorderColor: =Color.Blue
-                    Color: =RGBA(116, 116, 116, 1)
+                    Color: =RGBA(102, 106, 138, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
+                    Font: =Font.'Lato Black'
                     Height: =32
+                    Size: =11
                     Text: |-
                         =LeaveTypes.SelectedText.Value&" Balance:"
                     Width: =199
                     X: =753
                     Y: =431
-                    ZIndex: =19
-
-                Label13_2 As label:
-                    BorderColor: =Color.Blue
-                    Color: =RGBA(116, 116, 116, 1)
-                    DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
-                    Text: =
-                    Width: =136
-                    X: =865
-                    Y: =166
-                    ZIndex: =20
+                    ZIndex: =14
 
                 Label13_3 As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
                     Height: =37
                     PaddingRight: =0
-                    Text: |-
-                        ="Leave Type: "&LeaveTypes.SelectedText.Value
-                    Width: =238
-                    X: =764
+                    Text: =LeaveTypes.SelectedText.Value
+                    Width: =221
+                    X: =862
                     Y: =166
-                    ZIndex: =21
+                    ZIndex: =15
 
                 TotalDays As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
                     Height: =39
                     Text: |-
                         =1 + ((DateDiff(from.SelectedDate,to.SelectedDate)) 
@@ -365,119 +385,164 @@
                         Switch(Weekday(to.SelectedDate),7,1,0) - 
                         Switch(Weekday(from.SelectedDate),1,1,0)
                     Width: =61
-                    X: =912
+                    X: =891
                     Y: =274
-                    ZIndex: =22
+                    ZIndex: =16
 
                 Label13_5 As label:
                     BorderColor: =Color.Blue
-                    Color: =RGBA(116, 116, 116, 1)
+                    Color: =RGBA(102, 106, 138, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
+                    Size: =11
                     Text: |-
                         ="Number of Days:"
                     Width: =147
                     X: =765
                     Y: =274
-                    ZIndex: =23
+                    ZIndex: =17
 
                 RemainingBalance As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(102, 102, 102, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
                     Height: =32
                     Text: =First(TotalLeave).Value - First(LeaveSum).Value
                     Width: =62
-                    X: =952
+                    X: =900
                     Y: =431
-                    ZIndex: =25
+                    ZIndex: =18
 
                 Rectangle2 As rectangle:
                     BorderColor: =Color.Blue
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =RGBA(102, 106, 138, 1)
                     Height: =1
                     Width: =328
                     X: =753
                     Y: =418
-                    ZIndex: =36
+                    ZIndex: =26
 
                 Label4 As label:
                     BorderColor: =Color.Blue
-                    Color: =RGBA(116, 116, 116, 1)
+                    Color: =RGBA(102, 106, 138, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
+                    Font: =Font.'Lato Black'
+                    Size: =11
                     Text: |-
                         ="Reason:"
                     Width: =76
                     X: =765
                     Y: =313
-                    ZIndex: =37
+                    ZIndex: =27
 
                 ReasonsText As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
                     Height: =77
                     Text: =Reason.Text
                     VerticalAlign: =VerticalAlign.Top
                     Width: =242
                     X: =841
                     Y: =319
-                    ZIndex: =38
+                    ZIndex: =28
 
                 Label13_4 As label:
                     BorderColor: =Color.Blue
-                    Color: =RGBA(116, 116, 116, 1)
+                    Color: =RGBA(102, 106, 138, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
+                    Font: =Font.'Lato Black'
                     Height: =32
+                    Size: =11
                     Text: |-
                         ="New "&LeaveTypes.SelectedText.Value&" Balance:"
                     Width: =237
                     X: =753
                     Y: =463
-                    ZIndex: =39
+                    ZIndex: =29
 
                 Label7 As label:
                     BorderColor: =Color.Blue
-                    Color: =RGBA(102, 102, 102, 1)
+                    Color: =
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
+                    Fill: =Color.Transparent
                     Height: =32
                     Text: =If(Int(TotalDays.Text)<Int(RemainingBalance.Text),RemainingBalance-TotalDays,0)
                     Width: =106
-                    X: =990
+                    X: =936
                     Y: =463
-                    ZIndex: =40
+                    ZIndex: =30
 
                 Label8 As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
-                    Height: =30
+                    Fill: =Color.Transparent
+                    Height: =36
                     Text: |
-                        ="From: "&from.SelectedDate
-                    Width: =237
-                    X: =765
+                        =from.SelectedDate
+                    Width: =177
+                    X: =825
                     Y: =204
-                    ZIndex: =41
+                    ZIndex: =31
 
                 Label8_1 As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
-                    Fill: =RGBA(255, 255, 255, 0.3)
-                    Height: =30
+                    Fill: =Color.Transparent
+                    Height: =34
                     Text: |
-                        ="To: "&to.SelectedDate
-                    Width: =237
+                        =to.SelectedDate
+                    Width: =177
+                    X: =795
+                    Y: =239
+                    ZIndex: =32
+
+                Label24 As label:
+                    Color: =RGBA(102, 106, 138, 1)
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =36
+                    Size: =11
+                    Text: |-
+                        ="To: "
+                    Width: =30
                     X: =765
-                    Y: =240
-                    ZIndex: =42
+                    Y: =238
+                    ZIndex: =33
+
+                Label25 As label:
+                    Color: =RGBA(102, 106, 138, 1)
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
+                    Size: =11
+                    Text: |-
+                        ="From: "
+                    Width: =60
+                    X: =766
+                    Y: =200
+                    ZIndex: =34
+
+                Label26 As label:
+                    Color: =RGBA(102, 106, 138, 1)
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =38
+                    Size: =11
+                    Text: |-
+                        ="Leave Type:"
+                    Width: =110
+                    X: =765
+                    Y: =166
+                    ZIndex: =35
 
     errordisplaypop As group:
         Height: =5
@@ -589,5 +654,5 @@
             Width: =291
             X: =1045
             Y: =36
-            ZIndex: =11
+            ZIndex: =12
 

@@ -33,7 +33,7 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
-        TemplateFill: =If(ThisItem.IsSelected,Color.AliceBlue)
+        TemplateFill: =If(ThisItem.IsSelected,RGBA(235, 235, 235,1))
         TemplateSize: =88
         Transition: =Transition.Pop
         Width: =197.66666666666666

@@ -32,15 +32,16 @@
                 ZIndex: =1
 
             Button3_2 As button:
-                BorderColor: =RGBA(237, 237, 237, 1)
-                BorderThickness: =1
-                DisplayMode: =DisplayMode.View
+                BorderColor: =RGBA(219, 219, 219, 1)
+                BorderThickness: =0.5
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =642
                 HoverColor: =
                 HoverFill: =
                 PaddingRight: =5.00
                 PaddingTop: =5.00
+                PressedBorderColor: =
                 RadiusBottomLeft: =15
                 RadiusBottomRight: =15
                 RadiusTopLeft: =15
@@ -145,7 +146,7 @@
         Height: =60
         Items: =tabs
         Layout: =Layout.Vertical
-        TemplateFill: =If(ThisItem.IsSelected,Color.AliceBlue)
+        TemplateFill: =
         TemplatePadding: =0
         TemplateSize: =57
         Width: =688
@@ -157,7 +158,7 @@
         Button7 As button:
             BorderThickness: =1
             Color: =RGBA(116, 116, 116, 1)
-            Fill: =RGBA(219, 219, 219, 1)
+            Fill: =RGBA(235, 235, 235,1)
             Font: =Font.'Segoe UI'
             Height: =46
             HoverFill: =RGBA(116, 116, 116, 0.6)
@@ -276,7 +277,7 @@
                 DisplayMode: =DisplayMode.View
                 DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"Details")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =40
+                Height: =99
                 Required: =false
                 Width: =294
                 X: =1
@@ -537,7 +538,7 @@
                 DisplayMode: =DisplayMode.View
                 DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"ReportingManager")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =106
+                Height: =124
                 Required: =false
                 Update: =DataCardValue7.Selected
                 Width: =294
@@ -572,7 +573,7 @@
                     Template: =ListItemTemplate.Person
                     Width: =205
                     X: =89
-                    Y: =49
+                    Y: =59
                     ZIndex: =2
 
                 ErrorMessage3 As label:
@@ -602,10 +603,14 @@
 
                 Image7 As image:
                     Height: =43
-                    Image: =ThisItem.'Reporting Manager'.Picture
-                    Width: =37
-                    X: =41
-                    Y: =46
+                    Image: =User().Image
+                    RadiusBottomLeft: =50
+                    RadiusBottomRight: =50
+                    RadiusTopLeft: =50
+                    RadiusTopRight: =50
+                    Width: =48
+                    X: =30
+                    Y: =56
                     ZIndex: =5
 
             HR_DataCard1 As typedDataCard.comboBoxViewCard:
@@ -648,8 +653,8 @@
                     SelectMultiple: =false
                     Template: =ListItemTemplate.Person
                     Width: =204
-                    X: =76
-                    Y: =46
+                    X: =89
+                    Y: =54
                     ZIndex: =2
 
                 ErrorMessage4 As label:
@@ -677,13 +682,17 @@
                     Y: =DataCardKey8.Y
                     ZIndex: =4
 
-                Image8 As image:
-                    Height: =31
-                    Image: =ThisItem.'Reporting Manager'.Picture
-                    Width: =35
+                Image7_1 As image:
+                    Height: =43
+                    Image: =User().Image
+                    RadiusBottomLeft: =50
+                    RadiusBottomRight: =50
+                    RadiusTopLeft: =50
+                    RadiusTopRight: =50
+                    Width: =48
                     X: =30
-                    Y: =46
-                    ZIndex: =5
+                    Y: =51
+                    ZIndex: =6
 
             Comments_DataCard1 As typedDataCard.textualViewCard:
                 BorderStyle: =BorderStyle.Solid
@@ -732,7 +741,7 @@
                 DisplayMode: =DisplayMode.View
                 DisplayName: =DataSourceInfo([@'Leave Requests'],DataSourceInfo.DisplayName,"TotalDays")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =40
+                Height: =58
                 Required: =false
                 Width: =294
                 X: =0
@@ -762,6 +771,6 @@
                     Text: =Parent.Default&" Days"
                     Width: =106
                     X: =158
-                    Y: =4
+                    Y: =6
                     ZIndex: =2
 
