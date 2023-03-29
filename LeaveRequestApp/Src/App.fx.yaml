@@ -158,6 +158,7 @@ App As appinfo:
                 } 
             )
         );
+        Table({Filter:"All",Value:"All"},{Filter:"Approved",Value:"Approved"},{Filter:"Rejected",Value:"Rejected"},{Filter:"Pending",Value:"Pending TL Approval"})
         
         
     StartScreen: ='Splash Screen'
