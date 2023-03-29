@@ -35,10 +35,10 @@ Holidays As screen:
                 Height: =634
                 HoverFill: =
                 PaddingLeft: =20
-                RadiusBottomLeft: =14
-                RadiusBottomRight: =14
-                RadiusTopLeft: =14
-                RadiusTopRight: =14
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
                 Text: =""
                 Width: =1104
                 X: =30
