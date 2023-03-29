@@ -142,9 +142,9 @@
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =57
-        Width: =710
+        Width: =688
         WrapCount: =4
-        X: =266
+        X: =259
         Y: =107
         ZIndex: =6
 
