@@ -67,7 +67,7 @@
 
             Details As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
-                BorderThickness: =1
+                BorderThickness: =0.1
                 Default: =""
                 Height: =106
                 HintText: ="Please ellaborate the reason for applying leave."
@@ -80,7 +80,7 @@
 
             Reason As text:
                 BorderColor: =RGBA(102, 102, 102, 1)
-                BorderThickness: =1
+                BorderThickness: =0.1
                 Clear: =true
                 Default: =""
                 Height: =52
@@ -95,6 +95,7 @@
 
             LeaveTypes As dropdown:
                 BorderColor: =RGBA(102, 102, 102, 1)
+                BorderThickness: =0.1
                 ChevronBackground: =RGBA(102, 102, 102, 1)
                 ChevronHoverBackground: =
                 Default: ="2"
@@ -165,7 +166,7 @@
                     )
                     );
                     
-                    Set(sucessfulSubmission,true);
+                    Set(succesfulSubmission,true);
                     
                     Reset(Reason);
                     Reset(LeaveTypes);
@@ -289,7 +290,7 @@
 
             to As datepicker:
                 BorderColor: =RGBA(102, 102, 102, 1)
-                BorderThickness: =1
+                BorderThickness: =0.1
                 Height: =42
                 IconBackground: =RGBA(102, 102, 102, 102)
                 Reset: =true
@@ -337,7 +338,7 @@
 
             approver As dropdown:
                 BorderColor: =RGBA(102, 102, 102, 1)
-                BorderThickness: =1
+                BorderThickness: =0.1
                 ChevronBackground: =RGBA(102, 102, 102, 1)
                 ChevronHoverBackground: =
                 Height: =42
@@ -353,7 +354,7 @@
 
             from As datepicker:
                 BorderColor: =RGBA(102, 102, 102, 1)
-                BorderThickness: =1
+                BorderThickness: =0.1
                 Height: =42
                 IconBackground: =RGBA(102, 102, 102,1)
                 Reset: =true
@@ -487,11 +488,11 @@
         Rectangle4_1 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 0.5)
             BorderThickness: =0.5
-            DisabledFill: =Self.Fill-80%
+            DisabledFill: =
             DisplayMode: =DisplayMode.Disabled
-            Fill: =RGBA(255, 255, 255, 0.2)
+            Fill: =RGBA(255, 255, 255, 0.7)
             Height: =767
-            Visible: =sucessfulSubmission
+            Visible: =succesfulSubmission
             Width: =1366
             Y: =1
             ZIndex: =7
@@ -501,7 +502,7 @@
             Height: =25
             OnTimerEnd: =Set(succesfulSubmission,false)
             Start: =succesfulSubmission
-            Visible: =sucessfulSubmission
+            Visible: =succesfulSubmission
             Width: =24
             X: =1266
             Y: =571
@@ -512,31 +513,32 @@
             Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(255, 255, 255, 1)
             DisabledFill: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(26, 26, 26, 1)
-            Height: =251
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =96
             HoverFill: =
             Text: =""
-            Visible: =sucessfulSubmission
+            Visible: =succesfulSubmission
             Width: =406
-            X: =430
-            Y: =217
+            X: =959
+            Y: =28
             ZIndex: =9
 
         Icon3 As icon.Check:
             Icon: =Icon.Check
-            Visible: =sucessfulSubmission
-            X: =446
-            Y: =297
+            Visible: =succesfulSubmission
+            X: =981
+            Y: =40
             ZIndex: =10
 
         Label14_7 As label:
             Align: =Align.Center
             Color: =RGBA(77, 77, 77, 1)
+            FontWeight: =FontWeight.Bold
             Height: =79
             Text: ="Leave Successfully Applied."
-            Visible: =sucessfulSubmission
+            Visible: =succesfulSubmission
             Width: =291
-            X: =526
-            Y: =297
+            X: =1045
+            Y: =36
             ZIndex: =11
 
