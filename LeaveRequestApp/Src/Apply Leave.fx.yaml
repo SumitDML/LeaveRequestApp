@@ -344,17 +344,11 @@
                     Color: =RGBA(116, 116, 116, 1)
                     Height: =39
                     Text: |-
-                        =If(
-                            And(
-                                IsBlank(from),
-                                IsBlank(to)
-                            ),
-                            0,
-                            DateDiff(
-                                from.SelectedDate,
-                                to.SelectedDate
-                            )
-                         + 1)
+                        =1 + ((DateDiff(from.SelectedDate,to.SelectedDate)) 
+                        * 5 - ((Weekday(from.SelectedDate) - 
+                        Weekday(to.SelectedDate))*2)) / 7 - 
+                        Switch(Weekday(to.SelectedDate),7,1,0) - 
+                        Switch(Weekday(from.SelectedDate),1,1,0)
                     Width: =61
                     X: =912
                     Y: =274
@@ -517,7 +511,7 @@
             Height: =25
             OnTimerEnd: =Set(succesfulSubmission,false)
             Start: =succesfulSubmission
-            Visible: =succesfulSubmission
+            Visible: =false
             Width: =24
             X: =1266
             Y: =571
