@@ -102,11 +102,11 @@
     "Id": "e30fcc93-7878-48ea-9f75-957c508ea069",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "LeaveAppV3",
+    "Name": "LeaveAppV3Copy",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
-    "AppName": "LeaveAppV3",
+    "AppName": "LeaveAppV3Copy",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -118,10 +118,10 @@
   },
   "ScreenOrder": [
     "Splash Screen",
+    "Homepage",
     "Apply Leave",
     "Leave Status",
     "Leave Balance",
-    "Holidays",
-    "Homepage"
+    "Holidays"
   ]
 }

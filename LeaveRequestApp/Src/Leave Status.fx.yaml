@@ -10,6 +10,7 @@
         ZIndex: =1
 
     "'Left Navigation_2' As 'Left Navigation'":
+        CurrentScreen: ="Leave Status"
         Width: ='Left Navigation_4'.MenuWidth
         X: =1
         ZIndex: =2

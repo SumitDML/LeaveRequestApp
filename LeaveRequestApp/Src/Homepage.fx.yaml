@@ -240,6 +240,7 @@ Homepage As screen:
                     ZIndex: =6
 
     "'Left Navigation_5' As 'Left Navigation'":
+        CurrentScreen: ="Homepage"
         Width: =198
         X: =0.00
         ZIndex: =2

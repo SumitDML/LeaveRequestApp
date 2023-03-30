@@ -1,4 +1,5 @@
 "'Left Navigation' As CanvasComponent":
+    CurrentScreen: ="Text"
     Fill: =RGBA(255, 255, 255, 1) 
     Height: =Max(App.Height,App.DesignHeight)
     MenuWidth: =Max(App.Width, App.MinScreenWidth)/6-30
@@ -33,7 +34,7 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
-        TemplateFill: =If(ThisItem.IsSelected,RGBA(235, 235, 235,1))
+        TemplateFill: =If(ThisItem.Title='Left Navigation'.CurrentScreen,RGBA(235, 235, 235,1))
         TemplateSize: =88
         Transition: =Transition.Pop
         Width: =197.66666666666666
