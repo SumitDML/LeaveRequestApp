@@ -59,6 +59,7 @@ Holidays As screen:
                 ZIndex: =3
 
     "'Left Navigation_4' As 'Left Navigation'":
+        CurrentScreen: ="Holidays"
         Width: =198
         X: =0.00
         ZIndex: =2

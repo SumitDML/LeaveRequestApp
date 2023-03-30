@@ -2,6 +2,7 @@
     Fill: =
 
     "'Left Navigation_1' As 'Left Navigation'":
+        CurrentScreen: ="Apply Leave"
         Width: ='Left Navigation_4'.MenuWidth
         X: =0.00
 

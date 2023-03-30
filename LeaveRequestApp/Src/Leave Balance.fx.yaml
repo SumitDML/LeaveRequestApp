@@ -180,6 +180,7 @@
             ZIndex: =11
 
     "'Left Navigation_3' As 'Left Navigation'":
+        CurrentScreen: ="Leave Balance"
         Width: ='Left Navigation_4'.MenuWidth
         X: =0.00
         ZIndex: =5
