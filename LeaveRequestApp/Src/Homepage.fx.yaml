@@ -62,12 +62,6 @@ Homepage As screen:
                 Y: =246
                 ZIndex: =4
 
-            Label29 As label:
-                Text: ="Text"
-                X: =40
-                Y: =40
-                ZIndex: =5
-
             Icon4 As icon.Add:
                 Color: =RGBA(50, 86, 160, 1)
                 Icon: =Icon.Add
