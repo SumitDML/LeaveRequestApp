@@ -136,11 +136,11 @@
                 BorderColor: =RGBA(103, 143, 189,1)
                 BorderThickness: =1
                 DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
-                Fill: =RGBA(151, 186, 227,1)
+                Fill: =RGBA(77, 139, 209,1)
                 Font: =Font.'Lato Black'
                 Height: =55
                 HoverColor: =Color.White
-                HoverFill: =RGBA(151, 186, 227,0.8)
+                HoverFill: =RGBA(77, 139, 209,0.9)
                 OnSelect: |
                     =If(
                         from.SelectedDate < Today(),
@@ -174,6 +174,22 @@
                             Set(
                                 err,
                                 "You don't have enough leave balance."
+                            )
+                        ],
+                        CountRows(
+                            Filter(
+                                'Leave Requests',
+                                DateValue(Text(from.SelectedDate,"[$-en-US]yyyy-mm-dd"))=DateValue(Text(From,"[$-en-US]yyyy-mm-dd"))
+                            )
+                        )>0,
+                            [
+                            Set(
+                                errordisplay,
+                                true
+                            ),
+                            Set(
+                                err,
+                                "Already applied leave for this date."
                             )
                         ],
                         Set(
@@ -229,8 +245,7 @@
                                     Picture: ""
                                 }
                             }
-                        )
-                    );
+                        );
                     Set(
                         succesfulSubmission,
                         true
@@ -241,6 +256,7 @@
                     Reset(from);
                     Reset(to);
                     Reset(approver);
+                    );
                 RadiusBottomLeft: =15
                 RadiusBottomRight: =15
                 RadiusTopLeft: =15
@@ -260,7 +276,7 @@
                 Font: =Font.'Lato Black'
                 Height: =55
                 HoverColor: =RGBA(128, 128, 128, 1)
-                HoverFill: =RGBA(237, 237, 237, 1)
+                HoverFill: =RGBA(237, 237, 237, 0.3)
                 OnSelect: |-
                     =Reset(Reason);
                     Reset(LeaveTypes);

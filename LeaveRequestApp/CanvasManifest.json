@@ -102,11 +102,11 @@
     "Id": "e30fcc93-7878-48ea-9f75-957c508ea069",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "LeaveApp2",
+    "Name": "LeaveAppV3",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
-    "AppName": "LeaveApp2",
+    "AppName": "LeaveAppV3",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
