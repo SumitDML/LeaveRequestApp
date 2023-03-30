@@ -285,6 +285,8 @@
                     Reset(from);
                     Reset(to);
                     Reset(approver);
+                PressedColor: =RGBA(128, 128, 128, 1)
+                PressedFill: =RGBA(237, 237, 237, 0.8)
                 RadiusBottomLeft: =15
                 RadiusBottomRight: =15
                 RadiusTopLeft: =15
