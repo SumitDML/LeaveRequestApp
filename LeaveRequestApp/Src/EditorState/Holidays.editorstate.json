@@ -388,7 +388,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Canvas1_4",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -625,7 +625,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Circle1_7",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2349,7 +2349,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Left Navigation_4",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
