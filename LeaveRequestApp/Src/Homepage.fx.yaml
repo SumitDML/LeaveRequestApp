@@ -144,7 +144,7 @@ Homepage As screen:
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(205, 222, 240, 0.4)
-            Height: =791
+            Height: =769
             Width: =1168
             X: =0
             Y: =1
@@ -237,17 +237,6 @@ Homepage As screen:
                     X: =702
                     Y: =39
                     ZIndex: =6
-
-        DataCard2 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =766
-            Width: =1168
-            X: =0
-            Y: =2
-            ZIndex: =3
 
     "'Left Navigation_5' As 'Left Navigation'":
         Width: =198
