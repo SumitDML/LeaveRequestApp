@@ -73,7 +73,7 @@
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =515
-        Items: =MyLeaves
+        Items: =If(view,Filter('Leave Requests',RequestedBy.Email=User().Email),MyLeaves)
         Layout: =Layout.Vertical
         OnSelect: =Set(varDisplay,true)
         ShowScrollbar: =false
@@ -183,7 +183,7 @@
             Height: =46
             HoverFill: =RGBA(116, 116, 116, 0.6)
             OnSelect: |-
-                =UpdateContext({OneClicked:true});
+                =Set(view,false);
                 If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),
                 ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email&& StartsWith( Status.Value, ThisItem.Value ))));
                 

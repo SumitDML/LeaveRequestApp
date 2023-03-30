@@ -170,5 +170,7 @@ App As appinfo:
                 }
             )
         );
+        
+        Set(view,true);
     StartScreen: ='Splash Screen'
 
