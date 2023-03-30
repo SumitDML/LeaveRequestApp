@@ -64,10 +64,16 @@ Homepage As screen:
 
             Icon4 As icon.Add:
                 Color: =RGBA(50, 86, 160, 1)
+                Height: =205
                 Icon: =Icon.Add
                 OnSelect: =Navigate('Apply Leave')
-                X: =176
-                Y: =353
+                PaddingBottom: =60
+                PaddingLeft: =60
+                PaddingRight: =60
+                PaddingTop: =60
+                Width: =203
+                X: =109
+                Y: =280
                 ZIndex: =6
 
             Label30 As label:

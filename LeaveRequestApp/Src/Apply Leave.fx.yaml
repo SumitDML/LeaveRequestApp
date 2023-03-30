@@ -570,8 +570,8 @@
                     Text: |
                         =to.SelectedDate
                     Width: =177
-                    X: =814
-                    Y: =279
+                    X: =795
+                    Y: =276
                     ZIndex: =32
 
                 Label24 As label:
