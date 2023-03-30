@@ -142,7 +142,7 @@
             ZIndex: =6
 
         Image11 As image:
-            Image: =First(ThisItem.Attachments).AbsoluteUri
+            Image: =First(ThisItem.Attachments).Value
             OnSelect: =Select(Parent)
             X: =69
             Y: =59
