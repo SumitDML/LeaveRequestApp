@@ -166,7 +166,7 @@ App As appinfo:
                 },
                 {
                     Filter: "Pending",
-                    Value: "Pending TL Approval"
+                    Value: "Pending"
                 }
             )
         );

@@ -183,7 +183,7 @@
             OnSelect: |-
                 =UpdateContext({OneClicked:true});
                 If(ThisItem.Filter="All",ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email)),
-                ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email,Status.Value=ThisItem.Value)));
+                ClearCollect(MyLeaves,Filter('Leave Requests',RequestedBy.Email=User().Email&& StartsWith( Status.Value, ThisItem.Value ))));
                 
                 If(IsEmpty(MyLeaves),UpdateContext({dataMessage:"No Records Found!"}),UpdateContext({dataMessage:""}));
             RadiusBottomLeft: =13
