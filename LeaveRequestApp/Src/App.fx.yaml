@@ -43,16 +43,12 @@ App As appinfo:
                     mailaddress: "sumit.pradhan@digimantra.com"
                 },
                 {
-                    Name: "Manish Kumar",
-                    mailaddress: "manish.kumar@digimantra.com"
+                    Name: "Rohit Puri",
+                    mailaddress: "rohit.puri@digimantra.com"
                 },
                 {
-                    Name: "Ankit Aman",
-                    mailaddress: "ankit.aman@digimantra.com"
-                },
-                {
-                    Name: "Anmoldeep Singh",
-                    mailaddress: "anmoldeep.singh@digimantra.com"
+                    Name: "Bikramjit Singh",
+                    mailaddress: "bikram@digimantra.com"
                 },
                 {
                     Name: "Naveen Babbar",
