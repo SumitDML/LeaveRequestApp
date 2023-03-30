@@ -183,7 +183,7 @@ Homepage As screen:
 
             "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                 Height: =539
-                Items: =Filter('Leave Requests',From=Today())
+                Items: =Filter('Leave Requests',(From<=Today()&&Today()<=To),Status.Value<>"Rejected")
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
                 TemplateSize: =158
