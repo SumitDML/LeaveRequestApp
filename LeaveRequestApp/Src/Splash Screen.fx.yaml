@@ -5,7 +5,7 @@
     Timer1 As timer:
         AutoStart: =true
         Duration: =1500
-        OnTimerEnd: =Navigate('Apply Leave')
+        OnTimerEnd: =Navigate(Homepage)
         PaddingRight: =5.00
         PaddingTop: =5.00
         Size: =13.00
