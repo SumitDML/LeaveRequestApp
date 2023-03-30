@@ -445,7 +445,6 @@
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
                     Fill: =Color.Transparent
-                    Height: =39
                     Text: |-
                         =1 + ((DateDiff(from.SelectedDate,to.SelectedDate)) 
                         * 5 - ((Weekday(from.SelectedDate) - 
@@ -453,7 +452,7 @@
                         Switch(Weekday(to.SelectedDate),7,1,0) - 
                         Switch(Weekday(from.SelectedDate),1,1,0)
                     Width: =61
-                    X: =911
+                    X: =892
                     Y: =313
                     ZIndex: =16
 
@@ -480,8 +479,8 @@
                     Height: =32
                     Text: =First(TotalLeave).Value - First(LeaveSum).Value
                     Width: =62
-                    X: =936
-                    Y: =462
+                    X: =953
+                    Y: =458
                     ZIndex: =18
 
                 Rectangle2 As rectangle:
@@ -544,7 +543,7 @@
                     Height: =32
                     Text: =If(Int(TotalDays.Text)<Int(RemainingBalance.Text),RemainingBalance-TotalDays,0)
                     Width: =106
-                    X: =936
+                    X: =952
                     Y: =490
                     ZIndex: =30
 
