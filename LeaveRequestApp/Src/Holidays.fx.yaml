@@ -30,7 +30,7 @@ Holidays As screen:
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(205, 222, 240, 0.4)
-            Height: =769
+            Height: =767
             Width: =Parent.Width
             X: =Parent.X
             Y: =0
