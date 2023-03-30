@@ -1,13 +1,28 @@
 Holidays As screen:
     Fill: =RGBA(255, 255, 255, 0)
 
+    Circle1_6 As circle:
+        Fill: =RGBA(205, 222, 240, 0.7)
+        Height: =558
+        Width: =562
+        Y: =400
+        ZIndex: =1
+
+    Circle1_7 As circle:
+        Fill: =RGBA(205, 222, 240, 0.7)
+        Height: =558
+        Width: =562
+        X: =804
+        Y: =-400
+        ZIndex: =2
+
     Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(255, 255, 255, 0)
         Height: =Parent.Height
         Width: =Parent.Width-'Left Navigation_4'.Width
         X: ='Left Navigation_4'.Width
-        ZIndex: =1
+        ZIndex: =3
 
         DataCard1_4 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -62,7 +77,7 @@ Holidays As screen:
         CurrentScreen: ="Holidays"
         Width: =198
         X: =0.00
-        ZIndex: =2
+        ZIndex: =4
 
     "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =556
@@ -76,7 +91,7 @@ Holidays As screen:
         WrapCount: =4
         X: =243
         Y: =141
-        ZIndex: =3
+        ZIndex: =5
 
         HtmlText5 As htmlViewer:
             Height: =92

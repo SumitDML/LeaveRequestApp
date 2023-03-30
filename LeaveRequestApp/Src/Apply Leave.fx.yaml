@@ -137,7 +137,7 @@
                 BorderColor: =RGBA(103, 143, 189,1)
                 BorderThickness: =1
                 DisplayMode: =If(IsBlank(Reason)||IsBlank(Details),DisplayMode.Disabled)
-                Fill: =RGBA(151, 186, 227,1)
+                Fill: =RGBA(77, 139, 209, 1)
                 Font: =Font.'Lato Black'
                 Height: =55
                 HoverColor: =Color.White
