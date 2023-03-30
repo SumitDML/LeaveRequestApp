@@ -172,7 +172,7 @@
             BorderThickness: =0
             Fill: =RGBA(0, 0, 0, 0)
             HoverFill: =
-            OnSelect: =Set(varLeaveType,ThisItem.'Leave Type'.Value);Navigate('Apply Leave');
+            OnSelect: =Set(varLeaveType,ThisItem.'Leave Type'.Value);Navigate('Apply Leave',ScreenTransition.Fade);
             Text: =""
             Width: =125
             X: =59

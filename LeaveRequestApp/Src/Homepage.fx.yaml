@@ -186,29 +186,30 @@ Homepage As screen:
                 Items: =Filter('Leave Requests',(From<=Today()&&Today()<=To),Status.Value<>"Rejected")
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
-                TemplateSize: =158
+                TemplateSize: =144
+                Transition: =Transition.Pop
                 Width: =1028
                 X: =82
                 Y: =119
                 ZIndex: =3
 
                 Image6 As image:
-                    Height: =80
+                    Height: =63
                     Image: =User().Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =50
                     RadiusBottomRight: =50
                     RadiusTopLeft: =50
                     RadiusTopRight: =50
-                    Width: =76
-                    X: =48
-                    Y: =28
+                    Width: =63
+                    X: =43
+                    Y: =33
                     ZIndex: =1
 
                 HtmlText7 As htmlViewer:
-                    Height: =158
+                    Height: =144
                     HtmlText: |-
-                        ="<div style='margin:9px;width:970px;height:110px;background-color:#;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; border-radius:15px'></div>"
+                        ="<div style='margin:9px;width:970px;height:100px;background-color:#;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; border-radius:15px'></div>"
                     OnSelect: =Select(Parent)
                     Width: =1028
                     ZIndex: =4
@@ -218,10 +219,10 @@ Homepage As screen:
                     Height: =52
                     HtmlText: ="<b>"&ThisItem.RequestedBy.DisplayName&"</b> is on leave today"
                     OnSelect: =Select(Parent)
-                    Size: =20
+                    Size: =18
                     Width: =538
-                    X: =144
-                    Y: =39
+                    X: =119
+                    Y: =40
                     ZIndex: =5
 
                 Label35 As label:
@@ -235,7 +236,7 @@ Homepage As screen:
                     Text: =ThisItem.'Leave Type'.Value
                     Width: =258
                     X: =702
-                    Y: =39
+                    Y: =40
                     ZIndex: =6
 
     "'Left Navigation_5' As 'Left Navigation'":
