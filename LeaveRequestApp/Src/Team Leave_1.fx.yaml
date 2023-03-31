@@ -9,7 +9,7 @@
         
 
     "'Left Navigation_7' As 'Left Navigation'":
-        Width: ='Left Navigation_7'.MenuWidth
+        Width: =198
 
     Canvas1_7 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
