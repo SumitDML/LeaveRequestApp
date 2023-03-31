@@ -28,6 +28,23 @@
     "dependents": [],
     "id": "4d389b56-f094-40a5-bd48-370f78e0ddbc"
   },
+  "965efd75-8953-47cc-a2be-44d246132001": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/patches/1624/ase-v3-la-99-no-usgov/1.0.1624.3222/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "965efd75-8953-47cc-a2be-44d246132001"
+  },
   "b53750f6-d589-4c19-bebb-035000e3c271": {
     "connectionParameters": {
       "sku": "Enterprise"
