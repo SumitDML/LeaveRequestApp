@@ -13,7 +13,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "true",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "SelectRange",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -68,10 +68,31 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "ShowLongWeekday",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ShowLongWeekday",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "StartWeekOnMonday",
-        "AllowSelectionOfWeekends",
-        "ShowCloseIcon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "AllowSelectionOfWeekends",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "ShowCloseIcon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -116,7 +137,7 @@
         {
           "Category": "Data",
           "PropertyName": "AllowSelectionOfWeekends",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -146,7 +167,7 @@
         {
           "Category": "Data",
           "PropertyName": "ShowCloseIcon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -176,12 +197,12 @@
         {
           "Category": "Data",
           "PropertyName": "ShowLongWeekday",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "SelectRange",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
