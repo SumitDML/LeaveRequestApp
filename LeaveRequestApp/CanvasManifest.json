@@ -102,7 +102,7 @@
     "Id": "e30fcc93-7878-48ea-9f75-957c508ea069",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
-    "Name": "Leave Management System(Demo)",
+    "Name": "LeaveAppTesting",
     "OriginatingVersion": "1.330"
   },
   "PublishInfo": {
@@ -125,6 +125,7 @@
     "Holidays",
     "Team Leave",
     "Team Leave_1",
-    "Screen1"
+    "Screen1",
+    "Screen2"
   ]
 }

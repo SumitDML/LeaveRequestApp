@@ -1,0 +1,8 @@
+Screen2 As screen:
+
+    CalendarComponentMain_1 As CalendarComponentMain:
+        AllowSelectionOfWeekends: =false
+        Height: =473
+        SelectRange: =true
+        Width: =591
+
