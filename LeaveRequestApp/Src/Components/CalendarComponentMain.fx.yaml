@@ -1,6 +1,6 @@
 CalendarComponentMain As CanvasComponent:
     AllowSelectionOfWeekends: =true
-    BorderRadius: =0
+    BorderRadius: =1
     CalendarItems: |-
         =Table(
             {
@@ -32,7 +32,7 @@ CalendarComponentMain As CanvasComponent:
     Height: =640
     OnReset: =Set(visible_variable, true)
     SelectedDateColor: =Color.White
-    SelectedDateFill: =Color.Red
+    SelectedDateFill: =Color.DimGrey
     SelectRange: =false
     ShowCalendar: =visible_variable
     ShowCalendarEvents: =true
@@ -428,7 +428,7 @@ CalendarComponentMain As CanvasComponent:
         BorderColor: =RGBA(130, 144, 156, 1)
         DisabledBorderColor: =galCalendar_1.BorderColor
         DisabledFill: =galCalendar_1.Fill
-        Height: =377
+        Height: =531
         HoverBorderColor: =galCalendar_1.BorderColor
         HoverFill: =galCalendar_1.Fill
         Items: |-
@@ -445,7 +445,6 @@ CalendarComponentMain As CanvasComponent:
         TemplatePadding: |
             =0
         TemplateSize: =55
-        Width: =CalendarComponentMain.Width
         WrapCount: =7
         Y: =109
         ZIndex: =7
@@ -787,35 +786,4 @@ CalendarComponentMain As CanvasComponent:
         X: =576
         Y: =8
         ZIndex: =8
-
-    galCalItems As gallery.variableTemplateHeightGallery:
-        Height: =154
-        Items: =Filter(CalendarComponentMain.CalendarItems,DateValue(Date) = CalendarComponentMain.StartDate)
-        Layout: =Layout.Vertical
-        TemplateSize: =45
-        Visible: =CalendarComponentMain.ShowCalendarEvents
-        Y: =486
-        ZIndex: =10
-
-        lblEventName As label:
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Title
-            Width: =404
-            X: =34
-            ZIndex: =1
-
-        lblEventTime As label:
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.Time
-            Width: =145
-            X: =478
-            ZIndex: =2
-
-        Rectangle1_1 As rectangle:
-            Fill: =RGBA(128, 128, 128, 1)
-            Height: =40
-            OnSelect: =Select(Parent)
-            Width: =8
-            X: =9
-            ZIndex: =3
 

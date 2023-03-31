@@ -282,8 +282,6 @@
                     =Reset(Reason);
                     Reset(LeaveTypes);
                     Reset(Details);
-                    Reset(from);
-                    Reset(to);
                     Reset(approver);
                 PressedColor: =RGBA(128, 128, 128, 1)
                 PressedFill: =RGBA(237, 237, 237, 0.8)
@@ -297,17 +295,6 @@
                 X: =686
                 Y: =651
                 ZIndex: =11
-
-            to As datepicker:
-                BorderColor: =RGBA(202, 202, 202, 1)
-                BorderThickness: =1
-                Height: =42
-                IconBackground: =RGBA(102, 102, 102, 102)
-                Reset: =true
-                Width: =272
-                X: =369
-                Y: =410
-                ZIndex: =19
 
             Label14_3 As label:
                 Font: =Font.'Lato Black'
@@ -362,22 +349,30 @@
                 Y: =522
                 ZIndex: =24
 
-            Label29 As label:
-                BorderThickness: =1
-                OnSelect: =Set(customdatepicker,true)
-                Text: ="Text"
-                Width: =252
-                X: =68
-                Y: =410
-                ZIndex: =36
-
             Icon5 As icon.CalendarBlank:
                 Height: =50
                 Icon: =Icon.CalendarBlank
                 Width: =28
-                X: =279
-                Y: =405
+                X: =240
+                Y: =418
                 ZIndex: =37
+
+            from As text:
+                Default: =Text(CalendarComponentMain_2.StartDate,DateTimeFormat.LongDate)
+                Height: =57
+                OnSelect: =Set(customdatepicker,true)
+                Width: =200
+                X: =68
+                Y: =415
+                ZIndex: =38
+
+            to As text:
+                Default: =Text(CalendarComponentMain_2.EndDate,DateTimeFormat.LongDate)
+                Height: =54
+                Width: =199
+                X: =369
+                Y: =418
+                ZIndex: =39
 
             SideBox As group:
                 Height: =5
@@ -560,7 +555,7 @@
                     Fill: =Color.Transparent
                     Height: =36
                     Text: |
-                        =from.SelectedDate
+                        =from
                     Width: =177
                     X: =814
                     Y: =242
@@ -573,7 +568,7 @@
                     Fill: =Color.Transparent
                     Height: =34
                     Text: |
-                        =to.SelectedDate
+                        =to
                     Width: =177
                     X: =795
                     Y: =276
@@ -665,6 +660,17 @@
             Y: =49
             ZIndex: =6
 
+    Label28 As label:
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Lighter
+        Height: =46
+        Size: =14
+        Text: ="*All Fields Are Mandatory."
+        Width: =380
+        X: =267
+        Y: =654
+        ZIndex: =12
+
     "'Successful Submission' As group":
         Height: =5
         Width: =5
@@ -731,40 +737,85 @@
             Width: =291
             X: =1020
             Y: =32
-            ZIndex: =12
+            ZIndex: =11
 
-    Label28 As label:
-        Font: =Font.'Lato Light'
-        FontWeight: =FontWeight.Lighter
-        Height: =46
-        Size: =14
-        Text: ="*All Fields Are Mandatory."
-        Width: =380
-        X: =267
-        Y: =654
-        ZIndex: =13
-
-    Group3 As group:
+    customdatepickerpop As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =18
+        ZIndex: =20
 
-        Rectangle4_2 As rectangle:
-            BorderColor: =RGBA(255, 255, 255, 1)
-            BorderThickness: =0.5
-            Fill: =RGBA(0, 16, 96, 1)
+        Rectangle8 As rectangle:
+            Fill: =RGBA(215, 223, 240, 0.6)
             Height: =768
             Visible: =customdatepicker
-            Width: =1365
-            ZIndex: =15
+            Width: =1366
+            ZIndex: =13
+
+        HtmlText12 As htmlViewer:
+            Height: =659
+            HtmlText: |-
+                ="<div style='margin:10px;width:700px;height:608px;background-color:#ffffff;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
+            Visible: =customdatepicker
+            Width: =630
+            X: =307
+            Y: =44
+            ZIndex: =14
 
         CalendarComponentMain_2 As CalendarComponentMain:
-            Height: =454
+            Height: =447
+            SelectRange: =true
             Visible: =customdatepicker
-            Width: =678
-            X: =418
-            Y: =142
-            ZIndex: =17
+            Width: =554
+            X: =341
+            Y: =86
+            ZIndex: =15
+
+        Button8_1 As button:
+            BorderColor: =RGBA(202, 202, 202, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Lato Black'
+            HoverColor: =RGBA(128, 128, 128, 1)
+            HoverFill: =RGBA(237, 237, 237, 0.3)
+            OnSelect: =Set(customdatepicker,false)
+            PressedColor: =RGBA(128, 128, 128, 1)
+            PressedFill: =RGBA(237, 237, 237, 0.8)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Cancel"
+            Tooltip: ="Click To Cancel"
+            Visible: =customdatepicker
+            Width: =166
+            X: =458
+            Y: =556
+            ZIndex: =18
+
+        "'Apply Leave Button_1' As button":
+            BorderColor: =RGBA(103, 143, 189,1)
+            BorderThickness: =1
+            DisplayMode: =
+            Fill: =RGBA(77, 139, 209,1)
+            Font: =Font.'Lato Black'
+            HoverColor: =Color.White
+            HoverFill: =RGBA(77, 139, 209,0.9)
+            OnSelect: |+
+                =Set(customdatepicker,false)
+                
+                
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Text: ="Ok"
+            Tooltip: ="Click To Apply Leave"
+            Visible: =customdatepicker
+            Width: =141
+            X: =677
+            Y: =556
+            ZIndex: =19
 

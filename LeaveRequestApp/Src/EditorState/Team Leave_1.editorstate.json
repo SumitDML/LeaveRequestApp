@@ -148,7 +148,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_5",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -354,7 +354,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CalendarFrame",
-      "ParentIndex": 6,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -677,7 +677,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Component2_10",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -918,7 +918,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText11",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1064,7 +1064,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconNextMonth1_1",
-      "ParentIndex": 3,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1285,7 +1285,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconPrevMonth1_1",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1499,7 +1499,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblMonthSelected1_1",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1819,7 +1819,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MonthDayGallery1_1",
-      "ParentIndex": 5,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1995,7 +1995,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle7",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2830,7 +2830,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WeekdayGallery1_1",
-      "ParentIndex": 4,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
