@@ -760,15 +760,6 @@
             Width: =1365
             ZIndex: =15
 
-        Rectangle7 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =512
-            Visible: =customdatepicker
-            Width: =722
-            X: =398
-            Y: =142
-            ZIndex: =16
-
         CalendarComponentMain_2 As CalendarComponentMain:
             Height: =454
             Visible: =customdatepicker
