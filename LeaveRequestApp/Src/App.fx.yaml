@@ -28,6 +28,11 @@ App As appinfo:
                     Title: "Holidays",
                     Screen: Holidays,
                     Icon: holidays
+                },
+                {
+                    Title: "Team Leave",
+                    Screen: 'Team Leave',
+                    Icon:teamLeave
                 }
             )
         );
