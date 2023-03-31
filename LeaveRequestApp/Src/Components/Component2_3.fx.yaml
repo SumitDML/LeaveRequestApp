@@ -28,7 +28,7 @@ Component2_3 As CanvasComponent:
         PaddingTop: =5.00
         Size: =13.00
         Text: ="Hello, "&User().FullName
-        Width: =233.00
+        Width: =509
         X: =103
         Y: =17
         ZIndex: =3

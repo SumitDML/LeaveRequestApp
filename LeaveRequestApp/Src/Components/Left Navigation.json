@@ -58,7 +58,7 @@
         "Name": "Rectangle1",
         "Parent": "Left Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 183,
+        "PublishOrderIndex": 197,
         "Rules": [
           {
             "Category": "Design",
@@ -221,7 +221,7 @@
         "Name": "Image1",
         "Parent": "Left Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 184,
+        "PublishOrderIndex": 198,
         "Rules": [
           {
             "Category": "Data",
@@ -461,7 +461,7 @@
         "Name": "Rectangle5",
         "Parent": "Left Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 185,
+        "PublishOrderIndex": 199,
         "Rules": [
           {
             "Category": "Design",
@@ -599,7 +599,7 @@
             "Name": "galleryTemplate1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 187,
+            "PublishOrderIndex": 201,
             "Rules": [
               {
                 "Category": "Design",
@@ -729,7 +729,7 @@
             "Name": "Button1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 188,
+            "PublishOrderIndex": 202,
             "Rules": [
               {
                 "Category": "Data",
@@ -1066,7 +1066,7 @@
             "Name": "Image3",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 189,
+            "PublishOrderIndex": 203,
             "Rules": [
               {
                 "Category": "Data",
@@ -1358,7 +1358,7 @@
             "Name": "Label1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 190,
+            "PublishOrderIndex": 204,
             "Rules": [
               {
                 "Category": "Data",
@@ -1645,7 +1645,7 @@
             "Name": "Group1",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 191,
+            "PublishOrderIndex": 205,
             "Rules": [
               {
                 "Category": "Design",
@@ -1757,7 +1757,7 @@
         "Name": "Gallery1",
         "Parent": "Left Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 186,
+        "PublishOrderIndex": 200,
         "Rules": [
           {
             "Category": "Data",
