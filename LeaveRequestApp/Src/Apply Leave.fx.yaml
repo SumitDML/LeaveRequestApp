@@ -180,7 +180,7 @@
                         CountRows(
                             Filter(
                                 'Leave Requests',
-                                DateValue(Text(from.SelectedDate,"[$-en-US]yyyy-mm-dd"))=DateValue(Text(From,"[$-en-US]yyyy-mm-dd"))
+                                DateValue(Text(from.SelectedDate,"[$-en-US]yyyy-mm-dd"))=DateValue(Text(From,"[$-en-US]yyyy-mm-dd")),RequestedBy.Email=User().Email
                             )
                         )>0,
                             [
