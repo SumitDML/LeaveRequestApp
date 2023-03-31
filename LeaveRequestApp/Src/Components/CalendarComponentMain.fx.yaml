@@ -32,7 +32,7 @@ CalendarComponentMain As CanvasComponent:
     Height: =640
     OnReset: =Set(visible_variable, true)
     SelectedDateColor: =Color.White
-    SelectedDateFill: =Color.DimGrey
+    SelectedDateFill: =RGBA(
     SelectRange: =false
     ShowCalendar: =visible_variable
     ShowCalendarEvents: =true

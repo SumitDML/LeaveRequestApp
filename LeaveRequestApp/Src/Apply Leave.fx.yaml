@@ -33,13 +33,13 @@
                 Width: =568.3333333333333
                 X: =700
                 Y: =-200
-                ZIndex: =2
+                ZIndex: =1
 
             Component2_4 As Component2_3:
                 Height: =70
                 Width: =Parent.Width
                 X: =0.00
-                ZIndex: =3
+                ZIndex: =2
 
             Button3 As button:
                 BorderColor: =RGBA(219, 219, 219, 1)
@@ -59,7 +59,7 @@
                 Width: =1095
                 X: =36
                 Y: =90
-                ZIndex: =4
+                ZIndex: =3
 
             Label14_1 As label:
                 Font: =Font.'Lato Black'
@@ -68,7 +68,7 @@
                 Text: ="Details"
                 X: =68
                 Y: =220
-                ZIndex: =5
+                ZIndex: =4
 
             Label14_2 As label:
                 Font: =Font.'Lato Black'
@@ -77,7 +77,7 @@
                 Text: ="Reason"
                 X: =68
                 Y: =118
-                ZIndex: =6
+                ZIndex: =5
 
             Details As text:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -91,7 +91,7 @@
                 Width: =572
                 X: =68
                 Y: =252
-                ZIndex: =7
+                ZIndex: =6
 
             Reason As text:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -106,7 +106,7 @@
                 Width: =301
                 X: =68
                 Y: =151
-                ZIndex: =8
+                ZIndex: =7
 
             LeaveTypes As dropdown:
                 BorderColor: =RGBA(219, 219, 219, 1)
@@ -131,7 +131,7 @@
                 Width: =222
                 X: =419
                 Y: =151
-                ZIndex: =9
+                ZIndex: =8
 
             "'Apply Leave Button' As button":
                 BorderColor: =RGBA(103, 143, 189,1)
@@ -267,7 +267,7 @@
                 Width: =188
                 X: =912
                 Y: =651
-                ZIndex: =10
+                ZIndex: =9
 
             Button8 As button:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -294,7 +294,7 @@
                 Width: =188
                 X: =686
                 Y: =651
-                ZIndex: =11
+                ZIndex: =10
 
             Label14_3 As label:
                 Font: =Font.'Lato Black'
@@ -303,25 +303,7 @@
                 Text: ="Leave Type"
                 X: =418
                 Y: =118
-                ZIndex: =20
-
-            Label14_4 As label:
-                Font: =Font.'Lato Black'
-                Height: =33
-                Size: =15
-                Text: ="Start Date"
-                X: =68
-                Y: =377
-                ZIndex: =21
-
-            Label14_5 As label:
-                Font: =Font.'Lato Black'
-                Height: =33
-                Size: =15
-                Text: ="End Date"
-                X: =369
-                Y: =377
-                ZIndex: =22
+                ZIndex: =18
 
             Label14_6 As label:
                 Font: =Font.'Lato Black'
@@ -330,8 +312,8 @@
                 Text: ="Reporting Manager"
                 Width: =200
                 X: =68
-                Y: =489
-                ZIndex: =23
+                Y: =526
+                ZIndex: =19
 
             approver As dropdown:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -346,8 +328,8 @@
                 SelectionFill: =RGBA(219, 219, 219, 1)
                 Width: =286
                 X: =68
-                Y: =522
-                ZIndex: =24
+                Y: =573
+                ZIndex: =20
 
             Icon5 As icon.CalendarBlank:
                 Height: =50
@@ -355,24 +337,97 @@
                 Width: =28
                 X: =240
                 Y: =418
-                ZIndex: =37
+                ZIndex: =31
 
-            from As text:
-                Default: =Text(CalendarComponentMain_2.StartDate,DateTimeFormat.LongDate)
-                Height: =57
-                OnSelect: =Set(customdatepicker,true)
-                Width: =200
+            Label14_8 As label:
+                Font: =Font.'Lato Black'
+                Height: =33
+                Size: =15
+                Text: ="Dates"
                 X: =68
-                Y: =415
-                ZIndex: =38
-
-            to As text:
-                Default: =Text(CalendarComponentMain_2.EndDate,DateTimeFormat.LongDate)
-                Height: =54
-                Width: =199
-                X: =369
-                Y: =418
+                Y: =378
                 ZIndex: =39
+
+            Group2 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =39
+
+                Rectangle9 As rectangle:
+                    BorderColor: =RGBA(202, 202, 202, 1)
+                    BorderThickness: =1
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Width: =571
+                    X: =68
+                    Y: =413
+                    ZIndex: =32
+
+                from As text:
+                    BorderThickness: =0
+                    Default: =Text(CalendarComponentMain_2.StartDate,DateTimeFormat.LongDate)
+                    FocusedBorderThickness: =
+                    FontWeight: =FontWeight.Semibold
+                    Height: =79
+                    HoverFill: =RGBA(237, 237, 237, 0.3)
+                    OnSelect: =Set(customdatepicker,true)
+                    PressedBorderColor: =RGBA(128, 128, 128, 1)
+                    PressedColor: =RGBA(237, 237, 237, 0.3)
+                    Width: =282
+                    X: =78
+                    Y: =424
+                    ZIndex: =33
+
+                to As text:
+                    BorderThickness: =0
+                    Default: =If(Text(CalendarComponentMain_2.EndDate,DateTimeFormat.LongDate)="",Text(CalendarComponentMain_2.StartDate,DateTimeFormat.LongDate),Text(CalendarComponentMain_2.EndDate,DateTimeFormat.LongDate))
+                    FocusedBorderColor: =
+                    FocusedBorderThickness: =
+                    FontWeight: =FontWeight.Semibold
+                    Height: =74
+                    HoverBorderColor: =RGBA(128, 128, 128, 1)
+                    HoverFill: =RGBA(237, 237, 237, 0.3)
+                    Width: =261
+                    X: =356
+                    Y: =426
+                    ZIndex: =34
+
+                Label14_4 As label:
+                    Color: =RGBA(149, 149, 149, 1)
+                    Font: =Font.Arial
+                    Height: =20
+                    Size: =12
+                    Text: ="Start Date"
+                    X: =90
+                    Y: =431
+                    ZIndex: =35
+
+                Label14_5 As label:
+                    Color: =RGBA(149, 149, 149, 1)
+                    Font: =Font.Arial
+                    Height: =22
+                    Size: =12
+                    Text: ="End Date"
+                    X: =369
+                    Y: =431
+                    ZIndex: =36
+
+                Rectangle12 As rectangle:
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =88
+                    OnSelect: =Set(customdatepicker,true)
+                    Width: =571
+                    X: =68
+                    Y: =413
+                    ZIndex: =37
+
+                Rectangle13 As rectangle:
+                    Fill: =RGBA(202, 202, 202, 1)
+                    Width: =1
+                    X: =342
+                    Y: =413
+                    ZIndex: =38
 
             SideBox As group:
                 Height: =5
@@ -388,6 +443,7 @@
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
                     DisplayMode: =DisplayMode.Disabled
                     Fill: =RGBA(255, 255, 255, 0.3)
+                    Font: =Font.'Lato Black'
                     Height: =410
                     RadiusBottomLeft: =15
                     RadiusBottomRight: =15
@@ -397,7 +453,7 @@
                     Width: =384
                     X: =711
                     Y: =151
-                    ZIndex: =12
+                    ZIndex: =11
 
                 Label13 As label:
                     BorderColor: =Color.Blue
@@ -411,7 +467,7 @@
                     Width: =196
                     X: =740
                     Y: =157
-                    ZIndex: =13
+                    ZIndex: =12
 
                 Label13_1 As label:
                     BorderColor: =Color.Blue
@@ -426,7 +482,7 @@
                     Width: =199
                     X: =753
                     Y: =461
-                    ZIndex: =14
+                    ZIndex: =13
 
                 Label13_3 As label:
                     BorderColor: =Color.Blue
@@ -439,23 +495,28 @@
                     Width: =221
                     X: =862
                     Y: =205
-                    ZIndex: =15
+                    ZIndex: =14
 
                 TotalDays As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
                     Fill: =Color.Transparent
+                    Height: =39
                     Text: |-
-                        =1 + ((DateDiff(from.SelectedDate,to.SelectedDate)) 
-                        * 5 - ((Weekday(from.SelectedDate) - 
-                        Weekday(to.SelectedDate))*2)) / 7 - 
-                        Switch(Weekday(to.SelectedDate),7,1,0) - 
-                        Switch(Weekday(from.SelectedDate),1,1,0)
-                    Width: =61
-                    X: =892
+                        =If(1 + ((DateDiff(CalendarComponentMain_2.StartDate,CalendarComponentMain_2.EndDate)) 
+                        * 5 - ((Weekday(CalendarComponentMain_2.StartDate) - 
+                        Weekday(CalendarComponentMain_2.EndDate))*2)) / 7 - 
+                        Switch(Weekday(CalendarComponentMain_2.EndDate),7,1,0) - 
+                        Switch(Weekday(CalendarComponentMain_2.StartDate),1,1,0)>=1,1 + ((DateDiff(CalendarComponentMain_2.StartDate,CalendarComponentMain_2.EndDate)) 
+                        * 5 - ((Weekday(CalendarComponentMain_2.StartDate) - 
+                        Weekday(CalendarComponentMain_2.EndDate))*2)) / 7 - 
+                        Switch(Weekday(CalendarComponentMain_2.EndDate),7,1,0) - 
+                        Switch(Weekday(CalendarComponentMain_2.StartDate),1,1,0),1)
+                    Width: =123
+                    X: =883
                     Y: =313
-                    ZIndex: =16
+                    ZIndex: =15
 
                 Label13_5 As label:
                     BorderColor: =Color.Blue
@@ -470,7 +531,7 @@
                     Width: =147
                     X: =765
                     Y: =313
-                    ZIndex: =17
+                    ZIndex: =16
 
                 RemainingBalance As label:
                     BorderColor: =Color.Blue
@@ -482,7 +543,7 @@
                     Width: =62
                     X: =953
                     Y: =458
-                    ZIndex: =18
+                    ZIndex: =17
 
                 Rectangle2 As rectangle:
                     BorderColor: =Color.Blue
@@ -492,7 +553,7 @@
                     Width: =328
                     X: =755
                     Y: =446
-                    ZIndex: =26
+                    ZIndex: =21
 
                 Label4 As label:
                     BorderColor: =Color.Blue
@@ -506,7 +567,7 @@
                     Width: =76
                     X: =765
                     Y: =352
-                    ZIndex: =27
+                    ZIndex: =22
 
                 ReasonsText As label:
                     BorderColor: =Color.Blue
@@ -519,7 +580,7 @@
                     Width: =242
                     X: =826
                     Y: =357
-                    ZIndex: =28
+                    ZIndex: =23
 
                 Label13_4 As label:
                     BorderColor: =Color.Blue
@@ -534,7 +595,7 @@
                     Width: =237
                     X: =753
                     Y: =490
-                    ZIndex: =29
+                    ZIndex: =24
 
                 Label7 As label:
                     BorderColor: =Color.Blue
@@ -546,33 +607,33 @@
                     Width: =106
                     X: =952
                     Y: =490
-                    ZIndex: =30
+                    ZIndex: =25
 
                 Label8 As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
                     Fill: =Color.Transparent
-                    Height: =36
+                    Height: =34
                     Text: |
                         =from
-                    Width: =177
+                    Width: =254
                     X: =814
                     Y: =242
-                    ZIndex: =31
+                    ZIndex: =26
 
                 Label8_1 As label:
                     BorderColor: =Color.Blue
                     Color: =RGBA(116, 116, 116, 1)
                     DisabledFill: =RGBA(205, 222, 240, 0.3)
                     Fill: =Color.Transparent
-                    Height: =34
+                    Height: =37
                     Text: |
                         =to
-                    Width: =177
+                    Width: =249
                     X: =795
                     Y: =276
-                    ZIndex: =32
+                    ZIndex: =27
 
                 Label24 As label:
                     Color: =RGBA(102, 106, 138, 1)
@@ -585,7 +646,7 @@
                     Width: =40
                     X: =765
                     Y: =277
-                    ZIndex: =33
+                    ZIndex: =28
 
                 Label25 As label:
                     Color: =RGBA(102, 106, 138, 1)
@@ -597,7 +658,7 @@
                     Width: =60
                     X: =766
                     Y: =239
-                    ZIndex: =34
+                    ZIndex: =29
 
                 Label26 As label:
                     Color: =RGBA(102, 106, 138, 1)
@@ -610,7 +671,18 @@
                     Width: =110
                     X: =765
                     Y: =205
-                    ZIndex: =35
+                    ZIndex: =30
+
+    Label28 As label:
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Lighter
+        Height: =46
+        Size: =14
+        Text: ="*All Fields Are Mandatory."
+        Width: =380
+        X: =267
+        Y: =654
+        ZIndex: =3
 
     errordisplaypop As group:
         Height: =5
@@ -628,7 +700,7 @@
             Width: =57
             X: =1266
             Y: =86
-            ZIndex: =3
+            ZIndex: =15
 
         Rectangle4 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 0.5)
@@ -639,7 +711,7 @@
             Width: =457
             X: =908
             Y: =20
-            ZIndex: =4
+            ZIndex: =16
 
         Label14 As label:
             Align: =Align.Center
@@ -649,7 +721,7 @@
             Width: =351
             X: =990
             Y: =20
-            ZIndex: =5
+            ZIndex: =17
 
         Icon2 As icon.Error:
             Height: =46
@@ -658,18 +730,7 @@
             Width: =44
             X: =937
             Y: =49
-            ZIndex: =6
-
-    Label28 As label:
-        Font: =Font.'Lato Light'
-        FontWeight: =FontWeight.Lighter
-        Height: =46
-        Size: =14
-        Text: ="*All Fields Are Mandatory."
-        Width: =380
-        X: =267
-        Y: =654
-        ZIndex: =12
+            ZIndex: =18
 
     "'Successful Submission' As group":
         Height: =5
@@ -688,7 +749,7 @@
             Visible: =succesfulSubmission
             Width: =1366
             Y: =1
-            ZIndex: =7
+            ZIndex: =10
 
         Timer2_1 As timer:
             AutoStart: =
@@ -701,7 +762,7 @@
             Width: =24
             X: =1266
             Y: =571
-            ZIndex: =8
+            ZIndex: =11
 
         Button4 As button:
             BorderColor: =RGBA(128, 128, 128, 1)
@@ -716,7 +777,7 @@
             Width: =406
             X: =937
             Y: =24
-            ZIndex: =9
+            ZIndex: =12
 
         Icon3 As icon.Check:
             Height: =55
@@ -725,7 +786,7 @@
             Width: =47
             X: =973
             Y: =44
-            ZIndex: =10
+            ZIndex: =13
 
         Label14_7 As label:
             Align: =Align.Center
@@ -737,7 +798,7 @@
             Width: =291
             X: =1020
             Y: =32
-            ZIndex: =11
+            ZIndex: =14
 
     customdatepickerpop As group:
         Height: =5
@@ -751,7 +812,7 @@
             Height: =768
             Visible: =customdatepicker
             Width: =1366
-            ZIndex: =13
+            ZIndex: =4
 
         HtmlText12 As htmlViewer:
             Height: =659
@@ -761,16 +822,17 @@
             Width: =630
             X: =307
             Y: =44
-            ZIndex: =14
+            ZIndex: =5
 
         CalendarComponentMain_2 As CalendarComponentMain:
             Height: =447
+            SelectedDateFill: =RGBA(102, 102, 102, 0.6)
             SelectRange: =true
             Visible: =customdatepicker
             Width: =554
             X: =341
             Y: =86
-            ZIndex: =15
+            ZIndex: =6
 
         Button8_1 As button:
             BorderColor: =RGBA(202, 202, 202, 1)
@@ -780,7 +842,10 @@
             Font: =Font.'Lato Black'
             HoverColor: =RGBA(128, 128, 128, 1)
             HoverFill: =RGBA(237, 237, 237, 0.3)
-            OnSelect: =Set(customdatepicker,false)
+            OnSelect: |
+                =Set(customdatepicker,false);
+                Reset(from);
+                Reset(to);
             PressedColor: =RGBA(128, 128, 128, 1)
             PressedFill: =RGBA(237, 237, 237, 0.8)
             RadiusBottomLeft: =15
@@ -793,7 +858,7 @@
             Width: =166
             X: =458
             Y: =556
-            ZIndex: =18
+            ZIndex: =8
 
         "'Apply Leave Button_1' As button":
             BorderColor: =RGBA(103, 143, 189,1)
@@ -817,5 +882,5 @@
             Width: =141
             X: =677
             Y: =556
-            ZIndex: =19
+            ZIndex: =9
 
