@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "Component5": {
+    "Component4_1": {
       "AllowAccessToGlobals": false,
       "ControlPropertyState": [
         "Fill",
@@ -18,7 +18,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Component5",
+      "Name": "Component4_1",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -30,32 +30,32 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         }
       ],
       "StyleName": "",
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Component5"
+  "TopParentName": "Component4_1"
 }
