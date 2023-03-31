@@ -1,14 +1,10 @@
 "'Team Leave' As screen":
 
-    "'Left Navigation_6' As 'Left Navigation'":
-        Width: ='Left Navigation_6'.MenuWidth
-
     Canvas1_6 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(255, 255, 255, 0)
         Height: =Parent.Height
-        Width: =Parent.Width-'Left Navigation_4'.Width
-        X: ='Left Navigation_4'.Width
+        Width: =1366
         ZIndex: =2
 
         DataCard1_6 As dataCard:
@@ -18,7 +14,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(205, 222, 240, 0.4)
             Height: =769
-            Width: =Parent.Width
+            Width: =1366
             X: =0
             Y: =0
             ZIndex: =1
@@ -31,11 +27,25 @@
                 Y: =-300
                 ZIndex: =1
 
-            Component2_9 As Component2_3:
-                Height: =70
-                Width: =Parent.Width
-                X: =0.00
-                ZIndex: =2
+            Button2_3 As button:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =0.5
+                DisabledBorderColor: =
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =725
+                HoverFill: =
+                PaddingLeft: =20
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Text: =""
+                Width: =1312
+                X: =24
+                Y: =24
+                ZIndex: =3
 
         DataCard1_7 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -43,8 +53,173 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(205, 222, 240, 0.4)
             Height: =769
-            Width: =1168
+            Width: =1366
             X: =0
             Y: =1
             ZIndex: =2
+
+    Label29 As label:
+        Font: =Font.'Lato Black'
+        Text: ="Holiday Calendar"
+        Width: =176
+        X: =68
+        Y: =40
+        ZIndex: =3
+
+    Image12 As image:
+        Height: =200
+        Image: =jan
+        Width: =300
+        X: =27
+        Y: =80
+        ZIndex: =4
+
+    Image13 As image:
+        Height: =200
+        Image: =feb
+        Width: =300
+        X: =280
+        Y: =80
+        ZIndex: =5
+
+    Image14 As image:
+        Height: =200
+        Image: =mar
+        Width: =300
+        X: =533
+        Y: =80
+        ZIndex: =6
+
+    Image15 As image:
+        Height: =200
+        Image: =apr
+        Width: =300
+        X: =785
+        Y: =80
+        ZIndex: =7
+
+    Image16 As image:
+        Height: =200
+        Image: =may
+        Width: =300
+        X: =27
+        Y: =296
+        ZIndex: =8
+
+    Image17 As image:
+        Height: =200
+        Image: =jun
+        Width: =300
+        X: =280
+        Y: =296
+        ZIndex: =9
+
+    Image18 As image:
+        Height: =200
+        Image: =jul
+        Width: =300
+        X: =533
+        Y: =296
+        ZIndex: =10
+
+    Image19 As image:
+        Height: =200
+        Image: =aug
+        Width: =300
+        X: =785
+        Y: =296
+        ZIndex: =11
+
+    Image20 As image:
+        Height: =200
+        Image: =sep
+        Width: =300
+        X: =27
+        Y: =516
+        ZIndex: =12
+
+    Image21 As image:
+        Height: =200
+        Image: =oct
+        Width: =300
+        X: =280
+        Y: =516
+        ZIndex: =13
+
+    Image22 As image:
+        Height: =200
+        Image: =nov
+        Width: =300
+        X: =533
+        Y: =516
+        ZIndex: =14
+
+    Image23 As image:
+        Height: =200
+        Image: =dec
+        Width: =300
+        X: =785
+        Y: =516
+        ZIndex: =15
+
+    Label36 As label:
+        Height: =651
+        Size: =7
+        Text: |-
+            ="
+            Date	 	Name	
+            1 Jan	Sunday	New Year's Day	
+            14 Jan	Saturday	Makar Sankranti	
+            14 Jan	Saturday	Lohri	
+            15 Jan	Sunday	Pongal	
+            22 Jan	Sunday	Lunar New Year	
+            26 Jan	Thursday	Republic Day	
+            26 Jan	Thursday	Vasant Panchami
+            5 Feb	Sunday	Guru Ravidas Jayanti
+            5 Feb	Sunday	Hazarat Ali's Birthday
+            14 Feb	Tuesday	Valentine's Day	
+            15 Feb	Wednesday	Maharishi Dayanand Saraswati Jayanti
+            18 Feb	Saturday	Maha Shivaratri/Shivaratri
+            19 Feb	Sunday	Shivaji Jayanti	
+            7 Mar	Tuesday	Dolyatra	
+            7 Mar	Tuesday	Holika Dahana	
+            8 Mar	Wednesday	Holi	
+            21 Mar	Tuesday	March Equinox	
+            22 Mar	Wednesday	Chaitra Sukhladi	
+            22 Mar	Wednesday	Ugadi	
+            22 Mar	Wednesday	Gudi Padwa	
+            24 Mar	Friday	Ramadan Start	
+            30 Mar	Thursday	Rama Navami	
+            4 Apr	Tuesday	Mahavir Jayanti	
+            6 Apr	Thursday	First day of Passover	
+            6 Apr	Thursday	Maundy Thursday	
+            7 Apr	Friday	Good Friday	
+            9 Apr	Sunday	Easter Day
+            14 Apr	Friday	Vaisakhi	
+            14 Apr	Friday	Ambedkar Jayanti	
+            15 Apr	Saturday	Mesadi / Vaisakhadi	
+            21 Apr	Friday	Jamat Ul-Vida (Tentative Date)
+            22 Apr	Saturday	Ramzan Id/Eid-ul-Fitar 
+            22 Apr	Saturday	Ramzan Id/Eid-ul-Fitar
+            1 May	Monday	International Worker's Day
+            5 May	Friday	Buddha Purnima/Vesak	
+            9 May	Tuesday	Birthday of Rabindranath	
+            14 May	Sunday	Mother's Day	
+            18 Jun	Sunday	Father's Day	
+            20 Jun	Tuesday	Rath Yatra
+            21 Jun	Wednesday	June Solstice	
+            29 Jun	Thursday	Bakrid/Eid ul-Adha 
+            3 Jul	Monday	Guru Purnima	
+            29 Jul	Saturday	Muharram/Ashura
+            6 Aug	Sunday	Friendship Day	
+            15 Aug	Tuesday	Independence Day
+            16 Aug	Wednesday	Parsi New Year
+            20 Aug	Sunday	Vinayaka Chathurthi	
+            29 Aug	Tuesday	Onam	
+            30 Aug	Wednesday	Raksha Bandhan (Rakhi)
+            "
+        Width: =262
+        X: =1057
+        Y: =80
+        ZIndex: =16
 

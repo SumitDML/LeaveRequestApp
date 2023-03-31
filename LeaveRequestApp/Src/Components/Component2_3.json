@@ -121,7 +121,7 @@
         "Name": "Image2_1",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 30,
+        "PublishOrderIndex": 254,
         "Rules": [
           {
             "Category": "Data",
@@ -392,7 +392,7 @@
         "Name": "Label5_1",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 31,
+        "PublishOrderIndex": 255,
         "Rules": [
           {
             "Category": "Data",
@@ -706,7 +706,7 @@
         "Name": "Image8",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 32,
+        "PublishOrderIndex": 256,
         "Rules": [
           {
             "Category": "Data",
@@ -950,7 +950,7 @@
         "Name": "HtmlText2",
         "Parent": "Component2_3",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 33,
+        "PublishOrderIndex": 257,
         "Rules": [
           {
             "Category": "Data",
@@ -1113,7 +1113,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638158541915644245",
+    "LastModifiedTimestamp": "638158603782629674",
     "Name": "Component2_3",
     "Rules": [
       {
@@ -1172,7 +1172,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638158541915644245",
+  "LastModifiedTimestamp": "638158603782629674",
   "Name": "2c83fcd24b97406eb33eeade790d7b43",
   "OverridableProperties": {},
   "TemplateOriginalName": "9ddb115d1173464aa9db965d3d77cc36",

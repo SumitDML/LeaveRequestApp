@@ -139,3 +139,17 @@ Holidays As screen:
             Width: =269
             ZIndex: =5
 
+    Label37 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(202, 202, 202, 1)
+        BorderThickness: =1
+        Fill: =RGBA(237, 237, 237, 1)
+        Font: =Font.Lato
+        OnSelect: =Navigate('Team Leave',ScreenTransition.Fade)
+        Size: =11
+        Text: ="View Full Year Calendar"
+        Width: =209
+        X: =1085
+        Y: =101
+        ZIndex: =6
+
