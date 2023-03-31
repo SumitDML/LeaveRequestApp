@@ -756,13 +756,14 @@
             BorderThickness: =0.5
             Fill: =RGBA(0, 16, 96, 1)
             Height: =768
-            Visible: =errordisplay
+            Visible: =customdatepicker
             Width: =1365
             ZIndex: =15
 
         Rectangle7 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =512
+            Visible: =customdatepicker
             Width: =722
             X: =398
             Y: =142
@@ -770,6 +771,7 @@
 
         CalendarComponentMain_2 As CalendarComponentMain:
             Height: =454
+            Visible: =customdatepicker
             Width: =678
             X: =418
             Y: =142

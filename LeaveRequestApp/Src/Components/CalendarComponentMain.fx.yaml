@@ -782,7 +782,7 @@ CalendarComponentMain As CanvasComponent:
     iconClose As icon.Cancel:
         Height: =40
         Icon: =Icon.Cancel
-        OnSelect: =Set(visible_variable, false)
+        OnSelect: =Set(customdatepicker, false)
         Width: =40
         X: =576
         Y: =8
