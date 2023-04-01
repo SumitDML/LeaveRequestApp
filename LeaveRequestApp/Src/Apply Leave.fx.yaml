@@ -370,13 +370,14 @@
                     FocusedBorderThickness: =
                     FontWeight: =FontWeight.Semibold
                     Height: =79
+                    HintText: ="Select Date"
                     HoverFill: =RGBA(237, 237, 237, 0.3)
                     OnSelect: =Set(customdatepicker,true)
                     PressedBorderColor: =RGBA(128, 128, 128, 1)
                     PressedColor: =RGBA(237, 237, 237, 0.3)
                     Width: =282
-                    X: =78
-                    Y: =424
+                    X: =83
+                    Y: =431
                     ZIndex: =33
 
                 to As text:
@@ -386,17 +387,18 @@
                     FocusedBorderThickness: =
                     FontWeight: =FontWeight.Semibold
                     Height: =74
+                    HintText: ="Select Date"
                     HoverBorderColor: =RGBA(128, 128, 128, 1)
                     HoverFill: =RGBA(237, 237, 237, 0.3)
                     Width: =261
-                    X: =356
-                    Y: =426
+                    X: =362
+                    Y: =431
                     ZIndex: =34
 
                 Label14_4 As label:
                     Color: =RGBA(149, 149, 149, 1)
                     Font: =Font.Arial
-                    Height: =20
+                    Height: =22
                     Size: =12
                     Text: ="Start Date"
                     X: =90
