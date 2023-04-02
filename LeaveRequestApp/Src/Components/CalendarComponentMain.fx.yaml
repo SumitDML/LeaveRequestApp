@@ -50,7 +50,7 @@ CalendarComponentMain As CanvasComponent:
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =galWeekdays_1.BorderColor
         DisabledFill: =galWeekdays_1.Fill
-        Height: =41
+        Height: =37
         HoverBorderColor: =galWeekdays_1.BorderColor
         HoverFill: =galWeekdays_1.Fill
         Items: |-
@@ -102,8 +102,8 @@ CalendarComponentMain As CanvasComponent:
         PressedFill: =galWeekdays_1.Fill
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =Parent.Width / 7
-        Width: =Parent.Width
+        TemplateSize: =84
+        Width: =600
         Y: =btnPrevMonth_1.Y + btnPrevMonth_1.Height + 20
         ZIndex: =1
 
@@ -120,7 +120,7 @@ CalendarComponentMain As CanvasComponent:
             FocusedBorderColor: =RGBA(0,0,0,0)
             Font: =Font.'Segoe UI'
             FontWeight: =
-            Height: =35
+            Height: =34
             HoverBorderColor: =RGBA(0,0,0,0)
             HoverColor: =
             HoverFill: =RGBA(0,0,0,0)
@@ -445,6 +445,7 @@ CalendarComponentMain As CanvasComponent:
         TemplatePadding: |
             =0
         TemplateSize: =55
+        Width: =600
         WrapCount: =7
         Y: =109
         ZIndex: =7
@@ -783,7 +784,7 @@ CalendarComponentMain As CanvasComponent:
         Icon: =Icon.Cancel
         OnSelect: =Set(customdatepicker, false)
         Width: =40
-        X: =576
-        Y: =8
+        X: =560
+        Y: =12
         ZIndex: =8
 

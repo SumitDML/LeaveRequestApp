@@ -2097,15 +2097,15 @@
         "HoverFill",
         "AccessibleLabel",
         "ZIndex",
+        "Height",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "36",
-          "InvariantPropertyName": "Height",
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Width",
         "TemplateSize",
         "TemplateMaximumWidth",
         "Visible",

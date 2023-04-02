@@ -2821,7 +2821,14 @@
         },
         "ShowLongWeekday",
         "StartWeekOnMonday",
-        "AllowSelectionOfWeekends",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "AllowSelectionOfWeekends",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ShowCloseIcon",
         {
           "AFDDataSourceName": "",
@@ -2857,7 +2864,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "CalendarComponentMain_2",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2868,7 +2875,7 @@
         {
           "Category": "Data",
           "PropertyName": "AllowSelectionOfWeekends",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -4249,7 +4256,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText12",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4386,7 +4393,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon2",
-      "ParentIndex": 10,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4551,7 +4558,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11408,7 +11415,14 @@
           "NameMapSourceSchema": "?"
         },
         "OnSelect",
-        "Default",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "varLeaveType",
+          "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "OnChange"
       ],
       "HasDynamicProperties": false,
@@ -13824,7 +13838,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer2",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

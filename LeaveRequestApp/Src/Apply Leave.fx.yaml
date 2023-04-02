@@ -113,7 +113,7 @@
                 BorderThickness: =1
                 ChevronBackground: =RGBA(102, 102, 102, 1)
                 ChevronHoverBackground: =
-                Default: =varLeaveType
+                Default: =1
                 Height: =52
                 HoverFill: =RGBA(237, 237, 237, 0.3)
                 Items: =Choices([@'Leave Requests'].'Leave Type')
@@ -144,28 +144,7 @@
                 HoverFill: =RGBA(77, 139, 209,0.9)
                 OnSelect: |
                     =If(
-                        from.SelectedDate < Today(),
-                        [
-                            Set(
-                                errordisplay,
-                                true
-                            ),
-                            Set(
-                                err,
-                                "Please enter a valid start date"
-                            )
-                        ],
-                        from.SelectedDate > to.SelectedDate,
-                        [
-                            Set(
-                                errordisplay,
-                                true
-                            ),
-                            Set(
-                                err,
-                                "Please enter valid end date"
-                            )
-                        ],
+                    
                         Int(TotalDays.Text) > Int(RemainingBalance.Text),
                         [
                             Set(
@@ -180,7 +159,7 @@
                         CountRows(
                             Filter(
                                 'Leave Requests',
-                                DateValue(Text(from.SelectedDate,"[$-en-US]yyyy-mm-dd"))=DateValue(Text(From,"[$-en-US]yyyy-mm-dd")),RequestedBy.Email=User().Email
+                                DateValue(Text(from,"[$-en-US]yyyy-mm-dd"))=DateValue(Text(From,"[$-en-US]yyyy-mm-dd")),RequestedBy.Email=User().Email
                             )
                         )>0,
                             [
@@ -203,8 +182,8 @@
                             {Title: Reason.Text},
                             {Details: Details.Text},
                             {'Leave Type': LeaveTypes.SelectedText},
-                            {From: from.SelectedDate},
-                            {To: to.SelectedDate},
+                            {From: from},
+                            {To: to},
                             {'Total Days': Value(TotalDays.Text)},
                             {
                                 'Leave Id': {
@@ -695,20 +674,20 @@
 
         Timer2 As timer:
             Duration: =1500
-            Height: =38
+            Height: =29
             OnTimerEnd: =Set(errordisplay,false)
             Start: =errordisplay
-            Visible: =errordisplay
+            Visible: =false
             Width: =57
             X: =1266
-            Y: =86
+            Y: =70
             ZIndex: =15
 
         Rectangle4 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 0.5)
             BorderThickness: =0.5
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =104
+            Fill: =RGBA(255, 0, 0, 0.5)
+            Height: =79
             Visible: =errordisplay
             Width: =457
             X: =908
@@ -717,7 +696,7 @@
 
         Label14 As label:
             Align: =Align.Center
-            Height: =104
+            Height: =79
             Text: =err
             Visible: =errordisplay
             Width: =351
@@ -726,12 +705,12 @@
             ZIndex: =17
 
         Icon2 As icon.Error:
-            Height: =46
+            Height: =35
             Icon: =Icon.Error
             Visible: =errordisplay
             Width: =44
             X: =937
-            Y: =49
+            Y: =42
             ZIndex: =18
 
     "'Successful Submission' As group":
@@ -821,17 +800,18 @@
             HtmlText: |-
                 ="<div style='margin:10px;width:700px;height:608px;background-color:#ffffff;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;; #ccc; border-radius:15px'></div>"
             Visible: =customdatepicker
-            Width: =630
+            Width: =683
             X: =307
             Y: =44
             ZIndex: =5
 
         CalendarComponentMain_2 As CalendarComponentMain:
-            Height: =447
+            AllowSelectionOfWeekends: =false
+            Height: =455
             SelectedDateFill: =RGBA(102, 102, 102, 0.6)
             SelectRange: =true
             Visible: =customdatepicker
-            Width: =554
+            Width: =617
             X: =341
             Y: =86
             ZIndex: =6
@@ -871,7 +851,7 @@
             HoverColor: =Color.White
             HoverFill: =RGBA(77, 139, 209,0.9)
             OnSelect: |+
-                =Set(customdatepicker,false)
+                =If(CalendarComponentMain_2.StartDate<Today(),Set(errordisplay,true)&&Set(err,"Please select a valid date"),Set(customdatepicker,false))
                 
                 
             RadiusBottomLeft: =15
