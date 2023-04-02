@@ -148,7 +148,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -388,7 +388,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Canvas1_4",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -499,7 +499,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Circle1_6",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -748,7 +748,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Component2_7",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -941,7 +941,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery9",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2092,7 +2092,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label16",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2404,7 +2404,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label37",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2674,7 +2674,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Left Navigation_4",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -984,7 +984,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateTabletIconEmptyState.ID%",
       "Name": "iconEmptyState1",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1334,7 +1334,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateTabletIconNextMonth.ID%",
       "Name": "iconNextMonth1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1990,7 +1990,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateTabletLblAppName.ID%",
       "Name": "LblAppName1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

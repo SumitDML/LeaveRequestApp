@@ -1,21 +1,6 @@
 Holidays As screen:
     Fill: =RGBA(255, 255, 255, 0)
 
-    Circle1_6 As circle:
-        Fill: =RGBA(205, 222, 240, 0.7)
-        Height: =558
-        Width: =562
-        Y: =400
-        ZIndex: =1
-
-    Circle1_7 As circle:
-        Fill: =RGBA(205, 222, 240, 0.7)
-        Height: =558
-        Width: =562
-        X: =804
-        Y: =-400
-        ZIndex: =2
-
     Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Fill: =RGBA(255, 255, 255, 0)
@@ -36,11 +21,27 @@ Holidays As screen:
             Y: =0
             ZIndex: =1
 
+            Circle1_6 As circle:
+                Fill: =RGBA(205, 222, 240, 0.7)
+                Height: =558
+                Width: =562
+                X: =-200
+                Y: =200
+                ZIndex: =1
+
+            Circle1_7 As circle:
+                Fill: =RGBA(205, 222, 240, 0.7)
+                Height: =558
+                Width: =562
+                X: =700
+                Y: =-400
+                ZIndex: =2
+
             Component2_7 As Component2_3:
                 Height: =70
                 Width: =Parent.Width
                 X: =0.00
-                ZIndex: =1
+                ZIndex: =3
 
             Button2 As button:
                 BorderColor: =RGBA(202, 202, 202, 1)
@@ -59,7 +60,7 @@ Holidays As screen:
                 Width: =1091
                 X: =39
                 Y: =90
-                ZIndex: =2
+                ZIndex: =4
 
             Label16 As label:
                 Color: =RGBA(116, 116, 116, 1)
@@ -71,7 +72,7 @@ Holidays As screen:
                 Width: =271
                 X: =60
                 Y: =112
-                ZIndex: =3
+                ZIndex: =5
 
     "'Left Navigation_4' As 'Left Navigation'":
         CurrentScreen: ="Holidays"
