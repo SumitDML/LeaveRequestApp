@@ -11415,14 +11415,7 @@
           "NameMapSourceSchema": "?"
         },
         "OnSelect",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "varLeaveType",
-          "InvariantPropertyName": "Default",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Default",
         "OnChange"
       ],
       "HasDynamicProperties": false,

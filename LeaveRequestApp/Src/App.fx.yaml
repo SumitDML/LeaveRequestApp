@@ -171,7 +171,7 @@ App As appinfo:
                 }
             )
         );
-        
+        Set(varLeaveType,"Casual Leave");
         Set(view,true);
     StartScreen: ='Splash Screen'
 

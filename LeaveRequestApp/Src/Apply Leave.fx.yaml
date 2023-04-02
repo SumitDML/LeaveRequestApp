@@ -113,7 +113,7 @@
                 BorderThickness: =1
                 ChevronBackground: =RGBA(102, 102, 102, 1)
                 ChevronHoverBackground: =
-                Default: =1
+                Default: =varLeaveType
                 Height: =52
                 HoverFill: =RGBA(237, 237, 237, 0.3)
                 Items: =Choices([@'Leave Requests'].'Leave Type')
