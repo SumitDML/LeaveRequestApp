@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
+    OnStart: |+
         =ClearCollect(
             lmsnav,
             Table(
@@ -171,12 +171,12 @@ App As appinfo:
         
         
         Set(ismanager,!IsBlank(LookUp(Teams,ReportingManager.Email=User().Email)));
-        
-        Collect(lmsnav,
+        If(ismanager,Collect(lmsnav,
                 {
                     Title: "My Team",
                     Screen: 'Team Leave_1',
                     Icon:teamLeave
-                })
+                }))
+        
     StartScreen: ='Splash Screen'
 
