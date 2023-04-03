@@ -45,7 +45,7 @@
                 RadiusTopLeft: =15
                 RadiusTopRight: =15
                 Text: =""
-                Width: =1091
+                Width: =696
                 X: =39
                 Y: =90
                 ZIndex: =1
@@ -55,4 +55,174 @@
                 Width: =Parent.Width
                 X: =0.00
                 ZIndex: =2
+
+            Button2_6 As button:
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderThickness: =0.5
+                DisabledBorderColor: =
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =643
+                HoverFill: =
+                PaddingLeft: =20
+                RadiusBottomLeft: =15
+                RadiusBottomRight: =15
+                RadiusTopLeft: =15
+                RadiusTopRight: =15
+                Text: =""
+                Width: =364
+                X: =763
+                Y: =90
+                ZIndex: =3
+
+            Label41_1 As label:
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Text: ="On Leave Today"
+                X: =790
+                Y: =110
+                ZIndex: =4
+
+    "Gallery7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =556
+        Items: =Filter(Teams,ReportingManager.Email=User().Email)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =141
+        Width: =654
+        WrapCount: =2
+        X: =252
+        Y: =155
+        ZIndex: =3
+
+        Image9 As image:
+            Height: =75
+            Image: =User().Image
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Width: =75
+            X: =23
+            Y: =33
+            ZIndex: =1
+
+        Label38 As label:
+            Font: =Font.'Lato Black'
+            Height: =28
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Members.DisplayName
+            Width: =226
+            X: =111
+            Y: =30
+            ZIndex: =2
+
+        Label39 As label:
+            Height: =23
+            OnSelect: =Select(Parent)
+            Size: =8
+            Text: =ThisItem.Members.Email
+            Width: =207
+            X: =111
+            Y: =85
+            ZIndex: =3
+
+        Label40 As label:
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.Members.JobTitle
+            Width: =226
+            X: =111
+            Y: =58
+            ZIndex: =4
+
+        HtmlText11 As htmlViewer:
+            Height: =138
+            HtmlText: |-
+                ="<div style='margin:4px;width:310px;height:115px;background-color:#;box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; #ccc; border-radius:15px'></div>"
+            OnSelect: =Select(Parent)
+            Width: =327
+            ZIndex: =5
+
+    Label41 As label:
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Semibold
+        Text: ="Team Members"
+        X: =271
+        Y: =115
+        ZIndex: =4
+
+    "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =556
+        Items: =Filter('Leave Requests','Reporting Manager'.Email=User().Email)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Width: =332
+        X: =985
+        Y: =155
+        ZIndex: =5
+
+        Image10 As image:
+            Height: =128
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.SampleHeading
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image10.Width - 104
+            X: =Image10.X + Image10.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.SampleText
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Title3.Y + Title3.Height + 4
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator3 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
 
