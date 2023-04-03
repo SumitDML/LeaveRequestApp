@@ -170,18 +170,29 @@
 
         Label42 As label:
             Align: =Align.Center
+            Height: =32
             OnSelect: =Select(Parent)
+            Size: =12
             Text: =ThisItem.RequestedBy.DisplayName
             Width: =158
-            Y: =36
+            Y: =24
             ZIndex: =3
 
         Label43 As label:
             Align: =Align.Center
+            Height: =27
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.From&"-"&ThisItem.To
             Width: =158
-            Y: =76
+            Y: =56
             ZIndex: =4
+
+        HtmlText12 As htmlViewer:
+            Height: =116
+            HtmlText: |-
+                ="<div style='margin:1px;width:145px;height:103px;background-color:#;box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; #ccc; border-radius:15px'></div>"
+            OnSelect: =Select(Parent)
+            Width: =159
+            ZIndex: =5
 
