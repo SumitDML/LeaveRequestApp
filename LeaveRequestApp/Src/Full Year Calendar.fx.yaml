@@ -1,4 +1,4 @@
-"'Team Leave' As screen":
+"'Full Year Calendar' As screen":
 
     Canvas1_6 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -222,4 +222,13 @@
         X: =1057
         Y: =80
         ZIndex: =16
+
+    Icon5 As icon.Cancel:
+        Height: =26
+        Icon: =Icon.Cancel
+        OnSelect: =Navigate(Holidays,ScreenTransition.Fade)
+        Width: =27
+        X: =1280
+        Y: =55
+        ZIndex: =17
 

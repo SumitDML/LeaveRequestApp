@@ -146,7 +146,7 @@ Holidays As screen:
         BorderThickness: =1
         Fill: =RGBA(237, 237, 237, 1)
         Font: =Font.Lato
-        OnSelect: =Navigate('Team Leave',ScreenTransition.Fade)
+        OnSelect: =Navigate('Full Year Calendar',ScreenTransition.Fade)
         Size: =11
         Text: ="View Full Year Calendar"
         Width: =209

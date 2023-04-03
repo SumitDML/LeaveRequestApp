@@ -31,7 +31,7 @@ App As appinfo:
                 },
                 {
                     Title: "Team Leave",
-                    Screen: 'Team Leave',
+                    Screen: 'Full Year Calendar',
                     Icon:teamLeave
                 }
             )
