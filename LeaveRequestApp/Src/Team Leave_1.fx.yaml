@@ -161,68 +161,27 @@
         Items: =Filter('Leave Requests','Reporting Manager'.Email=User().Email)
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(160, Self.Height - 60)
-        Width: =332
-        X: =985
+        TemplateSize: =116
+        Width: =318
+        WrapCount: =2
+        X: =979
         Y: =155
         ZIndex: =5
 
-        Image10 As image:
-            Height: =128
+        Label42 As label:
+            Align: =Align.Center
             OnSelect: =Select(Parent)
-            Width: =128
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =1
-
-        Title3 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.SampleHeading
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image10.Width - 104
-            X: =Image10.X + Image10.Width + 24
-            Y: =44
-            ZIndex: =2
-
-        Subtitle3 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.SampleText
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height + 4
+            Text: =ThisItem.RequestedBy.DisplayName
+            Width: =158
+            Y: =36
             ZIndex: =3
 
-        NextArrow2 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Height: =60
-            Icon: =Icon.ChevronRight
+        Label43 As label:
+            Align: =Align.Center
             OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="View item details"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            Size: =9
+            Text: =ThisItem.From&"-"&ThisItem.To
+            Width: =158
+            Y: =76
             ZIndex: =4
-
-        Separator3 As rectangle:
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - 1
-            ZIndex: =5
 
