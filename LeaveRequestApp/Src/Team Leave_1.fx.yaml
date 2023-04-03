@@ -196,3 +196,12 @@
             Width: =159
             ZIndex: =5
 
+        Rectangle8 As rectangle:
+            Fill: =If(ThisItem.Status.Value="Approved",Color.DarkGreen,If(ThisItem.Status.Value="Rejected",Color.Red,Color.Yellow))
+            Height: =13
+            OnSelect: =Select(Parent)
+            Width: =116
+            X: =21
+            Y: =83
+            ZIndex: =6
+
