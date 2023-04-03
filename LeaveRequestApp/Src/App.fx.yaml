@@ -28,11 +28,6 @@ App As appinfo:
                     Title: "Calender",
                     Screen: Holidays,
                     Icon: holidays
-                },
-                {
-                    Title: "Team Leave",
-                    Screen: 'Full Year Calendar',
-                    Icon:teamLeave
                 }
             )
         );
@@ -173,5 +168,15 @@ App As appinfo:
         );
         
         Set(view,true);
+        
+        
+        Set(ismanager,!IsBlank(LookUp(Teams,ReportingManager.Email=User().Email)));
+        
+        Collect(lmsnav,
+                {
+                    Title: "My Team",
+                    Screen: 'Team Leave_1',
+                    Icon:teamLeave
+                })
     StartScreen: ='Splash Screen'
 

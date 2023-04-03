@@ -28,6 +28,31 @@
     "dependents": [],
     "id": "4d389b56-f094-40a5-bd48-370f78e0ddbc"
   },
+  "5e297fac-701f-4ce7-807c-2d9e83281d16": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1623/1.0.1623.3210/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://digimantra-my.sharepoint.com/personal/sumit_pradhan_digimantra_com": {
+        "dataSources": {
+          "Teams": {
+            "tableName": "b9f1da91-d5bb-4c88-ba5f-a81ccb76a6ad"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Teams"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "5e297fac-701f-4ce7-807c-2d9e83281d16"
+  },
   "965efd75-8953-47cc-a2be-44d246132001": {
     "connectionParameters": {
       "sku": "Enterprise"
