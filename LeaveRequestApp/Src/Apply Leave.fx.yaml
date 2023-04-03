@@ -182,8 +182,8 @@
                             {Title: Reason.Text},
                             {Details: Details.Text},
                             {'Leave Type': LeaveTypes.SelectedText},
-                            {From: from},
-                            {To: to},
+                            {From: CalendarComponentMain_2.StartDate},
+                            {To: CalendarComponentMain_2.EndDate},
                             {'Total Days': Value(TotalDays.Text)},
                             {
                                 'Leave Id': {
